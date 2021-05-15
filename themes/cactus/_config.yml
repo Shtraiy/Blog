@@ -5,7 +5,7 @@
 # Link to a page that gives an overview of all your projects.
 # This can be an external link (e.g., to you GitHub profile) or to another
 # page within your website.
-projects_url: http://github.com/probberechts
+projects_url: https://github.com/Shtraiy
 
 # Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
 direction: ltr
@@ -15,7 +15,7 @@ direction: ltr
 # languages/*.yml
 nav:
   首页: /
-  归档: archives
+  归档: /archives/
   分类: /categories/
   标签: /tags/
   关于: /about/
@@ -33,6 +33,8 @@ social_links:
   mail: mailto:weihuazhen24@gmail.com
   telegram: https://t.me/Kanaria_24
   expeditedssl: /about/PGP.html
+  steam: https://steamcommunity.com/id/Shtraiy/
+  
 
   
 
@@ -47,7 +49,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 10
+  post_count: 20
   sort_updated: false
 
 # Customize the archive view.
@@ -56,7 +58,7 @@ posts_overview:
 # Note: this does not work together with pagination, since the pagination
 # plugin will sort pages by date of creation.
 archive:
-  sort_updated: true
+  sort_updated: false
 
 # Customize the article view.
 # Options:
@@ -84,11 +86,11 @@ copyright:
 #   - grayout: whether to enable a hover effect on the logo
 logo:
   enabled: true
-  width: 50
-  height: 50
+  width: 100
+  height: 100
   url: /css/logo.png
   gravatar: false
-  grayout: true
+  grayout: false
 
 # Customize the favicons.
 # Cactus supports a limited set of the three most important icons:
@@ -112,7 +114,7 @@ favicon:
 
 # The color scheme that should be used to highlight codeblocks.
 # See source/css/_highlight for a list of all available color schemes.
-# highlight: rainbow
+highlight: tomorrow
 
 # Set the color scheme.
 # Available color schemes are 'dark', 'light', 'classic' and 'white'.
@@ -145,8 +147,8 @@ open_graph:
 
 # Fill in your Disqus Comments Shortname to enable Disqus comments.
 disqus:
-  enabled: false
-  shortname: cactus-1
+  enabled: true
+  shortname: Resalia
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:

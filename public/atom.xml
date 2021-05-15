@@ -3,11 +3,11 @@
   <title>Nocturne</title>
   
   <subtitle>Branch of Ivory Tower</subtitle>
-  <link href="https://wynio.pw/atom.xml" rel="self"/>
+  <link href="https://wynio.online/atom.xml" rel="self"/>
   
-  <link href="https://wynio.pw/"/>
-  <updated>2022-01-09T02:11:33.568Z</updated>
-  <id>https://wynio.pw/</id>
+  <link href="https://wynio.online/"/>
+  <updated>2023-01-10T03:04:33.424Z</updated>
+  <id>https://wynio.online/</id>
   
   <author>
     <name>Resalia</name>
@@ -17,9 +17,113 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2023迟来的新年礼物</title>
+    <link href="https://wynio.online/posts/f5ee/"/>
+    <id>https://wynio.online/posts/f5ee/</id>
+    <published>2023-01-10T02:40:01.000Z</published>
+    <updated>2023-01-10T03:04:33.424Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="2023年迟来的更新"><a href="#2023年迟来的更新" class="headerlink" title="2023年迟来的更新"></a>2023年迟来的更新</h1><p>最近也是发现AD:PIANO系列出到IX了，对我来说也算是一个很棒新年礼物了</p><p><img src="https://i.328888.xyz/2023/01/10/0MFFU.jpeg" alt="AD:PIANO IX -Alt-"></p><div id="aplayer" class="aplayer" data-id="157640212" data-server="netease" data-type="album" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="音乐播放" scheme="https://wynio.online/categories/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/"/>
+    
+    
+    <category term="音乐" scheme="https://wynio.online/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装N卡驱动</title>
+    <link href="https://wynio.online/posts/37c1/"/>
+    <id>https://wynio.online/posts/37c1/</id>
+    <published>2022-07-26T00:17:50.000Z</published>
+    <updated>2023-01-10T05:39:21.072Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="安装完Arch后我就一直在尝试装N卡驱动"><a href="#安装完Arch后我就一直在尝试装N卡驱动" class="headerlink" title="安装完Arch后我就一直在尝试装N卡驱动"></a>安装完Arch后我就一直在尝试装N卡驱动</h1><p>但是虽然Wiki上的安装过程很简单，只有短短几条命令</p><p>但安装后我还是出现了很多问题</p><p>像是安装后不显示驱动也进不去桌面</p><p>亦或者驱动装上了但是进不去桌面</p><p>后面经过我的实践，我终于总结出了一点装N卡驱动的经验</p><p>下面是官方中文Wiki</p><blockquote><p><a href="https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a></p></blockquote><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先安装linux-lts内核</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S linux-lts</span><br></pre></td></tr></table></figure><p>然后安装N卡驱动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S nvidia-lts</span><br></pre></td></tr></table></figure><p>需要注意的是，12代intelCPU可能会遇到系统无法正常启动的问题</p><p>这时候需要在引导加载程序中设置内核参数<strong>ibt=off</strong></p><p>下面以我用grub引导为例子</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;default&#x2F;grub</span><br></pre></td></tr></table></figure><p>找到LINUX_DEFAULT，并在后面添加ibt=off</p><p>保存退出后重新加载grub文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o &#x2F;etc&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure><p>正常情况下N卡驱动在你pacman后已经安装完成了，这时我们reboot</p><p>输入<code>nvidia-msi</code></p><p>会显示你显卡驱动的信息，如果没有也请自行上网搜索，实在不行就重装吧，我装N卡驱动少说重装了五遍，已经练出肌肉记忆了</p><h3 id="安装后配置"><a href="#安装后配置" class="headerlink" title="安装后配置"></a>安装后配置</h3><h5 id="DRM内核级显示模式设置"><a href="#DRM内核级显示模式设置" class="headerlink" title="DRM内核级显示模式设置"></a>DRM内核级显示模式设置</h5><p>在引导程序中添加DRM内核参数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;default&#x2F;grub</span><br></pre></td></tr></table></figure><p>在LINUX_DEFAULT后面添加<strong>nvidia-drm.modeset=1</strong></p><p>保存退出后更新引导文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o &#x2F;etc&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://wynio.online/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://wynio.online/tags/Linux/"/>
+    
+    <category term="系统" scheme="https://wynio.online/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="折腾" scheme="https://wynio.online/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yay助手</title>
+    <link href="https://wynio.online/posts/b0bb/"/>
+    <id>https://wynio.online/posts/b0bb/</id>
+    <published>2022-07-25T11:29:02.000Z</published>
+    <updated>2023-01-08T04:20:25.294Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="yay是ArchLinux下的AUR-Arch用户软件仓库-助手，能让我们更方便的下载和安装AUR上的软件包"><a href="#yay是ArchLinux下的AUR-Arch用户软件仓库-助手，能让我们更方便的下载和安装AUR上的软件包" class="headerlink" title="yay是ArchLinux下的AUR(Arch用户软件仓库)助手，能让我们更方便的下载和安装AUR上的软件包"></a>yay是ArchLinux下的AUR(Arch用户软件仓库)助手，能让我们更方便的下载和安装AUR上的软件包</h1><hr><h3 id="首先是安装前配置"><a href="#首先是安装前配置" class="headerlink" title="首先是安装前配置"></a>首先是安装前配置</h3><p>编辑ArchLinuxcn源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;pacman.conf</span><br></pre></td></tr></table></figure><p>将其中[multilib]和其下面一行的注释#删掉</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[multilib]</span><br><span class="line">Include &#x3D; &#x2F;etc&#x2F;pacman.d&#x2F;mirrorlist</span><br></pre></td></tr></table></figure><p>然后添加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br></pre></td></tr></table></figure><p>在其下面添加cn源</p><p>这里以清华源为例</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;archlinuxcn&#x2F;$arch</span><br></pre></td></tr></table></figure><p>添加完后记得同步数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syyus</span><br></pre></td></tr></table></figure><p>然后为cn源下载密钥</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S archlinuxcn-keyring</span><br></pre></td></tr></table></figure><p>如果报错尝试以下指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman-key --init</span><br><span class="line">sudo pacman-key --populate archlinux</span><br><span class="line">sudo pacman-key --populate archlinuxcn</span><br></pre></td></tr></table></figure><p>配置结束即可进行下一步</p><hr><h3 id="安装yay助手"><a href="#安装yay助手" class="headerlink" title="安装yay助手"></a>安装yay助手</h3><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S yay</span><br></pre></td></tr></table></figure><p>静待安装</p><hr><h3 id="接下来测试yay助手，利用yay助手从AUR下载软件包"><a href="#接下来测试yay助手，利用yay助手从AUR下载软件包" class="headerlink" title="接下来测试yay助手，利用yay助手从AUR下载软件包"></a>接下来测试yay助手，利用yay助手从AUR下载软件包</h3><h5 id="安装网易云音乐"><a href="#安装网易云音乐" class="headerlink" title="安装网易云音乐"></a>安装网易云音乐</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S netease-cloud-music</span><br></pre></td></tr></table></figure><p>需要注意的是尽量避免在root下运行yay</p><h5 id="安装chrome"><a href="#安装chrome" class="headerlink" title="安装chrome"></a>安装chrome</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S google-chrome</span><br></pre></td></tr></table></figure><p>剩下的可以自己摸索，本篇旨在配置yay软件助手</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://wynio.online/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://wynio.online/tags/Linux/"/>
+    
+    <category term="系统" scheme="https://wynio.online/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="折腾" scheme="https://wynio.online/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>近期声明 ③</title>
+    <link href="https://wynio.online/posts/9c0f/"/>
+    <id>https://wynio.online/posts/9c0f/</id>
+    <published>2022-07-23T16:00:00.000Z</published>
+    <updated>2023-01-08T04:56:19.124Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="迟来的2022第一篇文章"><a href="#迟来的2022第一篇文章" class="headerlink" title="迟来的2022第一篇文章"></a>迟来的2022第一篇文章</h1><h2 id="从2020建站到如今2022已经过了两年了"><a href="#从2020建站到如今2022已经过了两年了" class="headerlink" title="从2020建站到如今2022已经过了两年了"></a>从2020建站到如今2022已经过了两年了</h2><p>时光飞逝，不知不觉离建站已经两年了</p><p>从vuepress到gitbook再到如今的hexo</p><p>包括毕业后我开始自学html+css+js等前端知识，只为了将来能丰富我的网站</p><p>对于建站我已经有了一点小小的经验了，不再是当初到处问到处找教程的小白了</p><h2 id="再谈谈我的高中吧"><a href="#再谈谈我的高中吧" class="headerlink" title="再谈谈我的高中吧"></a>再谈谈我的高中吧</h2><p>和二次元那种只存在于幻想中的美好的高中生活不一样，我的高中被时间拉扯着向前</p><p>从高一入学到高三毕业，再到高考，我的经历和这个社会上大多数同龄人一样</p><p>入学时告诉自己将来要考哪个大学，然后再付诸努力，最后成就梦想</p><p>类似的人终究是少数，至少不是我</p><p>而我自己，摸鱼了三年，到最后还是去了填志愿时才知道的大学，才了解到的专业</p><p>但是无论生活如何，路还要走下去，人还是得向前看</p><p>这将是一个新的开始</p><p>以上便是2022我迟来的文章了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://wynio.online/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="闲聊" scheme="https://wynio.online/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>近期声明 ②</title>
-    <link href="https://wynio.pw/posts/9d4f/"/>
-    <id>https://wynio.pw/posts/9d4f/</id>
+    <link href="https://wynio.online/posts/9d4f/"/>
+    <id>https://wynio.online/posts/9d4f/</id>
     <published>2021-11-13T06:17:43.000Z</published>
     <updated>2022-01-09T02:11:33.568Z</updated>
     
@@ -33,17 +137,17 @@
     
     
     
-    <category term="公告" scheme="https://wynio.pw/categories/%E5%85%AC%E5%91%8A/"/>
+    <category term="公告" scheme="https://wynio.online/categories/%E5%85%AC%E5%91%8A/"/>
     
     
-    <category term="闲聊" scheme="https://wynio.pw/tags/%E9%97%B2%E8%81%8A/"/>
+    <category term="闲聊" scheme="https://wynio.online/tags/%E9%97%B2%E8%81%8A/"/>
     
   </entry>
   
   <entry>
     <title>你好李鑫——抽象之徒步狼人刘建龙</title>
-    <link href="https://wynio.pw/posts/2c64/"/>
-    <id>https://wynio.pw/posts/2c64/</id>
+    <link href="https://wynio.online/posts/2c64/"/>
+    <id>https://wynio.online/posts/2c64/</id>
     <published>2021-10-03T14:22:28.000Z</published>
     <updated>2022-01-09T02:13:50.680Z</updated>
     
@@ -57,21 +161,21 @@
     
     
     
-    <category term="抽象" scheme="https://wynio.pw/categories/%E6%8A%BD%E8%B1%A1/"/>
+    <category term="抽象" scheme="https://wynio.online/categories/%E6%8A%BD%E8%B1%A1/"/>
     
     
-    <category term="董事长" scheme="https://wynio.pw/tags/%E8%91%A3%E4%BA%8B%E9%95%BF/"/>
+    <category term="董事长" scheme="https://wynio.online/tags/%E8%91%A3%E4%BA%8B%E9%95%BF/"/>
     
-    <category term="保定" scheme="https://wynio.pw/tags/%E4%BF%9D%E5%AE%9A/"/>
+    <category term="保定" scheme="https://wynio.online/tags/%E4%BF%9D%E5%AE%9A/"/>
     
-    <category term="刘建龙" scheme="https://wynio.pw/tags/%E5%88%98%E5%BB%BA%E9%BE%99/"/>
+    <category term="刘建龙" scheme="https://wynio.online/tags/%E5%88%98%E5%BB%BA%E9%BE%99/"/>
     
   </entry>
   
   <entry>
     <title>与Katago对弈</title>
-    <link href="https://wynio.pw/posts/6c65/"/>
-    <id>https://wynio.pw/posts/6c65/</id>
+    <link href="https://wynio.online/posts/6c65/"/>
+    <id>https://wynio.online/posts/6c65/</id>
     <published>2021-07-12T10:15:03.000Z</published>
     <updated>2022-02-07T10:15:27.244Z</updated>
     
@@ -85,21 +189,21 @@
     
     
     
-    <category term="娱乐" scheme="https://wynio.pw/categories/%E5%A8%B1%E4%B9%90/"/>
+    <category term="娱乐" scheme="https://wynio.online/categories/%E5%A8%B1%E4%B9%90/"/>
     
     
-    <category term="对弈" scheme="https://wynio.pw/tags/%E5%AF%B9%E5%BC%88/"/>
+    <category term="对弈" scheme="https://wynio.online/tags/%E5%AF%B9%E5%BC%88/"/>
     
-    <category term="下棋" scheme="https://wynio.pw/tags/%E4%B8%8B%E6%A3%8B/"/>
+    <category term="下棋" scheme="https://wynio.online/tags/%E4%B8%8B%E6%A3%8B/"/>
     
   </entry>
   
   <entry>
     <title>音乐播放页</title>
-    <link href="https://wynio.pw/posts/a7c/"/>
-    <id>https://wynio.pw/posts/a7c/</id>
+    <link href="https://wynio.online/posts/a7c/"/>
+    <id>https://wynio.online/posts/a7c/</id>
     <published>2021-06-08T06:32:06.000Z</published>
-    <updated>2021-10-23T11:38:25.260Z</updated>
+    <updated>2023-01-08T04:23:04.543Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于一些本人喜欢的音乐"><a href="#关于一些本人喜欢的音乐" class="headerlink" title="关于一些本人喜欢的音乐"></a>关于一些本人喜欢的音乐</h1><h4 id="使用Aplayer实现，主要是播一些站长喜欢的音乐"><a href="#使用Aplayer实现，主要是播一些站长喜欢的音乐" class="headerlink" title="使用Aplayer实现，主要是播一些站长喜欢的音乐"></a>使用Aplayer实现，主要是播一些站长喜欢的音乐</h4><h4 id="能不能播放取决于API是否失效"><a href="#能不能播放取决于API是否失效" class="headerlink" title="能不能播放取决于API是否失效"></a>能不能播放取决于API是否失效</h4><h4 id="加载时间过长，见谅"><a href="#加载时间过长，见谅" class="headerlink" title="加载时间过长，见谅"></a>加载时间过长，见谅</h4><h4 id="测试中"><a href="#测试中" class="headerlink" title="测试中"></a>测试中</h4><div id="aplayer" class="aplayer" data-id="6796897788" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
     
@@ -111,21 +215,21 @@
     
     
     
-    <category term="音乐播放" scheme="https://wynio.pw/categories/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/"/>
+    <category term="音乐播放" scheme="https://wynio.online/categories/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/"/>
     
     
-    <category term="安利" scheme="https://wynio.pw/tags/%E5%AE%89%E5%88%A9/"/>
+    <category term="安利" scheme="https://wynio.online/tags/%E5%AE%89%E5%88%A9/"/>
     
-    <category term="音乐" scheme="https://wynio.pw/tags/%E9%9F%B3%E4%B9%90/"/>
+    <category term="音乐" scheme="https://wynio.online/tags/%E9%9F%B3%E4%B9%90/"/>
     
-    <category term="娱乐" scheme="https://wynio.pw/tags/%E5%A8%B1%E4%B9%90/"/>
+    <category term="娱乐" scheme="https://wynio.online/tags/%E5%A8%B1%E4%B9%90/"/>
     
   </entry>
   
   <entry>
     <title>收藏网页分享</title>
-    <link href="https://wynio.pw/posts/c0e5/"/>
-    <id>https://wynio.pw/posts/c0e5/</id>
+    <link href="https://wynio.online/posts/c0e5/"/>
+    <id>https://wynio.online/posts/c0e5/</id>
     <published>2021-05-15T12:01:24.000Z</published>
     <updated>2021-10-23T09:42:27.260Z</updated>
     
@@ -139,23 +243,23 @@
     
     
     
-    <category term="网站" scheme="https://wynio.pw/categories/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="https://wynio.online/categories/%E7%BD%91%E7%AB%99/"/>
     
     
-    <category term="网站" scheme="https://wynio.pw/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="https://wynio.online/tags/%E7%BD%91%E7%AB%99/"/>
     
-    <category term="安利" scheme="https://wynio.pw/tags/%E5%AE%89%E5%88%A9/"/>
+    <category term="安利" scheme="https://wynio.online/tags/%E5%AE%89%E5%88%A9/"/>
     
   </entry>
   
   <entry>
-    <title>关于巨人139话..</title>
-    <link href="https://wynio.pw/posts/df0b/"/>
-    <id>https://wynio.pw/posts/df0b/</id>
+    <title>关于《进击的巨人》139话..</title>
+    <link href="https://wynio.online/posts/df0b/"/>
+    <id>https://wynio.online/posts/df0b/</id>
     <published>2021-04-13T15:22:36.000Z</published>
-    <updated>2022-01-30T03:38:37.980Z</updated>
+    <updated>2023-01-09T00:08:46.418Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一言难尽"><a href="#一言难尽" class="headerlink" title="一言难尽"></a>一言难尽</h1><p>巨人139话出了以后，就有人问我对于巨人结局怎么看</p><p>虽说主要是因为在这之前我一直是个巨人吹</p><p>以前逢人就开吹巨人相较于同期作品好在哪里</p><p>甚至发言过很多NT言论，譬如踩一捧一大肆拿类似喰种的作品来比较</p><p>在这里为我以前的逆天言论道歉<del>不知道有没有人能看得到</del></p><h1 id="先在这里声明，我对关于巨人的话题一概保持中立"><a href="#先在这里声明，我对关于巨人的话题一概保持中立" class="headerlink" title="先在这里声明，我对关于巨人的话题一概保持中立"></a>先在这里声明，我对关于巨人的话题一概保持中立</h1><p>为什么这么做，也是有我一定的考虑</p><p>曾经有段时间我和他人进行过激烈的争论</p><p>那时候谁也不认同誰，主观上认为自己是对的，别人是错的</p><p>带着这种想法进行争论，到最后成了对双方家人<del>亲切</del>的问候</p><p>以至于到现在我发表言论都要瞻前顾后，以免有什么地方说错，更怕的是有人以此来大做文章</p><p>当然我也不是什么有头有脸的公众人物，只是上网冲浪久了，总会有人抓着你一句话不放，然后对你大肆<strong>批评</strong></p><p>巨人的结局是好是坏，每个人观感不同，得出的感受也不同</p><p>会有人过度解读，深挖其中或许本来就没有的内涵；亦会有人什么也看不出来，强行把自己所思考内涵通过结局强加给别人</p><p>其实通过巨人结局发布的前后就能够看出一些网友对于评价没有自己的主见</p><p>巨人结局出来前，无数人铺天盖地地无脑吹巨人，大肆踩一捧一</p><p>巨人结局出来后，一时全是骂声，那些曾经喜欢巨人的人仿佛不见了</p><p>当然我这里批判的不是那些真正喜欢巨人这一作品的人，而是一些像我一样喜欢跟风，没自己主见，风向不对又开始改口的人</p><p><strong>他们不是真的喜欢巨人</strong></p><p>正因为此，我也学乖了，在不能清晰理解一件事物的本质前，我不会轻易下定论</p><p>那么认识从何而来，自然来自实践</p><p>辩论就是实践的一种</p><p>我认为，辩论是一种工具，用法不同带来的作用也不同</p><p>我所认为的辩论</p><p>辩论的双方除去目的性(譬如学术讨论亦或者是辩论赛等)的工作，应当怀着一种包容的的心态去设身处地的思考为什么对方会有这样的观点</p><p>也许真当你这么做的时候，可能会惊喜的发现自己又多了种思考的方向</p><p>单纯的各执己见对进行辩论的双方没什么好处，以至于最后双方不欢而散</p><p>正所谓</p><blockquote><p>“一千个观众眼中有一千个哈姆雷特” </p></blockquote><p>莎士比亚说的</p><p>每个人都有自己的想法，而如何从这些人的想法中吸取有利的部分，从而达到真正的认识</p><p>这就是辩论的目的了</p><p>扯远了，总之，对于巨人结局如何这一问题，<strong>我不发表评价</strong>，因为我本身没能从这个剧情里看出什么苗头来，就不参与讨论了</p><p>具体什么样的结局我也不说了，也是怕看到这篇文章的人被剧透</p><p>网上也有比我更好的解释，比如知乎贴吧等论坛</p><p>具体巨人的结局分析可以在以下链接找到</p><blockquote><p><a href="https://www.zhihu.com/question/453468442/answer/1823210459">https://www.zhihu.com/question/453468442/answer/1823210459</a></p></blockquote><p>其实很不想写这么多，只是想把自己的想法写出来而已</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一言难尽"><a href="#一言难尽" class="headerlink" title="一言难尽"></a>一言难尽</h1><p>巨人139话出了以后，网络上就出现了各种不同的看法</p><p>但主要是巨人烂尾的观点居多</p><p>下面就简单讲一下我对《进击的巨人》第139话的看法</p><h2 id="首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂"><a href="#首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂" class="headerlink" title="首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂"></a>首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂</h2><p>在讨论巨人结尾之前，我想先讲一些别的东西</p><p>首先我认为，一个作品的好坏在于它创造出的价值</p><p>他于社会，于读者，传达出了什么价值观，有什么影响</p><p>巨人是不是神作，是的，至少在地鸣之前甚至139话之前他都能称得上一部优秀的作品</p><p>加上动画组优秀的作画以及泽野弘之神bgm的多重加持下巨人可以说的上是一部神作</p><p>巨人能够爆火，我认为主要得益于动画方面的宣传，虽说巨人的设定也很有意思</p><p>作者谏山创创造了一个比较完整的世界观，虽说里面有不少内容原理上和现代科学是相悖的，不科学的，也甚至于里面的有些设定放到现实中也是极其荒谬的</p><p>精良的动画制作加上巨人还算不错的设定让这个IP得到爆火</p><p>而当《进击的巨人》公布139话后，带来的冲击力是令人始料未及的</p><p>他烂到什么程度呢</p><p>借用B站UP瓶子152的话来说</p><blockquote><p>所有你能想到的烂尾作品可能都得对着巨人深深鞠上一躬</p></blockquote><p>所有在结尾出来之前的巨人爱好者都被谏山创突如其来的神回转灌了一嘴的shit</p><p>短短一话彻彻底底将这部本能在漫画史上留下美誉的作品推向了他的极端</p><p>短短一话让苦心经营的人设彻底崩塌</p><p>短短一话完全与所有巨人爱好者猜测的结局背道而驰</p><p>只能说谏山创的想象力是极其丰富的</p><p>现在巨人彻底扬名了，不过是臭名昭著</p><p>那么具体巨人的结尾烂在什么地方，大🔥可以网上直接搜，以下就不剧透了</p><p>以上就是我要说的全部内容了</p>]]></content>
     
     
       
@@ -165,17 +269,17 @@
     
     
     
-    <category term="评价" scheme="https://wynio.pw/categories/%E8%AF%84%E4%BB%B7/"/>
+    <category term="评价" scheme="https://wynio.online/categories/%E8%AF%84%E4%BB%B7/"/>
     
     
-    <category term="漫画" scheme="https://wynio.pw/tags/%E6%BC%AB%E7%94%BB/"/>
+    <category term="漫画" scheme="https://wynio.online/tags/%E6%BC%AB%E7%94%BB/"/>
     
   </entry>
   
   <entry>
     <title>Make a wish</title>
-    <link href="https://wynio.pw/posts/3166/"/>
-    <id>https://wynio.pw/posts/3166/</id>
+    <link href="https://wynio.online/posts/3166/"/>
+    <id>https://wynio.online/posts/3166/</id>
     <published>2021-01-30T03:51:18.000Z</published>
     <updated>2022-01-09T02:40:18.311Z</updated>
     
@@ -189,23 +293,23 @@
     
     
     
-    <category term="游戏" scheme="https://wynio.pw/categories/%E6%B8%B8%E6%88%8F/"/>
+    <category term="游戏" scheme="https://wynio.online/categories/%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="arknights" scheme="https://wynio.pw/categories/%E6%B8%B8%E6%88%8F/arknights/"/>
+    <category term="arknights" scheme="https://wynio.online/categories/%E6%B8%B8%E6%88%8F/arknights/"/>
     
     
-    <category term="祈愿" scheme="https://wynio.pw/tags/%E7%A5%88%E6%84%BF/"/>
+    <category term="祈愿" scheme="https://wynio.online/tags/%E7%A5%88%E6%84%BF/"/>
     
   </entry>
   
   <entry>
     <title>ArchLinux安装指南</title>
-    <link href="https://wynio.pw/posts/ae4f/"/>
-    <id>https://wynio.pw/posts/ae4f/</id>
+    <link href="https://wynio.online/posts/ae4f/"/>
+    <id>https://wynio.online/posts/ae4f/</id>
     <published>2021-01-26T04:23:19.000Z</published>
-    <updated>2022-01-09T02:41:16.811Z</updated>
+    <updated>2023-01-10T14:53:58.179Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="先前有尝试过用VMware装Archlinux"><a href="#先前有尝试过用VMware装Archlinux" class="headerlink" title="先前有尝试过用VMware装Archlinux"></a>先前有尝试过用VMware装Archlinux</h1><h5 id="因为整个系统都是在Cli下一步步引导安装"><a href="#因为整个系统都是在Cli下一步步引导安装" class="headerlink" title="因为整个系统都是在Cli下一步步引导安装"></a>因为整个系统都是在Cli下一步步引导安装</h5><p>打算针对只会Windows的完全没接触过GNU/Linux的新手写一个零基础安装教学</p><p>内容可能有一些错误，如有发现请即刻私信我</p><p>我也是第一次装，如果遇到什么问题可以找我讨论讨论<img src="/css/1.jpg"></p><p>另外，尽管这类教程Google上一搜一大片</p><p>但我还是决定把自己装过一次后的经验写下来</p><p>方便以后重装的时候复现</p><h5 id="所以这个教学不只是针对你们，也是为了我以后能够顺利重装"><a href="#所以这个教学不只是针对你们，也是为了我以后能够顺利重装" class="headerlink" title="所以这个教学不只是针对你们，也是为了我以后能够顺利重装"></a>所以这个教学不只是针对你们，也是为了我以后能够顺利重装</h5><h5 id="最后说明，本次教学演示将使用VMware进行，和实机操作可能有出入，大家仅供参考"><a href="#最后说明，本次教学演示将使用VMware进行，和实机操作可能有出入，大家仅供参考" class="headerlink" title="最后说明，本次教学演示将使用VMware进行，和实机操作可能有出入，大家仅供参考"></a>最后说明，本次教学演示将使用VMware进行，和实机操作可能有出入，大家仅供参考</h5><h5 id="废话说完了，开始操作"><a href="#废话说完了，开始操作" class="headerlink" title="废话说完了，开始操作"></a>废话说完了，开始操作</h5><h3 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备"></a>安装前准备</h3><h4 id="首先把官方文档的链接放在下面，有能力的先对照着看"><a href="#首先把官方文档的链接放在下面，有能力的先对照着看" class="headerlink" title="首先把官方文档的链接放在下面，有能力的先对照着看"></a>首先把官方文档的链接放在下面，有能力的先对照着看</h4><blockquote><p><a href="https://wiki.archlinux.org/index.php/Installation_guide">https://wiki.archlinux.org/index.php/Installation_guide</a></p></blockquote><p>然后因为我是用VMware安装，所以不需要考虑备份的问题</p><p>如果你是实体机安装，请先自行<strong>备份</strong></p><p>备份结束后就可以下载ISO了</p><blockquote><p><a href="https://www.archlinux.org/download/">https://www.archlinux.org/download/</a></p></blockquote><p>进入以后可以选择下载磁力链或种子<br><img src="/css/2.png"></p><p>当然我是选择的磁力链，迅雷下载也是比较快的</p><p>下载结束后也最好检验一下哈希值，这里就不详细说明怎么检验了</p><p><del>因为我也不会</del></p><p>准备工作结束后，就可以开始安装了</p><hr><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="关于VMware的创建虚拟机过程就不一一阐述了，接下来只有关于创建完成后的引导操作"><a href="#关于VMware的创建虚拟机过程就不一一阐述了，接下来只有关于创建完成后的引导操作" class="headerlink" title="关于VMware的创建虚拟机过程就不一一阐述了，接下来只有关于创建完成后的引导操作"></a>关于VMware的创建虚拟机过程就不一一阐述了，接下来只有关于创建完成后的引导操作</h5><p>另外如果出现这样的界面已经成功了</p><p><img src="/css/1.png" alt="另外如果出现这样的界面已经成功了"></p><h5 id="这里选择第一个选项或是等待过后自动进入安装页面"><a href="#这里选择第一个选项或是等待过后自动进入安装页面" class="headerlink" title="这里选择第一个选项或是等待过后自动进入安装页面"></a>这里选择第一个选项或是等待过后自动进入安装页面</h5><p><img src="/css/3.png" alt="1"></p><h3 id="首先确定自己的引导方式"><a href="#首先确定自己的引导方式" class="headerlink" title="首先确定自己的引导方式"></a>首先确定自己的引导方式</h3><p>执行以下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls &#x2F;sys&#x2F;firmware&#x2F;efi&#x2F;efivars</span><br></pre></td></tr></table></figure><p>执行命令后，如果提示</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls: cannot access &#39;&#x2F;sys&#x2F;firmware&#x2F;efi&#x2F;efivars&#39;: No such file or directory</span><br></pre></td></tr></table></figure><p>说明你是以BIOS方式引导，反之为以EFI方式引导</p><p>两种不同的类型安装方式也会略有不同</p><hr><h3 id="下一步是联网"><a href="#下一步是联网" class="headerlink" title="下一步是联网"></a>下一步是联网</h3><p><strong>arch</strong>不能离线安装，需要通过联网来下载相关的包和组件，首先我们需要联网</p><ul><li><h5 id="如果你是有线网，输入以下命令获取IP地址"><a href="#如果你是有线网，输入以下命令获取IP地址" class="headerlink" title="如果你是有线网，输入以下命令获取IP地址"></a>如果你是有线网，输入以下命令获取IP地址</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dhcpcd</span><br></pre></td></tr></table></figure><p>然后再通过ping来判断是否联网，例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ping www.baidu.com</span><br></pre></td></tr></table></figure><p>ping通了就说明连上网了</p><ul><li><h5 id="如果你是无线网，就执行以下命令："><a href="#如果你是无线网，就执行以下命令：" class="headerlink" title="如果你是无线网，就执行以下命令："></a>如果你是无线网，就执行以下命令：</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwctl</span><br></pre></td></tr></table></figure><p><img src="/css/4.png" alt="1"></p><p>会进入这个以<strong>iwd</strong>开头的Cli环境中，然后执行</p><p>你们都注意到了，我没有无线网卡，因为我是有线网络，因此我决定做一回理论带师</p><p>执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">station name scan # 使用称为name的网卡进行无线网络扫描</span><br><span class="line">station name get-networks # 使用称为name的网卡列出扫描到的网络</span><br><span class="line">station name connect Name # 使用称为name的网卡连接到Name网络</span><br></pre></td></tr></table></figure><p>之后按要求输入密码，就能成功连上网了，执行下面命令以退出iwd</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure><p>由于我没进行过实际操作，如果有什么疑义可以去下面的文档查找相关解决方法</p><blockquote><p><a href="https://wiki.archlinux.org/index.php/Wireless_network_configuration">https://wiki.archlinux.org/index.php/Wireless_network_configuration</a></p></blockquote><h5 id="成功连上网后，先更新系统时间"><a href="#成功连上网后，先更新系统时间" class="headerlink" title="成功连上网后，先更新系统时间"></a>成功连上网后，先更新系统时间</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timedatectl set-ntp true</span><br></pre></td></tr></table></figure><p>正常情况下是没什么输出的..如果出现了什么新的情况，我也没什么办法，因为我是正常的</p><p>实在不放心的就输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">timedatectl status</span><br></pre></td></tr></table></figure><h5 id="这下应该没问题了，然后进行下一步"><a href="#这下应该没问题了，然后进行下一步" class="headerlink" title="这下应该没问题了，然后进行下一步"></a>这下应该没问题了，然后进行下一步</h5><hr><h3 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h3><h5 id="操作前一定要特别注意，一定不要操作失误，一定要清楚自己所做的每一步带来的影响，不然你数据没了，不过我是虚拟机，可以随便试"><a href="#操作前一定要特别注意，一定不要操作失误，一定要清楚自己所做的每一步带来的影响，不然你数据没了，不过我是虚拟机，可以随便试" class="headerlink" title="操作前一定要特别注意，一定不要操作失误，一定要清楚自己所做的每一步带来的影响，不然你数据没了，不过我是虚拟机，可以随便试"></a>操作前一定要特别注意，一定不要操作失误，一定要清楚自己所做的每一步带来的影响，不然你数据没了，不过我是虚拟机，可以随便试</h5><ul><li><h5 id="首先查看目前的分区情况"><a href="#首先查看目前的分区情况" class="headerlink" title="首先查看目前的分区情况"></a>首先查看目前的分区情况</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l</span><br></pre></td></tr></table></figure><p><img src="/css/5.png" alt="1"></p><p>可以直观看到我的磁盘<code>/dev/sda</code>下是没有分区的</p><h5 id="接下来我们创建一个引导分区"><a href="#接下来我们创建一个引导分区" class="headerlink" title="接下来我们创建一个引导分区"></a>接下来我们创建一个引导分区</h5><p>执行命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk &#x2F;dev&#x2F;sda # 将sda换成你要进行分区的磁盘</span><br></pre></td></tr></table></figure><p>接下来就进入了<strong>fdisk</strong>的操作环境，可以输入<strong>m</strong>来查看各命令作用</p><ol><li><p>首先我是一块全新的磁盘：输入<strong>g</strong>创建一个全新的gpt分区表</p></li><li><p>输入n创建一个新的分区，一直回车默认即可，也可以自行分配</p></li><li><p>然后输入p来查看新创建的分区</p></li><li><p>输入w使所有的操作写入磁盘生效</p></li><li><p>输入以下命令格式化刚刚创建的引导分区</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.fat -F32 &#x2F;dev&#x2F;sda1 # sda1替换成你创建的分区名字</span><br></pre></td></tr></table></figure><h5 id="执行完上面操作后引导分区就创建好了"><a href="#执行完上面操作后引导分区就创建好了" class="headerlink" title="执行完上面操作后引导分区就创建好了"></a>执行完上面操作后引导分区就创建好了</h5><h5 id="创建一个根分区"><a href="#创建一个根分区" class="headerlink" title="创建一个根分区"></a>创建一个根分区</h5><ol><li><p>首先我是一块全新的磁盘：输入<strong>o</strong>创建一个全新的MBR分区表</p></li><li><p>输入n创建一个新的分区，一直回车默认即可，也可以自行分配</p></li><li><p>然后输入p来查看新创建的分区</p></li><li><p>输入w使所有的操作写入磁盘生效</p></li><li><p>输入以下命令格式化刚刚创建的根分区</p></li></ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext4 &#x2F;dev&#x2F;sda1 # sda1替换成你创建的分区名字</span><br></pre></td></tr></table></figure><p><img src="/css/6.png" alt="1"></p><p>如你所见，现在多出了一块分区/dev/sda1</p><hr><h3 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h3><ul><li><h5 id="执行以下命令将分区挂载到-mnt"><a href="#执行以下命令将分区挂载到-mnt" class="headerlink" title="执行以下命令将分区挂载到/mnt"></a>执行以下命令将分区挂载到<code>/mnt</code></h5></li></ul><p>输入命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount &#x2F;dev&#x2F;sda1 &#x2F;mnt # 将sda1替换成之前创建的根分区</span><br></pre></td></tr></table></figure><ul><li><h5 id="如果是EFI-GPT引导方式，执行下列命令挂载到-mnt-boot"><a href="#如果是EFI-GPT引导方式，执行下列命令挂载到-mnt-boot" class="headerlink" title="如果是EFI/GPT引导方式，执行下列命令挂载到/mnt/boot"></a>如果是EFI/GPT引导方式，执行下列命令挂载到/mnt/boot</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir &#x2F;mnt&#x2F;boot</span><br><span class="line">mount &#x2F;dev&#x2F;sda1 &#x2F;mnt&#x2F;boot # 将sda1替换成引导分区</span><br></pre></td></tr></table></figure><h5 id="挂载结束就可以选择镜像了"><a href="#挂载结束就可以选择镜像了" class="headerlink" title="挂载结束就可以选择镜像了"></a>挂载结束就可以选择镜像了</h5><hr><h3 id="选择镜像"><a href="#选择镜像" class="headerlink" title="选择镜像"></a>选择镜像</h3><p>根据不同地区选择不同的镜像来加快下载速度</p><p><del>硬下也没关系，只不过可能要下到猴年马月</del></p><p>执行以下命令来编辑源文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;pacman.d&#x2F;mirrorlist</span><br></pre></td></tr></table></figure><p>找到标有China的镜像源，剪切到最前面的位置</p><p>找不到就直接复制</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Server &#x3D; http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;archlinux&#x2F;$repo&#x2F;os&#x2F;$arch</span><br><span class="line">Server &#x3D; http:&#x2F;&#x2F;mirrors.zju.edu.cn&#x2F;archlinux&#x2F;$repo&#x2F;os&#x2F;$arch</span><br></pre></td></tr></table></figure><p>之后用<code>:wq</code>保存并退出即可<img src="/css/2.jpg" alt="1"></p><hr><h3 id="安装基本包"><a href="#安装基本包" class="headerlink" title="安装基本包"></a>安装基本包</h3><p>折腾了一堆东西，总算可以开始安装基本包了，本过程需要全程联网<del>废话</del></p><p>执行以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacstrap &#x2F;mnt base base-devel linux linux-firmware dhcpcd</span><br></pre></td></tr></table></figure><h5 id="重新出现命令提示符说明下载结束了，可以进行下一步操作"><a href="#重新出现命令提示符说明下载结束了，可以进行下一步操作" class="headerlink" title="重新出现命令提示符说明下载结束了，可以进行下一步操作"></a>重新出现命令提示符说明下载结束了，可以进行下一步操作</h5><hr><h3 id="配置Fstab"><a href="#配置Fstab" class="headerlink" title="配置Fstab"></a>配置Fstab</h3><p>生成一个Fstab文件通过UUID或者标签进行定义</p><p>执行以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genfstab -U &#x2F;mnt &gt;&gt; &#x2F;mnt&#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure><p>检查输出的文件<code>/mnt/etc/fstab</code>是否正确</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;mnt&#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure><p>没什么好讲的</p><h3 id="Chroot"><a href="#Chroot" class="headerlink" title="Chroot"></a>Chroot</h3><p>把Root权限给到新的系统</p><p>执行以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arch-chroot &#x2F;mnt</span><br></pre></td></tr></table></figure><p><img src="/css/7.png" alt="1"></p><h5 id="像上面这样"><a href="#像上面这样" class="headerlink" title="像上面这样"></a>像上面这样</h5><hr><h3 id="设置时区"><a href="#设置时区" class="headerlink" title="设置时区"></a>设置时区</h3><p>输入以下指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -sf &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Region&#x2F;City &#x2F;etc&#x2F;localtime # &#x2F;Region&#x2F;City改为自己城市和地区，例如&#x2F;Asia&#x2F;Shanghai</span><br><span class="line">hwclock --systohc</span><br></pre></td></tr></table></figure><hr><h3 id="安装必须软件包"><a href="#安装必须软件包" class="headerlink" title="安装必须软件包"></a>安装必须软件包</h3><p>可以通过Archlinux的包管理器<strong>pacman</strong>下载，大部分情况只需要一行命令就帮你搞定依赖和安装的问题</p><p>输入以下指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S vim dialog wpa_supplicant ntfs-3g networkmanager netctl</span><br></pre></td></tr></table></figure><hr><h3 id="设置locale"><a href="#设置locale" class="headerlink" title="设置locale"></a>设置locale</h3><p>执行以下命令已编辑/etc/locale.gen文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;locale.gen</span><br></pre></td></tr></table></figure><p>在文件中找到zh_CN.UTF-8 UTF-8和en_US.UTF-8 UTF-8</p><p>去掉开头的#号，并:<strong>wq</strong>保存退出</p><p>再执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">locale-gen</span><br></pre></td></tr></table></figure><p>打开<del>创建</del><code>/etc/locale.conf</code>文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;locale.conf</span><br></pre></td></tr></table></figure><p>在文件第一行加入<strong>LANG=en_US.UTF-8</strong></p><p>:<strong>wq</strong>并退出</p><hr><h3 id="设置Root密码"><a href="#设置Root密码" class="headerlink" title="设置Root密码"></a>设置Root密码</h3><p>没什么好说的</p><p>输入以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure><p>按提示确认即可</p><hr><h3 id="安装Intel-ucode-非Intel的CPU的就跳过"><a href="#安装Intel-ucode-非Intel的CPU的就跳过" class="headerlink" title="安装Intel-ucode(非Intel的CPU的就跳过)"></a>安装Intel-ucode(非Intel的CPU的就跳过)</h3><p><strong>pacman</strong>安装</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S intel-ucode</span><br></pre></td></tr></table></figure><hr><h3 id="如果存在其他系统，安装os-prober"><a href="#如果存在其他系统，安装os-prober" class="headerlink" title="如果存在其他系统，安装os-prober"></a>如果存在其他系统，安装os-prober</h3><p>执行以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S os-prober</span><br></pre></td></tr></table></figure><hr><h3 id="安装grub进行引导"><a href="#安装grub进行引导" class="headerlink" title="安装grub进行引导"></a>安装grub进行引导</h3><ul><li><h5 id="安装grub："><a href="#安装grub：" class="headerlink" title="安装grub："></a>安装grub：</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S grub</span><br></pre></td></tr></table></figure><ul><li><h5 id="部署grub："><a href="#部署grub：" class="headerlink" title="部署grub："></a>部署grub：</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-install --target&#x3D;i386-pc &#x2F;dev&#x2F;sda # 将sda换成你的硬盘</span><br></pre></td></tr></table></figure><ul><li><h5 id="生成配置文件："><a href="#生成配置文件：" class="headerlink" title="生成配置文件："></a>生成配置文件：</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-mkconfig -o &#x2F;boot&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure><h5 id="如果是EFI-GPT引导方式"><a href="#如果是EFI-GPT引导方式" class="headerlink" title="如果是EFI/GPT引导方式"></a>如果是EFI/GPT引导方式</h5><ul><li><h5 id="安装grub和efibootmgr："><a href="#安装grub和efibootmgr：" class="headerlink" title="安装grub和efibootmgr："></a>安装grub和efibootmgr：</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S grub efibootmgr</span><br></pre></td></tr></table></figure><ul><li><h5 id="部署grub：-1"><a href="#部署grub：-1" class="headerlink" title="部署grub："></a>部署grub：</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-install --target&#x3D;x86_64-efi --efi-directory&#x3D;&#x2F;boot --bootloader-id&#x3D;grub</span><br></pre></td></tr></table></figure><ul><li><h5 id="生成配置文件：-1"><a href="#生成配置文件：-1" class="headerlink" title="生成配置文件："></a>生成配置文件：</h5></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-mkconfig -o &#x2F;boot&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure><p>如果引导或挂载没什么问题这里应该是正常的<del>应该</del></p><hr><h3 id="安装后检查"><a href="#安装后检查" class="headerlink" title="安装后检查"></a>安装后检查</h3><p>输入以下指令检查是否成功生成各系统入口：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;boot&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure><p>如果没生成其他系统入口，请自行查阅</p><blockquote><p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Combining_the_use_of_UUIDs_and_basic_scripting">https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Combining_the_use_of_UUIDs_and_basic_scripting</a></p></blockquote><p>vans后就进行下一步</p><hr><h3 id="Reboot"><a href="#Reboot" class="headerlink" title="Reboot"></a>Reboot</h3><h5 id="一定要先确保所有步骤无误，否则重启后一切努力就会全部木大！"><a href="#一定要先确保所有步骤无误，否则重启后一切努力就会全部木大！" class="headerlink" title="一定要先确保所有步骤无误，否则重启后一切努力就会全部木大！"></a>一定要先确保所有步骤无误，否则重启后一切努力就会全部木大！</h5><p>确保无误后先输入<code>exit</code></p><p>然后取消挂载</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">umount &#x2F;mnt</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><p><img src="/css/8.png" alt="1"></p><p>如果你成功进入到这里了，恭喜你，你已经完成安装了</p><hr><h2 id="安装后配置"><a href="#安装后配置" class="headerlink" title="安装后配置"></a>安装后配置</h2><ul><li><h5 id="安装gnome图形界面"><a href="#安装gnome图形界面" class="headerlink" title="安装gnome图形界面"></a>安装gnome图形界面</h5></li></ul><p>输入以下指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S gnome gnome-extra</span><br></pre></td></tr></table></figure><p>如果下载失败了，很大程度上是因为你没联网<img src="/css/32.png" alt="1"></p><ul><li><h5 id="安装Xorg"><a href="#安装Xorg" class="headerlink" title="安装Xorg"></a>安装Xorg</h5></li></ul><p>开源图形服务，没有它就不支持桌面环境</p><p>执行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S xorg</span><br></pre></td></tr></table></figure><ul><li><h5 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h5></li></ul><p>禁用netctl启用NetworkManager<del>言简意赅</del></p><p>输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl disable netctl</span><br><span class="line">sudo systemctl enable NetworkManager</span><br></pre></td></tr></table></figure><p>你也可以安装桌面工具栏来配置网络</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S network-manager-applet</span><br></pre></td></tr></table></figure><ul><li><h5 id="安装并启用gdm"><a href="#安装并启用gdm" class="headerlink" title="安装并启用gdm"></a>安装并启用gdm</h5></li></ul><p>执行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pacman -S gdm</span><br><span class="line">systemctl enable gdm</span><br><span class="line">systemctl start gdm</span><br></pre></td></tr></table></figure><p>最后</p><p><img src="/css/9.png" alt="1"></p><hr><h2 id="安装结束"><a href="#安装结束" class="headerlink" title="安装结束"></a>安装结束</h2><p>如果在安装过程中你们遇到什么问题可以和我讲，我大家一起探讨</p><p>整篇文章有很多写错的地方还请指出斧正</p><p>谢谢！<br><img src="/css/33.png" alt="1"></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="先前有尝试过用vmware装archlinux">先前有尝试过用VMware装Archlinux</span></h1><p>因为整个系统都是在Cli下一步步引导安装</p><p>打算针对只会Windows的完全没接触过GNU/Linux的新手写一个零基础安装教学</p><p>这回不再使用VMware进行安装，直接上手实机进行EFI引导安装arch</p><p>内容可能会有一些错误，如有发现请即刻私信我</p><p>我也是没有过这类手动安装linux的经历，如果遇到什么问题也可以找我讨论<img src="/css/1.jpg"></p><p>另外，尽管这类教程Google上一搜一大片</p><p>但还是有些不全面的地方，这个教程会针对新人，保证仅通过复制代码不清楚代码作用的情况下也能顺利安装</p><p>这个教学不只是针对新人，也为了日后我速通archlinux。冷知识：目前世界记录是一分多钟</p><p>具体安装速度取决于网速，取决于你安装基本包的速度</p><p><strong>Tips：</strong>本次安装使用y7000p进行实机安装</p><p>废话说完了，开始操作</p><h3><span id="安装前准备">安装前准备</span></h3><blockquote><p>首先把官方文档的链接放在下面，有能力的先对照着看</p></blockquote><blockquote><p><a href="https://wiki.archlinux.org/index.php/Installation_guide">https://wiki.archlinux.org/index.php/Installation_guide</a></p></blockquote><p>备份结束后就可以下载ISO了</p><blockquote><p><a href="https://www.archlinux.org/download/">https://www.archlinux.org/download/</a></p></blockquote><p>进入以后可以选择下载磁力链或种子<br><img src="/css/2.png"></p><p>当然我是选择的磁力链，迅雷下载也是比较快的</p><p>下载结束后也最好检验一下哈希值，这里就不详细说明怎么检验了</p><p>下载完镜像后可以使用rufus创建引导U盘，这里也不一一阐述</p><p>引导盘弄好后，就可以开始安装了</p><hr><h3><span id="安装">安装</span></h3><p> 首先重启电脑进入BIOS界面</p><p><img src="/css/1.png" alt="另外如果出现这样的界面已经成功了"></p><p>然后设置你的U盘启动项为首位</p><p> 这里选择第一个选项或是等待过后自动进入安装页面</p><p><img src="/css/3.png" alt="1"></p><h3><span id="首先确定自己的引导方式">首先确定自己的引导方式</span></h3><p>执行以下命令</p><p><code>ls /sys/firmware/efi/efivars</code></p><p>执行命令后，如果弹出一大堆东西，说明你是EFI引导，如果弹出下面的信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls: cannot access &#39;&#x2F;sys&#x2F;firmware&#x2F;efi&#x2F;efivars&#39;: No such file or directory</span><br></pre></td></tr></table></figure><p>则说明你是以BIOS方式引导</p><p>两种不同的类型安装方式也会有所不同</p><p>本次安装采用EFI引导安装</p><hr><h3><span id="联网">联网</span></h3><p><strong>arch</strong>不能离线安装，需要通过联网来下载相关的包和组件，首先我们需要联网</p><p>如果你是有线网，输入以下命令获取IP地址</p><p><code>dhcpcd</code></p><p>然后再通过ping来判断是否联网，例如：</p><p><code>ping www.baidu.com</code></p><p>ping通了就说明连上网了</p><p>如果你是无线网，就执行以下命令：</p><p><code>iwctl</code></p><p>会进入一个以<strong>iwd</strong>开头的Cli环境中，然后执行</p><p><code>device list</code></p><p>会出现以下情况</p><p><img src="/css/4.png" alt="1"></p><p>有的人可能会像我这样，设备的powered是off的，这时候可以执行rfkill unblock wlan</p><p>再次<code>device list</code>即可</p><p>然后执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">station name scan # 使用wlan0进行无线网络扫描</span><br><span class="line">station name get-networks # 使用wlan0列出扫描到的网络</span><br><span class="line">station name connect WIFI # 使用wlan0连接到你家WIFI</span><br></pre></td></tr></table></figure><p>之后按要求输入密码，就能成功连上网了，执行下面命令以退出iwd</p><p><code>quit</code></p><p>之后再尝试<code>ping baidu.com</code></p><p>如果ping的通就连上了</p><p>目前我没遇到过什么问题，如遇到问题可以先上官方论坛查找，下方是官方wiki</p><blockquote><p><a href="https://wiki.archlinux.org/index.php/Wireless_network_configuration">https://wiki.archlinux.org/index.php/Wireless_network_configuration</a></p></blockquote><hr><h3><span id="分区">分区</span></h3><p>操作前一定要特别注意，一定不要操作失误，一定要清楚自己所做的每一步带来的影响，不然你数据就没了</p><p>首先查看目前的分区情况</p><p><code>fdisk -l</code></p><p><img src="/css/5.png" alt="1"></p><p>可以先清空磁盘，删除掉不需要的分区，需要注意的是不要删错，下面以我为例</p><p>执行<code>fdisk /dev/nvme0n1</code></p><p>然后输入<code>d</code>，一路回车，最后输入<code>w</code>保存</p><p>然后可以<strong>CTRL+C</strong>退出fdisk</p><p>下面对磁盘进行分区</p><p>我采用的是cfdisk进行，还是以我为例</p><p>执行<code>cfdisk /dev/nvme0n1</code></p><p>下方回车new选项，回车</p><p>大小输入300M，回车，创建一个EFI分区</p><p><img src="/css/38.png" alt="1"></p><p>此时已经创建了一个EFI分区</p><p>然后再选中剩下的free space再创建一个根分区</p><p>回车new创建完成后再回车write，输入yes，回车</p><p>然后回车quit离开</p><p>此时再<code>fdisk -l</code>就会发现已经分区完成了</p><p>格式化分区</p><p>执行以下命令对EFI分区和根分区进行格式化</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkfs.fat -F32 &#x2F;dev&#x2F;nvme0n1p1 #对EFI分区进行格式化</span><br><span class="line">mkfs.ext4 &#x2F;dev&#x2F;nvme0n1p2 #对根分区进行格式化</span><br></pre></td></tr></table></figure><p>格式化结束进行下一步</p><p>挂载</p><p>首先挂载根分区</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount &#x2F;dev&#x2F;你的根分区 &#x2F;mnt</span><br></pre></td></tr></table></figure><p>随后创建EFI分区的挂载点</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir &#x2F;mnt&#x2F;boot</span><br><span class="line">mkdir &#x2F;mnt&#x2F;boot&#x2F;EFI</span><br></pre></td></tr></table></figure><p>挂载EFI分区</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount &#x2F;dev&#x2F;你的EFI分区 &#x2F;mnt&#x2F;boot&#x2F;EFI</span><br></pre></td></tr></table></figure><p>挂载结束进行下一步</p><hr><h3><span id="选择镜像">选择镜像</span></h3><p>根据不同地区选择不同的镜像来加快下载速度</p><p><del>硬下也没关系，只不过可能要下到猴年马月</del></p><p>执行以下命令来编辑源文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;pacman.d&#x2F;mirrorlist</span><br></pre></td></tr></table></figure><p>找到标有China的镜像源，剪切到最前面的位置</p><p>找不到就直接手搓</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Server &#x3D; http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;archlinux&#x2F;$repo&#x2F;os&#x2F;$arch</span><br><span class="line">Server &#x3D; http:&#x2F;&#x2F;mirrors.zju.edu.cn&#x2F;archlinux&#x2F;$repo&#x2F;os&#x2F;$arch</span><br></pre></td></tr></table></figure><p>之后用<code>:wq</code>保存并退出即可<img src="/css/37.png" alt="1"></p><hr><h3><span id="安装基本包">安装基本包</span></h3><p>折腾了一堆东西，总算可以开始安装基本包了，本过程需要全程联网<del>废话</del></p><p>执行以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacstrap &#x2F;mnt base base-devel linux linux-firmware dhcpcd </span><br></pre></td></tr></table></figure><p>能不能速通就看网速了，arch安装一般就卡在网速上</p><p>不过镜像配置好是不会很久的</p><hr><h3><span id="配置fstab">配置Fstab</span></h3><p>生成一个Fstab文件通过UUID或者标签进行定义</p><p>执行以下命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genfstab -U &#x2F;mnt &gt;&gt; &#x2F;mnt&#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &#x2F;mnt&#x2F;etc&#x2F;fstab</span><br></pre></td></tr></table></figure><p>检查输出的文件<code>/mnt/etc/fstab</code>是否正确</p><p>比如查看是否有/boot/EFI的文件，如果没出现说明挂载没成功</p><p>需要重新挂载后再生成一次</p><p>结束进行下一步</p><h3><span id="chroot">Chroot</span></h3><p>切换到根目录</p><p>执行<code>arch-chroot /mnt</code></p><p><img src="/css/7.png" alt="1"></p><hr><h3><span id="设置时区">设置时区</span></h3><p>输入以下指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -sf &#x2F;usr&#x2F;share&#x2F;zoneinfo&#x2F;Region&#x2F;City &#x2F;etc&#x2F;localtime # &#x2F;Region&#x2F;City改为自己城市和地区，例如&#x2F;Asia&#x2F;Shanghai</span><br><span class="line">hwclock --systohc #设置时间漂移</span><br></pre></td></tr></table></figure><p>结束到下一步</p><hr><h3><span id="安装vim和sudo">安装vim和sudo</span></h3><p>可以通过Archlinux的包管理器<strong>pacman</strong>下载，大部分情况只需要一行命令就帮你搞定依赖和安装的问题</p><p>输入以下指令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S vim sudo</span><br></pre></td></tr></table></figure><hr><h3><span id="配置locale">配置locale</span></h3><p>执行以下命令已编辑/etc/locale.gen文件</p><p><code>vim /etc/locale.gen</code></p><p>在文件中找到zh_CN.UTF-8 UTF-8和en_US.UTF-8 UTF-8</p><p>去掉开头的#号，并:<strong>wq</strong>保存退出</p><p>再执行<code>locale-gen</code></p><p>下一步</p><hr><h3><span id="设置语言">设置语言</span></h3><p><code>vim /etc/locale.conf</code></p><p>在里面输入<strong>LANG=en_US.UTF-8</strong></p><p><strong>:wq</strong>退出</p><hr><h3><span id="设置主机名字">设置主机名字</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 主机名 &gt; &#x2F;etc&#x2F;hostname</span><br></pre></td></tr></table></figure><hr><h3><span id="配置hosts文件">配置hosts文件</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;hosts</span><br></pre></td></tr></table></figure><p><img src="/css/39.png" alt="1"></p><p>其中的anastasia改为上一步你设置的主机名字</p><p><strong>:wq</strong>保存退出</p><hr><h3><span id="启用dhcpcd服务">启用dhcpcd服务</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable dhcpcd.service</span><br></pre></td></tr></table></figure><hr><h3><span id="设置root密码">设置Root密码</span></h3><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure><p>按提示确认即可</p><hr><h3><span id="创建普通用户并设置密码并赋予其sudo权限">创建普通用户并设置密码并赋予其sudo权限</span></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -m -G wheel -s &#x2F;bin&#x2F;bash 用户名</span><br></pre></td></tr></table></figure><p>然后</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd 用户名</span><br></pre></td></tr></table></figure><p>接着</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></table></figure><p>找到%wheel ALL=(ALL:ALL) ALL，并把其前面的注释#去掉，保存退出</p><hr><h3><span id="安装引导">安装引导</span></h3><p>安装grub和efibootmgr：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S grub efibootmgr</span><br></pre></td></tr></table></figure><p>部署grub：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-install --target&#x3D;x86_64-efi --efi-directory&#x3D;&#x2F;boot&#x2F;EFI</span><br></pre></td></tr></table></figure><p>生成配置文件：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-mkconfig -o &#x2F;boot&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure><p>如果是EFI/GPT引导方式</p><p>如果引导或挂载没什么问题这里应该是正常的</p><hr><h3><span id="安装后检查">安装后检查</span></h3><p>输入以下指令检查是否成功生成各系统入口：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;boot&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure><p>如果没生成其他系统入口，请自行查阅</p><blockquote><p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Combining_the_use_of_UUIDs_and_basic_scripting">https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Combining_the_use_of_UUIDs_and_basic_scripting</a></p></blockquote><p>vans后就进行下一步</p><hr><h3><span id="reboot">Reboot</span></h3><p>一定要先确保所有步骤无误，否则重启后一切努力就会全部木大！</p><p>确保无误后先输入<code>exit</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure><p>重启</p><p><img src="/css/8.png" alt="1"></p><p>如果你成功进入到这里了，恭喜你，你已经完成安装了</p><p>算算时间，看看你一共花了多长时间吧</p><hr><h3><span id="安装后配置">安装后配置</span></h3><p>查看显示设备</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lspci | grep VGA</span><br></pre></td></tr></table></figure><p>安装通用显示驱动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S xf86-video-vesa</span><br></pre></td></tr></table></figure><p>安装xorg</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S xorg</span><br></pre></td></tr></table></figure><p>安装字体</p><p>安装字体，不然有可能出现方块字</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S wqy-microhei</span><br></pre></td></tr></table></figure><p>安装KDE桌面</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S plasma kde-applications</span><br></pre></td></tr></table></figure><p>启用sddm显示和network网络管理器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable sddm</span><br><span class="line">systemctl enable NetworkManager</span><br></pre></td></tr></table></figure><p>重启<code>reboot</code></p><p>最后</p><p><img src="/css/9.jpg" alt="1"></p><hr><h3><span id="结束">结束</span></h3><p>至此archlinux的图形化界面已经安装结束了</p><p>如果在安装过程中你们遇到什么问题可以上论坛找，也可以找我</p><p>整篇文章如有写错的地方还请指出</p><p>谢谢！<br><img src="/css/33.png" alt="1"></p>]]></content>
     
     
       
@@ -215,21 +319,23 @@
     
     
     
-    <category term="技术" scheme="https://wynio.pw/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://wynio.online/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Linux" scheme="https://wynio.pw/tags/Linux/"/>
+    <category term="Linux" scheme="https://wynio.online/tags/Linux/"/>
     
-    <category term="系统" scheme="https://wynio.pw/tags/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="系统" scheme="https://wynio.online/tags/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="瞎折腾" scheme="https://wynio.pw/tags/%E7%9E%8E%E6%8A%98%E8%85%BE/"/>
+    <category term="折腾" scheme="https://wynio.online/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="笔记" scheme="https://wynio.online/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>近期声明 ①</title>
-    <link href="https://wynio.pw/posts/b180/"/>
-    <id>https://wynio.pw/posts/b180/</id>
+    <link href="https://wynio.online/posts/b180/"/>
+    <id>https://wynio.online/posts/b180/</id>
     <published>2021-01-25T05:16:23.000Z</published>
     <updated>2021-10-16T11:06:12.227Z</updated>
     
@@ -243,17 +349,17 @@
     
     
     
-    <category term="公告" scheme="https://wynio.pw/categories/%E5%85%AC%E5%91%8A/"/>
+    <category term="公告" scheme="https://wynio.online/categories/%E5%85%AC%E5%91%8A/"/>
     
     
-    <category term="闲聊" scheme="https://wynio.pw/tags/%E9%97%B2%E8%81%8A/"/>
+    <category term="闲聊" scheme="https://wynio.online/tags/%E9%97%B2%E8%81%8A/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://wynio.pw/posts/4a17b156/"/>
-    <id>https://wynio.pw/posts/4a17b156/</id>
+    <link href="https://wynio.online/posts/4a17b156/"/>
+    <id>https://wynio.online/posts/4a17b156/</id>
     <published>2020-11-29T04:23:19.000Z</published>
     <updated>2021-10-23T09:33:11.472Z</updated>
     
@@ -267,12 +373,12 @@
     
     
     
-    <category term="start" scheme="https://wynio.pw/categories/start/"/>
+    <category term="start" scheme="https://wynio.online/categories/start/"/>
     
     
-    <category term="Hexo" scheme="https://wynio.pw/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://wynio.online/tags/Hexo/"/>
     
-    <category term="Hello world" scheme="https://wynio.pw/tags/Hello-world/"/>
+    <category term="Hello world" scheme="https://wynio.online/tags/Hello-world/"/>
     
   </entry>
   

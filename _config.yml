@@ -6,14 +6,14 @@
 title: Nocturne
 subtitle: 'Branch of Ivory Tower'
 description: 'The Encyclopedia of Ivory Tower'
-keywords: Rectitude/Shtraiy/Kanaria/Nocturne/Resalia
+keywords: Rectitude/Shtraiy/Kanaria/Nocturne/Resalia/Anastasia
 author: Resalia
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://wynio.pw
+url: https://wynio.online
 root: /
 permalink: posts/:abbrlink/
 permalink_defaults:
@@ -45,7 +45,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
+highlight: 
   enable: true
   line_number: true
   auto_detect: false

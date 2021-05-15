@@ -9,8 +9,11 @@
     letter-spacing: .01em
     font-weight: 700
     font-style: normal
-    font-size: 1.5rem
-    line-height: 2rem
+    font-size: 2rem
+    line-height: 4rem
+    background: linear-gradient(#31d6c3,#3191d6)
+    -webkit-background-clip: text
+    color: transparent
 
     antialias()
 
@@ -37,13 +40,14 @@
     letter-spacing: .01em
     font-weight: 200
     font-style: normal
-    font-size: .8rem
+    font-size: 1.2rem
+
 
     ul
       margin: 0
       padding: 0
       list-style-type: none
-      line-height: 15px
+      line-height: 20px
 
       a
         margin-right: 15px
@@ -80,11 +84,14 @@ if $logo-grayout
     display: table
     margin-right: 5rem
     min-height: $logo-height
+
     h1
       display: table-cell
       vertical-align: middle
 
   #header #nav
+    margin-top: 10px
+
     ul
       a:hover
         background: none
@@ -92,6 +99,7 @@ if $logo-grayout
       li
         display: none
         border-right: 0
+        font-size: 1rem
 
       li.icon
         position: absolute
