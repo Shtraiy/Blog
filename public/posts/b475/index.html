@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="最近闲来无事，抽空搞了一下以前废弃的项目 主要内容是利用koishi框架搭建的一个bot 可以实现一些简单的功能主要使用的是其他大佬写的轮子 下面放一下官方文档  https:&#x2F;&#x2F;koishi.chat&#x2F;  下面就记录一下我安装的方式，我是通过创建模板安装的  首先需要安装Node.js(最低 v14，推荐使用 LTS)环境   https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;    使用包管理器进行">
+    <meta name="description" content="最近闲来无事，抽空搞了一下以前废弃的项目 主要内容是利用koishi框架搭建的一个bot koishi搭建项目模板 可以实现一些简单的功能主要使用的是其他大佬写的轮子 下面放一下官方文档  https:&#x2F;&#x2F;koishi.chat&#x2F;  下面就记录一下我安装的方式，我是通过创建模板安装的  首先需要安装Node.js(最低 v14，推荐使用 LTS)环境   https:&#x2F;&#x2F;nodejs.org&#x2F;en">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于koishi机器人框架的一些笔记">
 <meta property="og:url" content="https://wynio.online/posts/b475/index.html">
 <meta property="og:site_name" content="Nocturne">
-<meta property="og:description" content="最近闲来无事，抽空搞了一下以前废弃的项目 主要内容是利用koishi框架搭建的一个bot 可以实现一些简单的功能主要使用的是其他大佬写的轮子 下面放一下官方文档  https:&#x2F;&#x2F;koishi.chat&#x2F;  下面就记录一下我安装的方式，我是通过创建模板安装的  首先需要安装Node.js(最低 v14，推荐使用 LTS)环境   https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;    使用包管理器进行">
+<meta property="og:description" content="最近闲来无事，抽空搞了一下以前废弃的项目 主要内容是利用koishi框架搭建的一个bot koishi搭建项目模板 可以实现一些简单的功能主要使用的是其他大佬写的轮子 下面放一下官方文档  https:&#x2F;&#x2F;koishi.chat&#x2F;  下面就记录一下我安装的方式，我是通过创建模板安装的  首先需要安装Node.js(最低 v14，推荐使用 LTS)环境   https:&#x2F;&#x2F;nodejs.org&#x2F;en">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://koishi.chat/manual/nodejs/home-light.webp">
 <meta property="article:published_time" content="2023-02-04T12:52:54.000Z">
-<meta property="article:modified_time" content="2023-02-04T13:05:32.569Z">
+<meta property="article:modified_time" content="2023-02-06T04:59:17.702Z">
 <meta property="article:author" content="Resalia">
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="bot">
@@ -119,7 +119,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">koishi搭建项目模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">选择onebot的通信方式、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">go-cqhttp配置参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.3.</span> <span class="toc-text">启用插件</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -144,7 +144,7 @@
       
         <time datetime="2023-02-04T12:52:54.000Z" itemprop="datePublished">2023-02-04</time>
         
-        (Updated: <time datetime="2023-02-04T13:05:32.569Z" itemprop="dateModified">2023-02-04</time>)
+        (Updated: <time datetime="2023-02-06T04:59:17.702Z" itemprop="dateModified">2023-02-06</time>)
         
       
     </div>
@@ -195,6 +195,7 @@
   <div class="content" itemprop="articleBody">
     <h1><span id="最近闲来无事抽空搞了一下以前废弃的项目">最近闲来无事，抽空搞了一下以前废弃的项目</span></h1>
 <p>主要内容是利用koishi框架搭建的一个bot</p>
+<h2><span id="koishi搭建项目模板">koishi搭建项目模板</span></h2>
 <p>可以实现一些简单的功能<s>主要使用的是其他大佬写的轮子</s></p>
 <p>下面放一下官方文档</p>
 <blockquote>
@@ -217,6 +218,33 @@
 <p>然后输入<strong>npm start</strong>启动项目</p>
 <p>这样你就成功拥有了一个自己的bot！</p>
 <p>接下来可以安装一些官方市场的插件来丰富它的功能</p>
+<p><strong>Onebot插件和go-cqhttp框架的使用</strong></p>
+<blockquote>
+<p>OneBot 是一个聊天机器人应用接口标准，目前可用于 QQ 聊天机器人的实现。你可以使用下列实现该协议的框架</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Mrs4s/go-cqhttp">Mrs4s/go-cqhttp</a>（推荐）<br>
+<a target="_blank" rel="noopener" href="https://github.com/yyuueexxiinngg/cqhttp-mirai">yyuueexxiinngg/cqhttp-mirai</a><br>
+<a target="_blank" rel="noopener" href="https://github.com/richardchien/coolq-http-api">richardchien/coolq-http-api</a>（配合 <a target="_blank" rel="noopener" href="https://github.com/iTXTech/mirai-native">iTXTech/mirai-native</a> 使用）</p>
+<p>这里我用的是go-cqhttp，本文后续部分仅介绍go-cqhttp的使用方法</p>
+<h3><span id="选择onebot的通信方式">选择onebot的通信方式、</span></h3>
+<p>根据官方文档，Onebot 协议规定了四种不同的通信方式：</p>
+<ul>
+<li>正向 HTTP：OneBot 作为 HTTP 服务端，提供 API 调用服务</li>
+<li>反向 HTTP：OneBot 作为 HTTP 客户端，向用户配置的 URL 推送事件，并处理用户返回的响应</li>
+<li>正向 WebSocket：OneBot 作为 WebSocket 服务端，接受用户连接，提供 API 调用和事件推送服务</li>
+<li>反向 WebSocket：OneBot 作为 WebSocket 客户端，主动连接用户配置的 URL，提供 API 调用和事件推送服务</li>
+</ul>
+<p>同时官方文档推荐使用正向 WebSocket，这种通信方式操作简便，且拥有相对较高的性能。在本文的后续部分我们将介绍每一种通信方式的配置方法</p>
+<p>首先从下载并解压最新版本的 <a target="_blank" rel="noopener" href="https://github.com/Mrs4s/go-cqhttp/releases">go-cqhttp</a></p>
+<p>解压完成后利用命令行cd进入go-cqhttp的目录<br>
+输入<code>./go-cqhttp</code>后按照提示选择通信方式</p>
+<h3><span id="go-cqhttp配置参考">go-cqhttp配置参考</span></h3>
+<p>主要配置官方文档都写着，这里就懒得写了</p>
+<p>放一下文档链接 <a target="_blank" rel="noopener" href="https://koishi.chat/plugins/adapter/onebot.html#go-cqhttp-%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83">点击这里</a></p>
+<h3><span id="启用插件">启用插件</span></h3>
+<p>填写完go-cqhttp的配置文件后可以在koishi自动生成的控制台启用adapter-onebot和gocqgttp插件</p>
+<p>gocqhttp插件主要作用是每次启用koishi时会创建一个gocqhttp的子进程，这样就不需要每次开机器人都手动运行一遍<code>./go-cqhttp</code>了</p>
+<p>然后根据提示进行验证就可以让onebot接管你的qq了</p>
 
   </div>
 </article>
@@ -254,7 +282,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">koishi搭建项目模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">选择onebot的通信方式、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">go-cqhttp配置参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.3.</span> <span class="toc-text">启用插件</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

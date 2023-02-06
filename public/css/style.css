@@ -829,11 +829,11 @@ body {
 }
 #header-post #toc .toc-level-3 {
   color: #666;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 #header-post #toc .toc-level-4 {
   color: #525252;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #header-post #toc .toc-level-5 {
   display: none;
@@ -1103,6 +1103,9 @@ article header .author {
 article header .postdate {
   display: inline;
 }
+article .content p a {
+  color: #27b0f5;
+}
 article .content p a:hover {
   background: linear-gradient(#e35522, #dece1b);
   -webkit-background-clip: text;
@@ -1153,7 +1156,7 @@ article .content blockquote p {
   color: rgba(85,85,85,0.5);
 }
 article .content blockquote p a {
-  color: rgba(85,85,85,0.5);
+  color: rgba(39,176,245,0.5);
 }
 article .content blockquote p a:hover {
   background: linear-gradient(#e35522, #dece1b);
@@ -1606,10 +1609,11 @@ pre code {
   border: none;
 }
 code {
-  padding: 0 5px;
-  border: 1px dotted #666;
+  padding: 5px 5px;
+  background: rgba(85,85,85,0.1);
   border-radius: 2px;
   -webkit-border-radius: 2px;
+  font-color: rgba(85,85,85,0.3);
 }
 .highlight {
   overflow-x: auto;

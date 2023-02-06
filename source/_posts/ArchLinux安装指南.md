@@ -506,9 +506,7 @@ systemctl enable NetworkManager
 
 重启```reboot```
 
-最后
-
-![1](/css/9.jpg)
+这个时候就进入到archlinux的图形化界面了
 
 ---
 
