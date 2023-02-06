@@ -435,8 +435,13 @@ body td {
 }
 @font-face {
   font-style: normal;
-  font-family: "Meslo LG";
-  src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
+  font-family: "JetBrains Mono Light";
+  src: local("JetBrains Mono Light"), url("../lib/JetBrainsMono-2.242/fonts/ttf/JetBrainsMono-Light.ttf") format("truetype");
+}
+@font-face {
+  font-style: normal;
+  font-family: "字心坊轩雅体";
+  src: local("字心坊轩雅体"), url("../lib/ZiXinFangXuanYaTiChangGui/ZiXinFangXuanYaTiChangGui-2.ttf") format("truetype");
 }
 *,
 *:before,
@@ -458,8 +463,8 @@ body {
   color: #2b2b2b;
   font-display: swap;
   font-weight: 400;
-  font-size: 17px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-size: 18px;
+  font-family: "JetBrains Mono Light", "字心坊轩雅体常规", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   flex: 1;
@@ -472,6 +477,9 @@ body {
   flex-direction: column;
   min-height: 100%;
   overflow-wrap: break-word;
+}
+.content ul li {
+  content: none;
 }
 .content p {
   hyphens: auto;
@@ -488,13 +496,6 @@ body {
 .content a {
   color: #2b2b2b;
   text-decoration: none;
-}
-.content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #31bdc4 4px, #31bdc4);
-  background-image: linear-gradient(transparent, transparent 5px, #2b2b2b 5px, #2b2b2b);
-  background-position: bottom;
-  background-size: 100% 6px;
-  background-repeat: repeat-x;
 }
 .content a.icon {
   background: none;
@@ -814,6 +815,7 @@ body {
   max-width: 20em;
   max-height: calc(95vh - 7rem);
   text-align: right;
+  list-style: none;
 }
 #header-post #toc a:hover {
   color: #31bdc4;
@@ -827,11 +829,11 @@ body {
 }
 #header-post #toc .toc-level-3 {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 #header-post #toc .toc-level-4 {
   color: #525252;
-  font-size: 0.4rem;
+  font-size: 0.9rem;
 }
 #header-post #toc .toc-level-5 {
   display: none;
@@ -1035,6 +1037,11 @@ body {
   margin-left: 0;
   list-style-type: none;
 }
+.post-list .post-item a:hover {
+  background: linear-gradient(#e35522, #dece1b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 .post-list .post-item .meta {
   display: block;
   margin-right: 16px;
@@ -1077,13 +1084,16 @@ article header .posttitle {
   -webkit-background-clip: text;
   color: transparent;
 }
-article header .meta {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
 article header .meta * {
   color: #8c8c8c;
   font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+article header .meta #example {
+  width: 0;
+  height: 0;
+  display: none;
 }
 article header .author {
   text-transform: uppercase;
@@ -1092,6 +1102,18 @@ article header .author {
 }
 article header .postdate {
   display: inline;
+}
+article .content p a:hover {
+  background: linear-gradient(#e35522, #dece1b);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+article .content ul li {
+  color: rgba(85,85,85,0.8);
+  font-weight: bold;
+}
+article .content ul li::marker {
+  color: #58beed;
 }
 article .content img,
 article .content video {
@@ -1118,22 +1140,25 @@ article .content .video-container embed {
 }
 article .content blockquote {
   margin: 1rem 10px;
-  padding: 0.5em 10px;
+  content: none;
+  border-left: 1px solid rgba(85,85,85,0.2);
+  border-width: 5px;
+  padding: 0 0 0 7px;
   background: inherit;
-  color: #30c9c4;
   quotes: "\201C" "\201D" "\2018" "\2019";
   font-weight: bold;
 }
 article .content blockquote p {
   margin: 0;
+  color: rgba(85,85,85,0.5);
 }
-article .content blockquote:before {
-  margin-right: 0.25em;
-  color: #30c9c4;
-  content: "\201C";
-  vertical-align: -0.4em;
-  font-size: 2em;
-  line-height: 0.1em;
+article .content blockquote p a {
+  color: rgba(85,85,85,0.5);
+}
+article .content blockquote p a:hover {
+  background: linear-gradient(#e35522, #dece1b);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 article .content blockquote footer {
   margin: line-height 0;
@@ -1244,40 +1269,30 @@ article .content .caption {
   -webkit-background-clip: text;
   color: transparent;
 }
-#footer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-#footer li {
-  display: inline-block;
-  margin-right: 15px;
-  border-right: 1px solid;
-  border-color: #666;
-  vertical-align: middle;
-}
-#footer li a {
-  margin-right: 15px;
-}
-#footer li:last-child {
-  margin-right: 0;
-  border-right: 0;
-}
-#footer li:last-child a {
-  margin-right: 0;
-}
-#footer a {
-  color: #666;
-  text-decoration: underline;
-  background-image: none;
-}
-#footer a:hover {
-  color: #858585;
-}
 #footer .footer-left {
   height: 20px;
   vertical-align: middle;
   line-height: 20px;
+  margin-top: 2px;
+}
+#footer .footer-right a {
+  background: linear-gradient(#cf1da5, #e62991);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 14px;
+}
+#footer .footer-right:hover a {
+  background: linear-gradient(#e35522, #dece1b);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 14px;
+}
+#footer .footer-ipv6 a:hover {
+  position: relative;
+  vertical-align: top;
+  background: linear-gradient(#e35522, #dece1b);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 @media (min-width: 39rem) {
   #footer {
@@ -1304,7 +1319,9 @@ article .content .caption {
 }
 .pagination .page-number {
   color: #2b2b2b;
+  position: relative;
   font-size: 0.8rem;
+  bottom: 2px;
 }
 .pagination a {
   padding: 4px 6px;
@@ -1312,6 +1329,11 @@ article .content .caption {
   background-image: none;
   color: #2b2b2b;
   text-decoration: none;
+}
+.pagination a i:hover {
+  background: linear-gradient(#cf1da5, #e62991);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .pagination a:hover {
   background-image: none;
@@ -1374,7 +1396,7 @@ article .content .caption {
 }
 #tag-cloud .tag-cloud-tags a {
   display: inline-block;
-  margin: 20px;
+  margin: 8px;
 }
 .tooltipped {
   position: relative;
@@ -1389,7 +1411,7 @@ article .content .caption {
   font-display: swap;
   font-weight: 400;
   font-size: 12.8px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "JetBrains Mono Light", "字心坊轩雅体常规", monospace;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   text-align: center;
@@ -1480,8 +1502,17 @@ article .content .caption {
 #categories .category-list-title {
   color: #666;
 }
+#categories .category-list .category-list-item {
+  display: block-inline;
+}
+#categories .category-list .category-list-item a {
+  color: rgba(85,85,85,0.6);
+}
+#categories .category-list .category-list-item a:hover {
+  text-decoration: underline;
+}
 #categories .category-list .category-list-item .category-list-count {
-  color: #666;
+  color: rgba(85,85,85,0.6);
 }
 #categories .category-list .category-list-item .category-list-count:before {
   content: " (";
@@ -1490,55 +1521,73 @@ article .content .caption {
   content: ")";
 }
 .highlight {
-  color: #4d4d4c;
+  color: #000;
   background: #fff;
 }
 .highlight .code .comment,
 .highlight .code .quote {
-  color: #8e908c;
-}
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .tag,
-.highlight .code .name,
-.highlight .code .selector-id,
-.highlight .code .selector-class,
-.highlight .code .regexp,
-.highlight .code .deletion {
-  color: #c82829;
-}
-.highlight .code .number,
-.highlight .code .built_in,
-.highlight .code .builtin-name,
-.highlight .code .literal,
-.highlight .code .type,
-.highlight .code .params,
-.highlight .code .meta,
-.highlight .code .link {
-  color: #f5871f;
-}
-.highlight .code .attribute {
-  color: #eab700;
-}
-.highlight .code .string,
-.highlight .code .symbol,
-.highlight .code .bullet,
-.highlight .code .addition {
-  color: #718c00;
-}
-.highlight .code .title,
-.highlight .code .section {
-  color: #4271ae;
+  color: #006a00;
 }
 .highlight .code .keyword,
-.highlight .code .selector-tag {
-  color: #8959a8;
+.highlight .code .selector-tag,
+.highlight .code .literal {
+  color: #aa0d91;
+}
+.highlight .code .name {
+  color: #008;
+}
+.highlight .code .variable,
+.highlight .code .template-variable {
+  color: #660;
+}
+.highlight .code .string {
+  color: #c41a16;
+}
+.highlight .code .regexp,
+.highlight .code .link {
+  color: #080;
+}
+.highlight .code .title,
+.highlight .code .tag,
+.highlight .code .symbol,
+.highlight .code .bullet,
+.highlight .code .number,
+.highlight .code .meta {
+  color: #1c00cf;
+}
+.highlight .code .section,
+.highlight .code .class .title,
+.highlight .code .type,
+.highlight .code .attr,
+.highlight .code .built_in,
+.highlight .code .builtin-name,
+.highlight .code .params {
+  color: #5c2699;
+}
+.highlight .code .attribute,
+.highlight .code .subst {
+  color: #000;
+}
+.highlight .code .formula {
+  background-color: #eee;
+  font-style: italic;
+}
+.highlight .code .addition {
+  background-color: #baeeba;
+}
+.highlight .code .deletion {
+  background-color: #ffc8bd;
+}
+.highlight .code .selector-id,
+.highlight .code .selector-class {
+  color: #9b703f;
+}
+.highlight .code .doctag,
+.highlight .code .strong {
+  font-weight: bold;
 }
 .highlight .code .emphasis {
   font-style: italic;
-}
-.highlight .code .strong {
-  font-weight: bold;
 }
 pre {
   overflow-x: auto;
@@ -1547,7 +1596,7 @@ pre {
   border: 1px dotted #666;
   border-radius: 4px;
   font-size: 13px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "JetBrains Mono Light", monospace;
   line-height: 22px;
   -webkit-border-radius: 4px;
 }
@@ -1568,7 +1617,7 @@ code {
   padding: 10px 15px;
   border-radius: 4px;
   background: #fafafa;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "JetBrains Mono Light", monospace;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
@@ -1625,4 +1674,50 @@ code {
 }
 .highlight .line {
   height: 22px;
+}
+#friends h1 {
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(#a91de0, #e01da9);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+}
+#friends .link {
+  display: inline-block;
+  padding: 8px 14px 8px 14px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0,0,0,0.3);
+  margin-right: -4px;
+  margin-bottom: 5px;
+}
+#friends .link .avater {
+  display: inline-flex;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  margin: 0;
+  vertical-align: middle;
+}
+#friends .link .content {
+  float: right;
+  display: flex;
+  margin: 8px 8px 8px 8px;
+  height: 50%;
+}
+#friends .link .content .name {
+  position: relative;
+  display: inline;
+  margin: 0;
+  text-decoration: none;
+  font-size: 21px;
+  font-color: #555;
+}
+#friends .link .content .description {
+  position: relative;
+  text-decoration: none;
+  font-size: 13px;
+}
+#friends .link:hover {
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.2);
 }

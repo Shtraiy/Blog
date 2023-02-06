@@ -18,7 +18,7 @@ nav:
   归档: /archives/
   分类: /categories/
   标签: /tags/
-  关于: /about/
+  关于我: /about/
   朋友: /friends/
   搜索: /search/
 
@@ -31,9 +31,10 @@ social_links:
   github: http://github.com/Shtraiy
   twitter: https://twitter.com/Shtraiy
   mail: mailto:weihuazhen24@gmail.com
-  telegram: https://t.me/Kanaria_24
+  telegram: https://t.me/Resalia_24
   expeditedssl: /about/PGP.html
   steam: https://steamcommunity.com/id/Shtraiy/
+  rss: https://wynio.online/atom.xml
   
 
   
@@ -114,7 +115,7 @@ favicon:
 
 # The color scheme that should be used to highlight codeblocks.
 # See source/css/_highlight for a list of all available color schemes.
-highlight: tomorrow
+highlight: xcode
 
 # Set the color scheme.
 # Available color schemes are 'dark', 'light', 'classic' and 'white'.

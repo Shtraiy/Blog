@@ -6,7 +6,7 @@
   <link href="https://wynio.online/atom.xml" rel="self"/>
   
   <link href="https://wynio.online/"/>
-  <updated>2023-01-10T03:04:33.424Z</updated>
+  <updated>2023-02-04T13:05:32.569Z</updated>
   <id>https://wynio.online/</id>
   
   <author>
@@ -17,13 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于koishi机器人框架的一些笔记</title>
+    <link href="https://wynio.online/posts/b475/"/>
+    <id>https://wynio.online/posts/b475/</id>
+    <published>2023-02-04T12:52:54.000Z</published>
+    <updated>2023-02-04T13:05:32.569Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="最近闲来无事抽空搞了一下以前废弃的项目">最近闲来无事，抽空搞了一下以前废弃的项目</span></h1><p>主要内容是利用koishi框架搭建的一个bot</p><p>可以实现一些简单的功能<s>主要使用的是其他大佬写的轮子</s></p><p>下面放一下官方文档</p><blockquote><p><a href="https://koishi.chat/">https://koishi.chat/</a></p></blockquote><p>下面就记录一下我安装的方式，我是通过创建模板安装的</p><ul><li>首先需要安装Node.js(最低 v14，推荐使用 LTS)环境</li></ul><blockquote><p><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p></blockquote><p><img src="https://koishi.chat/manual/nodejs/home-light.webp" alt="1"></p><ul><li>使用包管理器进行项目初始化</li></ul><p>新建一个文件夹作为你koishi项目的repo</p><p><code>npm init koishi</code></p><p>根据提示完成全套初始化流程</p><p>然后输入<strong>npm start</strong>启动项目</p><p>这样你就成功拥有了一个自己的bot！</p><p>接下来可以安装一些官方市场的插件来丰富它的功能</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="https://wynio.online/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="技术" scheme="https://wynio.online/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="bot" scheme="https://wynio.online/tags/bot/"/>
+    
+    <category term="koishi" scheme="https://wynio.online/tags/koishi/"/>
+    
+    <category term="onebot" scheme="https://wynio.online/tags/onebot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2023迟来的新年礼物</title>
     <link href="https://wynio.online/posts/f5ee/"/>
     <id>https://wynio.online/posts/f5ee/</id>
     <published>2023-01-10T02:40:01.000Z</published>
-    <updated>2023-01-10T03:04:33.424Z</updated>
+    <updated>2023-01-11T09:40:26.375Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="2023年迟来的更新"><a href="#2023年迟来的更新" class="headerlink" title="2023年迟来的更新"></a>2023年迟来的更新</h1><p>最近也是发现AD:PIANO系列出到IX了，对我来说也算是一个很棒新年礼物了</p><p><img src="https://i.328888.xyz/2023/01/10/0MFFU.jpeg" alt="AD:PIANO IX -Alt-"></p><div id="aplayer" class="aplayer" data-id="157640212" data-server="netease" data-type="album" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="2023年迟来的更新">2023年迟来的更新</span></h1><p>最近也是发现AD:PIANO系列出到IX了，对我来说也算是一个很棒的新年礼物了</p><p><img src="https://i.328888.xyz/2023/01/10/0MFFU.jpeg" alt="AD:PIANO IX -Alt-"></p><div id="aplayer" class="aplayer" data-id="157640212" data-server="netease" data-type="album" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
     
     
       
@@ -101,9 +131,9 @@
     <link href="https://wynio.online/posts/9c0f/"/>
     <id>https://wynio.online/posts/9c0f/</id>
     <published>2022-07-23T16:00:00.000Z</published>
-    <updated>2023-01-08T04:56:19.124Z</updated>
+    <updated>2023-01-11T13:53:49.552Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="迟来的2022第一篇文章"><a href="#迟来的2022第一篇文章" class="headerlink" title="迟来的2022第一篇文章"></a>迟来的2022第一篇文章</h1><h2 id="从2020建站到如今2022已经过了两年了"><a href="#从2020建站到如今2022已经过了两年了" class="headerlink" title="从2020建站到如今2022已经过了两年了"></a>从2020建站到如今2022已经过了两年了</h2><p>时光飞逝，不知不觉离建站已经两年了</p><p>从vuepress到gitbook再到如今的hexo</p><p>包括毕业后我开始自学html+css+js等前端知识，只为了将来能丰富我的网站</p><p>对于建站我已经有了一点小小的经验了，不再是当初到处问到处找教程的小白了</p><h2 id="再谈谈我的高中吧"><a href="#再谈谈我的高中吧" class="headerlink" title="再谈谈我的高中吧"></a>再谈谈我的高中吧</h2><p>和二次元那种只存在于幻想中的美好的高中生活不一样，我的高中被时间拉扯着向前</p><p>从高一入学到高三毕业，再到高考，我的经历和这个社会上大多数同龄人一样</p><p>入学时告诉自己将来要考哪个大学，然后再付诸努力，最后成就梦想</p><p>类似的人终究是少数，至少不是我</p><p>而我自己，摸鱼了三年，到最后还是去了填志愿时才知道的大学，才了解到的专业</p><p>但是无论生活如何，路还要走下去，人还是得向前看</p><p>这将是一个新的开始</p><p>以上便是2022我迟来的文章了</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="迟来的2022第一篇文章">迟来的2022第一篇文章</span></h1><h2><span id="从2020建站到如今2022已经过了两年了">从2020建站到如今2022已经过了两年了</span></h2><p>时光飞逝，不知不觉离建站已经两年了</p><p>从vuepress到gitbook再到如今的hexo</p><p>包括毕业后我开始自学html+css+js等前端知识，只为了将来能丰富我的网站</p><p>对于建站我已经有了一点小小的经验了，不再是当初到处问到处找教程的小白了</p><h2><span id="再谈谈我的高中吧">再谈谈我的高中吧</span></h2><p>和二次元那种只存在于幻想中的美好的高中生活不一样</p><p>从高一入学到高三毕业，再到高考，我的经历和这个社会上大多数同龄人一样</p><p>入学时告诉自己将来要考哪个大学，然后再付诸努力，最后成就梦想</p><p>类似的成功之人终究是少数，至少不是我</p><p>而我自己，摸鱼了三年，到最后还是去了填志愿时才知道的大学，才了解到的专业</p><p>但是无论生活如何，路还要走下去，人还是得向前看</p><p>这将是一个新的开始</p>]]></content>
     
     
       
@@ -125,9 +155,9 @@
     <link href="https://wynio.online/posts/9d4f/"/>
     <id>https://wynio.online/posts/9d4f/</id>
     <published>2021-11-13T06:17:43.000Z</published>
-    <updated>2022-01-09T02:11:33.568Z</updated>
+    <updated>2023-01-11T13:58:19.799Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="近期无大事-但在这里讲一些事情"><a href="#近期无大事-但在这里讲一些事情" class="headerlink" title="近期无大事,但在这里讲一些事情"></a>近期无大事,但在这里讲一些事情</h1><h5 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h5><p><strong>在此吹爆Laur在11月出的两张新Album</strong></p><p><img src="https://i.loli.net/2021/11/13/S79rUyDvtQEo24T.png" alt="Afflict"></p><blockquote><p><a href="https://last-labyrinth1.bandcamp.com/album/afflict">https://last-labyrinth1.bandcamp.com/album/afflict</a></p></blockquote><p><img src="https://i.loli.net/2021/11/13/KDts2lBGZn4fp86.png" alt="Collapse"></p><blockquote><p><a href="https://last-labyrinth1.bandcamp.com/album/collapse">https://last-labyrinth1.bandcamp.com/album/collapse</a></p></blockquote><p>封面很好看，歌也很好听</p><h5 id="另外"><a href="#另外" class="headerlink" title="另外"></a>另外</h5><p>你们的站长Resalia要失联一段世界le</p><h5 id="最后给大家附赠点礼物"><a href="#最后给大家附赠点礼物" class="headerlink" title="最后给大家附赠点礼物"></a>最后给大家附赠点礼物</h5><div id="aplayer" class="aplayer" data-id="7066987507" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div><h5 id="以上"><a href="#以上" class="headerlink" title="以上"></a>以上</h5>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="近期没什么特别的事情但在这里转发一下老二laur的两张新专辑">近期没什么特别的事情,但在这里转发一下老二(Laur)的两张新专辑</span></h1><p><img src="https://i.loli.net/2021/11/13/S79rUyDvtQEo24T.png" alt="Afflict"></p><blockquote><p><a href="https://last-labyrinth1.bandcamp.com/album/afflict">https://last-labyrinth1.bandcamp.com/album/afflict</a></p></blockquote><p><img src="https://i.loli.net/2021/11/13/KDts2lBGZn4fp86.png" alt="Collapse"></p><blockquote><p><a href="https://last-labyrinth1.bandcamp.com/album/collapse">https://last-labyrinth1.bandcamp.com/album/collapse</a></p></blockquote><p>封面很好看，歌也很好听</p><h5><span id="另外">另外</span></h5><p>Resalia最近要失联一段时间</p><h5><span id="最后给大家附赠点礼物">最后给大家附赠点礼物</span></h5><div id="aplayer" class="aplayer" data-id="7066987507" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div><h5><span id="以上">以上</span></h5>]]></content>
     
     
       
@@ -149,9 +179,9 @@
     <link href="https://wynio.online/posts/2c64/"/>
     <id>https://wynio.online/posts/2c64/</id>
     <published>2021-10-03T14:22:28.000Z</published>
-    <updated>2022-01-09T02:13:50.680Z</updated>
+    <updated>2023-01-17T12:54:02.903Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="有关董事长的介绍可以参考下面链接"><a href="#有关董事长的介绍可以参考下面链接" class="headerlink" title="有关董事长的介绍可以参考下面链接"></a>有关董事长的介绍可以参考下面链接</h1><blockquote><p><a href="https://www.zhihu.com/question/364890378">https://www.zhihu.com/question/364890378</a></p></blockquote><blockquote><p>在抖音上直接搜索“徒步阿龙”就能找到他，此人正是戴维董事长，也是东沟泥螺，快手已经放弃听说这人现在正在转型当网红，经常社会语录，显然，他没有这个才华，有的只是嘴臭拷打，不去干拷打他凉的很快。</p></blockquote><blockquote><p>大新闻:徒步阿龙，戴维董事长，刘建龙，此人在快手上直播打架被快手官方永久封禁，爷的青春正式结束，此人快手号没了，抖音和B站还在，可以去看看</p></blockquote><p><img src="https://i.loli.net/2021/10/23/DnO9ZamoLQxY7jd.png" alt="刘建龙"></p><p><img src="/css/36.png" alt="1"></p><h1 id="龙丽思想抽象学必修-1-学习材料"><a href="#龙丽思想抽象学必修-1-学习材料" class="headerlink" title="龙丽思想抽象学必修 1 学习材料"></a>龙丽思想抽象学必修 1 学习材料</h1><div class="row">    <embed src="https://doc-1252552907.cos.ap-shanghai.myqcloud.com/%E9%BE%99%E4%B8%BD%E9%9B%86%E5%9B%A2%E9%99%84%E5%B1%9E%E6%8A%BD%E8%B1%A1%E4%B8%93%E4%B8%9A%E5%A4%A7%E5%AD%A6%E9%BE%99%E4%B8%BD%E6%80%9D%E6%83%B3%20%E6%8A%BD%E8%B1%A1%E5%AD%A6%E5%BF%85%E4%BF%AE%201%20%E5%AD%A6%E4%B9%A0%E6%9D%90%E6%96%99.pdf" width="100%" height="550" type="application/pdf"></div><h5 id="董事长经典"><a href="#董事长经典" class="headerlink" title="董事长经典"></a>董事长经典</h5><p><strong>戴维董事长惩治二手车黑心商家</strong></p><blockquote><p><a href="https://www.youtube.com/watch?v=vVcuuGWcBjk&amp;t=352s">https://www.youtube.com/watch?v=vVcuuGWcBjk&amp;t=352s</a></p></blockquote><p><strong>龙丽董事长和李鑫</strong></p><blockquote><p><a href="https://www.youtube.com/watch?v=eQsoylZU73Y&amp;t=1s">https://www.youtube.com/watch?v=eQsoylZU73Y&amp;t=1s</a></p></blockquote><h5 id="持续更新"><a href="#持续更新" class="headerlink" title="持续更新"></a>持续更新</h5>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="有关董事长的介绍可以参考下面链接">有关董事长的介绍可以参考下面链接</span></h1><blockquote><p><a href="https://www.zhihu.com/question/364890378">https://www.zhihu.com/question/364890378</a></p></blockquote><blockquote><p>在抖音上直接搜索“徒步阿龙”就能找到他，此人正是戴维董事长，也是东沟泥螺，快手已经放弃听说这人现在正在转型当网红，经常社会语录，显然，他没有这个才华，有的只是嘴臭拷打，不去干拷打他凉的很快。</p></blockquote><blockquote><p>大新闻:徒步阿龙，戴维董事长，刘建龙，此人在快手上直播打架被快手官方永久封禁，爷的青春正式结束，此人快手号没了，抖音和B站还在，可以去看看</p></blockquote><p><img src="https://i.loli.net/2021/10/23/DnO9ZamoLQxY7jd.png" alt="刘建龙"></p><p><img src="/css/36.png" alt="1"></p><h2><span id="龙丽思想抽象学必修-1-学习材料">龙丽思想抽象学必修 1 学习材料</span></h2><div class="row">    <embed src="https://doc-1252552907.cos.ap-shanghai.myqcloud.com/%E9%BE%99%E4%B8%BD%E9%9B%86%E5%9B%A2%E9%99%84%E5%B1%9E%E6%8A%BD%E8%B1%A1%E4%B8%93%E4%B8%9A%E5%A4%A7%E5%AD%A6%E9%BE%99%E4%B8%BD%E6%80%9D%E6%83%B3%20%E6%8A%BD%E8%B1%A1%E5%AD%A6%E5%BF%85%E4%BF%AE%201%20%E5%AD%A6%E4%B9%A0%E6%9D%90%E6%96%99.pdf" width="100%" height="550" type="application/pdf"></div><h5><span id="董事长经典">董事长经典</span></h5><p><strong>戴维董事长惩治二手车黑心商家</strong></p><blockquote><p><a href="https://www.youtube.com/watch?v=vVcuuGWcBjk&amp;t=352s">https://www.youtube.com/watch?v=vVcuuGWcBjk&amp;t=352s</a></p></blockquote><p><strong>龙丽董事长和李鑫</strong></p><blockquote><p><a href="https://www.youtube.com/watch?v=eQsoylZU73Y&amp;t=1s">https://www.youtube.com/watch?v=eQsoylZU73Y&amp;t=1s</a></p></blockquote><h5><span id="持续更新">持续更新</span></h5>]]></content>
     
     
       
@@ -177,9 +207,9 @@
     <link href="https://wynio.online/posts/6c65/"/>
     <id>https://wynio.online/posts/6c65/</id>
     <published>2021-07-12T10:15:03.000Z</published>
-    <updated>2022-02-07T10:15:27.244Z</updated>
+    <updated>2023-01-11T14:02:31.432Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="最近无聊到下棋"><a href="#最近无聊到下棋" class="headerlink" title="最近无聊到下棋"></a>最近无聊到下棋</h1><p>当然因为我不是什么以棋类运动为生的专业人士</p><p>对我来说下棋就是一种休闲的运动，☞脑力运动</p><p>于是我就以Katago为对手开始下棋</p><p>Katago是由David J. Wu 所研究并开发的一套围棋软件。</p><p>并且以DeepMind的AlphaGo Zero与AlphaZero论文为基础为基础，训练速度更快，棋力更强</p><p>黑色是我<img src="/css/28.png" alt="被乱杀"></p><p><del>开局被乱杀</del></p><p>下面就简单讲一下KataGo和Sabaki的使用方法和下载方式</p><blockquote><p><a href="https://github.com/SabakiHQ/Sabaki/releases/tag/v0.52.0">https://github.com/SabakiHQ/Sabaki/releases/tag/v0.52.0</a>  –Sabaki</p></blockquote><blockquote><p><a href="https://github.com/lightvector/KataGo/releases">https://github.com/lightvector/KataGo/releases</a>  –KataGo</p></blockquote><p>我下载的KataGo是1.9.1版本的</p><p><img src="/css/29.png" alt="1"></p><p>其中文件名字带有bs29的是娱乐版本，支持29x29棋盘，但我不打算用，因为19x19就已经够我下了</p><p>一般来说有显卡的用OpenCL或CUDA比较好，Eigen是纯CPU</p><p>这里我下的是1.9.1的OpenCL版本</p><p>下载好后用cmd进入Katago的目录并执行katago.exe genconfig -model (权重文件名字).bin.gz -output gtp_custom.cfg</p><p><img src="/css/17.png" alt="1"></p><p>这里输入chinese即可</p><p>后面还有一系列指令一般有default的就直接回车吧，其他的大家英语好的自行判断该输什么</p><p>KataGo的权重文件可以到<a href="https://katagotraining.org/networks/">这里</a>下载</p><p>然后你需要给Sabaki配置权重</p><p>下载完后打开Sabaki</p><p><img src="/css/30.png" alt="1"></p><p>具体配置如上</p><p>详细介绍可以上网找，这里不一一阐述，其实我也是一知半解</p><p>配置完后打开这个运行</p><p><img src="/css/31.png" alt="1"></p><p>等候几十秒就加载完成了</p><p>然后你就可以和KataGo对弈了</p><p><img src="/css/1.gif" alt="1"></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="最近无聊到下棋">最近无聊到下棋</span></h1><p>当然我不是什么职业棋士</p><p>对我来说下棋与其说是一种益智活动更像是一种催眠方式</p><p>因为有时下着下着就困了</p><p>但是我最近对一个叫做Katago围棋AI有了点兴趣，于是就研究了一下</p><p>Katago是由David J. Wu 所研究并开发的一套围棋软件。</p><p>并且以DeepMind的AlphaGo Zero与AlphaZero论文为基础为基础，训练速度更快，棋力更强</p><p>黑色是我<img src="/css/28.png" alt="被乱杀"></p><p><del>开局被乱杀</del></p><p>下面就简单讲一下KataGo和Sabaki的使用方法和下载方式</p><blockquote><p><a href="https://github.com/SabakiHQ/Sabaki/releases/tag/v0.52.0">https://github.com/SabakiHQ/Sabaki/releases/tag/v0.52.0</a>  –Sabaki</p></blockquote><blockquote><p><a href="https://github.com/lightvector/KataGo/releases">https://github.com/lightvector/KataGo/releases</a>  –KataGo</p></blockquote><p>我下载的KataGo是1.9.1版本的</p><p><img src="/css/29.png" alt="1"></p><p>其中文件名字带有bs29的是娱乐版本，支持29x29棋盘，但我不打算用，因为19x19就已经够我下一年了</p><p>一般来说有显卡的用OpenCL或CUDA比较好，Eigen是纯CPU</p><p>这里我下的是1.9.1的OpenCL版本</p><p>下载好后用cmd进入Katago的目录并执行katago.exe genconfig -model (权重文件名字).bin.gz -output gtp_custom.cfg</p><p><img src="/css/17.png" alt="1"></p><p>这里输入chinese即可</p><p>后面还有一系列指令一般有default的就直接回车吧，其他的大家英语好的自行判断该输什么</p><p>KataGo的权重文件可以到<a href="https://katagotraining.org/networks/">这里</a>下载</p><p>然后你需要给Sabaki配置权重</p><p>下载完后打开Sabaki</p><p><img src="/css/30.png" alt="1"></p><p>具体配置如上</p><p>详细介绍可以上网找，这里不一一阐述，其实我也是一知半解</p><p>配置完后打开这个运行</p><p><img src="/css/31.png" alt="1"></p><p>等候几十秒就加载完成了</p><p>加载完成就可以正常和Katago下棋了</p>]]></content>
     
     
       
@@ -203,9 +233,9 @@
     <link href="https://wynio.online/posts/a7c/"/>
     <id>https://wynio.online/posts/a7c/</id>
     <published>2021-06-08T06:32:06.000Z</published>
-    <updated>2023-01-08T04:23:04.543Z</updated>
+    <updated>2023-01-11T13:58:59.139Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于一些本人喜欢的音乐"><a href="#关于一些本人喜欢的音乐" class="headerlink" title="关于一些本人喜欢的音乐"></a>关于一些本人喜欢的音乐</h1><h4 id="使用Aplayer实现，主要是播一些站长喜欢的音乐"><a href="#使用Aplayer实现，主要是播一些站长喜欢的音乐" class="headerlink" title="使用Aplayer实现，主要是播一些站长喜欢的音乐"></a>使用Aplayer实现，主要是播一些站长喜欢的音乐</h4><h4 id="能不能播放取决于API是否失效"><a href="#能不能播放取决于API是否失效" class="headerlink" title="能不能播放取决于API是否失效"></a>能不能播放取决于API是否失效</h4><h4 id="加载时间过长，见谅"><a href="#加载时间过长，见谅" class="headerlink" title="加载时间过长，见谅"></a>加载时间过长，见谅</h4><h4 id="测试中"><a href="#测试中" class="headerlink" title="测试中"></a>测试中</h4><div id="aplayer" class="aplayer" data-id="6796897788" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="关于一些本人喜欢的音乐">关于一些本人喜欢的音乐</span></h1><p>使用Aplayer实现，主要是播一些站长喜欢的音乐</p><p>能不能播放取决于API是否失效</p><p>其实已经失效过一次了</p><p>加载时间过长，见谅</p><p>就当是一个测试页面了</p><div id="aplayer" class="aplayer" data-id="6796897788" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
     
     
       
@@ -257,9 +287,9 @@
     <link href="https://wynio.online/posts/df0b/"/>
     <id>https://wynio.online/posts/df0b/</id>
     <published>2021-04-13T15:22:36.000Z</published>
-    <updated>2023-01-09T00:08:46.418Z</updated>
+    <updated>2023-01-11T14:04:22.587Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一言难尽"><a href="#一言难尽" class="headerlink" title="一言难尽"></a>一言难尽</h1><p>巨人139话出了以后，网络上就出现了各种不同的看法</p><p>但主要是巨人烂尾的观点居多</p><p>下面就简单讲一下我对《进击的巨人》第139话的看法</p><h2 id="首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂"><a href="#首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂" class="headerlink" title="首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂"></a>首先把我的观点放在前头，巨人的结尾确实烂，烂上加烂</h2><p>在讨论巨人结尾之前，我想先讲一些别的东西</p><p>首先我认为，一个作品的好坏在于它创造出的价值</p><p>他于社会，于读者，传达出了什么价值观，有什么影响</p><p>巨人是不是神作，是的，至少在地鸣之前甚至139话之前他都能称得上一部优秀的作品</p><p>加上动画组优秀的作画以及泽野弘之神bgm的多重加持下巨人可以说的上是一部神作</p><p>巨人能够爆火，我认为主要得益于动画方面的宣传，虽说巨人的设定也很有意思</p><p>作者谏山创创造了一个比较完整的世界观，虽说里面有不少内容原理上和现代科学是相悖的，不科学的，也甚至于里面的有些设定放到现实中也是极其荒谬的</p><p>精良的动画制作加上巨人还算不错的设定让这个IP得到爆火</p><p>而当《进击的巨人》公布139话后，带来的冲击力是令人始料未及的</p><p>他烂到什么程度呢</p><p>借用B站UP瓶子152的话来说</p><blockquote><p>所有你能想到的烂尾作品可能都得对着巨人深深鞠上一躬</p></blockquote><p>所有在结尾出来之前的巨人爱好者都被谏山创突如其来的神回转灌了一嘴的shit</p><p>短短一话彻彻底底将这部本能在漫画史上留下美誉的作品推向了他的极端</p><p>短短一话让苦心经营的人设彻底崩塌</p><p>短短一话完全与所有巨人爱好者猜测的结局背道而驰</p><p>只能说谏山创的想象力是极其丰富的</p><p>现在巨人彻底扬名了，不过是臭名昭著</p><p>那么具体巨人的结尾烂在什么地方，大🔥可以网上直接搜，以下就不剧透了</p><p>以上就是我要说的全部内容了</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="一言难尽但是不好的观点居多">一言难尽，但是不好的观点居多</span></h1><p>巨人139话出了以后，网络上就出现了各种不同的看法</p><p>但主要是巨人烂尾的观点居多</p><p>下面就简单讲一下我对《进击的巨人》第139话的看法</p><h2><span id="把我的观点放在前头巨人的结尾确实烂烂上加烂">把我的观点放在前头，巨人的结尾确实烂，烂上加烂</span></h2><p>在讨论巨人结尾之前，我想先讲一些别的东西</p><p>首先我认为，一个作品的好坏在于它创造出的价值</p><p>他于社会，于读者，传达出了什么价值观，有什么影响</p><p>巨人是不是神作，是的，至少在地鸣之前甚至139话之前他都能称得上一部优秀的作品</p><p>加上动画组优秀的作画以及泽野弘之神bgm的多重加持下巨人可以说的上是一部神作</p><p>巨人能够爆火，我认为主要得益于动画方面的宣传，虽说巨人的设定也很有意思</p><p>作者谏山创创造了一个比较完整的世界观，虽说里面有不少内容原理上和现代科学是相悖的，不科学的，也甚至于里面的有些设定放到现实中也是极其荒谬的</p><p>精良的动画制作加上巨人还算不错的设定让这个IP得到爆火</p><p>而当《进击的巨人》公布139话后，带来的冲击力是令人始料未及的</p><p>他烂到什么程度呢</p><p>借用B站UP瓶子152的话来说</p><blockquote><p>所有你能想到的烂尾作品可能都得对着巨人深深鞠上一躬</p></blockquote><p>所有在结尾出来之前的巨人爱好者都被谏山创突如其来的神回转灌了一嘴的shit</p><p>短短一话彻彻底底将这部本能在漫画史上留下美誉的作品推向了他的极端</p><p>短短一话让苦心经营的人设彻底崩塌</p><p>短短一话完全与所有巨人爱好者猜测的结局背道而驰</p><p>只能说谏山创的想象力是极其丰富的</p><p>现在巨人彻底扬名了，不过是臭名昭著</p><p>那么具体巨人的结尾烂在什么地方，大🔥可以网上直接搜，以下就不剧透了</p><p>以上就是我要说的全部内容了</p>]]></content>
     
     
       
@@ -281,9 +311,9 @@
     <link href="https://wynio.online/posts/3166/"/>
     <id>https://wynio.online/posts/3166/</id>
     <published>2021-01-30T03:51:18.000Z</published>
-    <updated>2022-01-09T02:40:18.311Z</updated>
+    <updated>2023-01-17T04:41:06.557Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="ark新活动，本来想着摸摸鱼就算了"><a href="#ark新活动，本来想着摸摸鱼就算了" class="headerlink" title="ark新活动，本来想着摸摸鱼就算了"></a>ark新活动，本来想着摸摸鱼就算了</h1><p><img src="/css/5.jpg" alt="1"></p><p>But…</p><p><img src="/css/10.png" alt="1"></p><p>OHHHHHHHHHHHHHHHHH!!!!!</p><p>夕太戳我xp了，我爱她</p><p>夕姐姐来我岛吧</p><p><img src="/css/11.png" alt="1"></p><p>狗子很可爱，我也很喜欢</p><p><img src="/css/12.png" alt="1"></p><p><img src="/css/13.png" alt="1"></p><p>年和絮雨的皮肤也很棒，我也很喜欢</p><p>许愿夕和嵯峨</p><p>出货必还愿</p><p>yj不要不识好歹</p><p><img src="/css/37.png" alt="1"></p><h1 id="POWER！"><a href="#POWER！" class="headerlink" title="POWER！"></a>POWER！</h1><hr><p>活动开始，前几十发很惨淡</p><p><img src="/css/maws1.jpg" alt="1"></p><p><img src="/css/maws3.jpg" alt="1"></p><p><img src="/css/maws2.jpg" alt="1"></p><h5 id="但是"><a href="#但是" class="headerlink" title="但是"></a>但是</h5><p>yj我谢谢你</p><p>我出息<del>夕</del>了</p><p><img src="/css/xi.png" alt="1"></p><p>按照约定我来还愿了,但是活动才刚开始</p><p>能不能把嵯峨一起送来给我呢<del>得寸进尺</del></p><p>谢谢你，yj</p><hr><p>二月十九号，一大早醒来，夕池没了，嵯峨也没出</p><h5 id="？？？"><a href="#？？？" class="headerlink" title="？？？"></a>？？？</h5><p><img src="/css/16.png" alt="1"></p><p>本次活动很圆满<del>遗憾</del>的结束了</p><p>我狗子呢？<em>YJ!!??</em></p><h5 id="这个仇我记下了"><a href="#这个仇我记下了" class="headerlink" title="这个仇我记下了"></a>这个仇我记下了</h5>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="ark新活动本来想着摸摸鱼就算了">ark新活动，本来想着摸摸鱼就算了</span></h1><p><img src="/css/5.jpg" alt="1"></p><p>But…</p><p><img src="/css/10.png" alt="1"></p><p>OHHHHHHHHHHHHHHHHH!!!!!</p><p><img src="/css/11.png" alt="1"></p><p>狗子很可爱</p><p><img src="/css/12.png" alt="1"></p><p><img src="/css/13.png" alt="1"></p><p>顶</p><h2><span id="许愿夕和嵯峨">许愿夕和嵯峨</span></h2><p>出货必还愿</p><p>yj不要不识好歹</p><p><img src="/css/37.png" alt="1"></p><h1><span id="power">POWER！</span></h1><hr><p><img src="/css/maws1.jpg" alt="1"></p><p><img src="/css/maws3.jpg" alt="1"></p><p><img src="/css/maws2.jpg" alt="1"></p><p>出息<del>夕</del>了</p><p><img src="/css/xi.png" alt="1"></p><p>按照约定前来还愿了,但是活动才刚开始</p><p>能否再送个嵯峨给我呢<del>得寸进尺</del></p><p>谢谢你，yj</p><hr><p>二月十九号，一大早醒来，夕池没了，嵯峨也没出</p><h5><span id>？？？</span></h5><p><img src="/css/16.png" alt="1"></p><p>本次活动很圆满<del>遗憾</del>的结束了</p><p>我狗子呢？<em>YJ!!??</em></p><h5><span id="这个仇我记下了">这个仇我记下了</span></h5>]]></content>
     
     
       
@@ -337,9 +367,9 @@
     <link href="https://wynio.online/posts/b180/"/>
     <id>https://wynio.online/posts/b180/</id>
     <published>2021-01-25T05:16:23.000Z</published>
-    <updated>2021-10-16T11:06:12.227Z</updated>
+    <updated>2023-01-11T13:57:12.169Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="最近也是迫于疫情形势严峻的情况下，我提前放假了"><a href="#最近也是迫于疫情形势严峻的情况下，我提前放假了" class="headerlink" title="最近也是迫于疫情形势严峻的情况下，我提前放假了"></a>最近也是迫于疫情形势严峻的情况下，我提前放假了</h1><p>抽空搞了一下这个站点</p><p>原先使用的theme是hipaper</p><p>由于bug比较多，为求清净换了cactus</p><p>体验很不错，但是代码移植的过程中发现pjax无法像之前那样发挥作用</p><p>就导致Aplayer在跳转过程中可能会中断</p><p>这个问题我可能要鸽到很久才会解决</p><p><strong>首先声明</strong>，并非我懒，而是能力不允许</p><p>以后摸清楚pjax后会补上的</p><p>如果有人需要播放音乐就先等放完在跳转了</p><h1 id="以上"><a href="#以上" class="headerlink" title="以上"></a>以上</h1><h1 id="来自未来的Resalia"><a href="#来自未来的Resalia" class="headerlink" title="来自未来的Resalia"></a>来自未来的Resalia</h1><p>Aplayer已经去掉了，无需考虑pjax了</p><h1 id="来自比未来更未来的Resalia"><a href="#来自比未来更未来的Resalia" class="headerlink" title="来自比未来更未来的Resalia"></a>来自比未来更未来的Resalia</h1><p>没有使用pjax，但是重新启用了音乐播放页</p><h1 id="来自未来未来未来的Resalia"><a href="#来自未来未来未来的Resalia" class="headerlink" title="来自未来未来未来的Resalia"></a>来自未来未来未来的Resalia</h1><p>我真的好喜欢用一级标题啊，我甚至可以每个文段用一次</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="最近也是迫于疫情形势严峻的情况下我提前放假了">最近也是迫于疫情形势严峻的情况下，我提前放假了</span></h1><p>抽空搞了一下这个站点</p><p>原先使用的theme是hipaper</p><p>由于bug比较多，为求清净换了cactus</p><p>不说别的我还挺喜欢cactus的，但是有一些小bug，不过好在不影响观感</p><p>但是限于我目前的前端知识我还没法修复这些bug</p><p>所以暂时鸽置一下啦</p>]]></content>
     
     
       

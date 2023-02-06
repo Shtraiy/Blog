@@ -11,40 +11,33 @@
   -webkit-background-clip: text
   color: transparent
 
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
-
-  li
-    display: inline-block
-    margin-right: 15px
-    border-right: 1px solid
-    border-color: $color-border
-    vertical-align: middle
-
-    a
-      margin-right: 15px
-
-  li:last-child
-    margin-right: 0
-    border-right: 0
-
-    a
-      margin-right: 0
-
-  a
-    color: $color-meta
-    text-decoration: underline
-    background-image: none
-
-  a:hover
-    color: lighten($color-meta, 20%)
-
   .footer-left
     height: 20px
     vertical-align: middle
     line-height: 20px
+    margin-top: 2px
+
+  .footer-right
+    a
+      background: linear-gradient(#cf1da5,#e62991)
+      -webkit-background-clip: text
+      color: transparent
+      font-size: 14px
+  
+  .footer-right:hover
+    a
+      background: linear-gradient(#e35522,#dece1b)
+      -webkit-background-clip: text
+      color: transparent
+      font-size: 14px
+  .footer-ipv6
+    a:hover
+      position: relative
+      vertical-align: top
+      background: linear-gradient(#e35522,#dece1b)
+      -webkit-background-clip: text
+      color: transparent
+      
 
 @media (min-width: 39rem)
   #footer

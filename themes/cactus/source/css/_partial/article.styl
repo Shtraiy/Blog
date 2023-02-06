@@ -10,13 +10,17 @@ article
       -webkit-background-clip: text
       color: transparent
 
-    .meta
-      margin-top: 0
-      margin-bottom: 1rem
-
     .meta *
       color: $color-accent-3
       font-size: 1rem
+      margin-top: 0
+      margin-bottom: 1rem
+
+    .meta
+      #example
+        width: 0
+        height: 0
+        display: none
 
     .author
       text-transform: uppercase
@@ -27,6 +31,18 @@ article
       display: inline
 
   .content
+    p
+      a:hover
+        background: linear-gradient(#e35522,#dece1b)
+        -webkit-background-clip: text
+        color: transparent
+    ul
+      li
+        color: rgba(85, 85, 85, 0.8)
+        font-weight: bold
+        &::marker
+          color: #58beed
+            
 
     img
     video
@@ -52,22 +68,26 @@ article
 
     blockquote
       margin: 1rem 10px
-      padding: .5em 10px
+      content: none
+      border-left: 1px solid rgba(85, 85, 85,0.2)
+      border-width: 5px
+      padding: 0 0 0 7px
       background: inherit
-      color: $color-quote
       quotes: "\201C" "\201D" "\2018" "\2019"
       font-weight: bold
 
+
       p
         margin: 0
+        color: rgba(85, 85, 85, 0.5)
 
-      &:before
-        margin-right: .25em
-        color: $color-quote
-        content: "\201C"
-        vertical-align: -.4em
-        font-size: 2em
-        line-height: .1em
+        a
+          color: rgba(85, 85, 85, 0.5)
+
+        a:hover
+          background: linear-gradient(#e35522,#dece1b)
+          -webkit-background-clip: text
+          color: transparent
 
       footer
         margin: line-height 0
