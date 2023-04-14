@@ -105,9 +105,8 @@ theme: cactus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: 
-    github: git@github.com:Shtraiy/Rectitude.git
-  branch: gh-pages
+  repository: git@github.com:Shtraiy/Blog.git
+  branch: master
 
 # abbrlink config
 abbrlink:
