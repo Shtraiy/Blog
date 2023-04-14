@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Nocturne</title>
+  
+  <subtitle>Branch of Ivory Tower</subtitle>
+  <link href="https://wynio.online/atom.xml" rel="self"/>
+  
+  <link href="https://wynio.online/"/>
+  <updated>2023-02-06T04:59:17.702Z</updated>
+  <id>https://wynio.online/</id>
+  
+  <author>
+    <name>Resalia</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于koishi机器人框架的一些笔记</title>
+    <link href="https://wynio.online/posts/b475/"/>
+    <id>https://wynio.online/posts/b475/</id>
+    <published>2023-02-04T12:52:54.000Z</published>
+    <updated>2023-02-06T04:59:17.702Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="最近闲来无事抽空搞了一下以前废弃的项目">最近闲来无事，抽空搞了一下以前废弃的项目</span></h1><p>主要内容是利用koishi框架搭建的一个bot</p><h2><span id="koishi搭建项目模板">koishi搭建项目模板</span></h2><p>可以实现一些简单的功能<s>主要使用的是其他大佬写的轮子</s></p><p>下面放一下官方文档</p><blockquote><p><a href="https://koishi.chat/">https://koishi.chat/</a></p></blockquote><p>下面就记录一下我安装的方式，我是通过创建模板安装的</p><ul><li>首先需要安装Node.js(最低 v14，推荐使用 LTS)环境</li></ul><blockquote><p><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p></blockquote><p><img src="https://koishi.chat/manual/nodejs/home-light.webp" alt="1"></p><ul><li>使用包管理器进行项目初始化</li></ul><p>新建一个文件夹作为你koishi项目的repo</p><p><code>npm init koishi</code></p><p>根据提示完成全套初始化流程</p><p>然后输入<strong>npm start</strong>启动项目</p><p>这样你就成功拥有了一个自己的bot！</p><p>接下来可以安装一些官方市场的插件来丰富它的功能</p><p><strong>Onebot插件和go-cqhttp框架的使用</strong></p><blockquote><p>OneBot 是一个聊天机器人应用接口标准，目前可用于 QQ 聊天机器人的实现。你可以使用下列实现该协议的框架</p></blockquote><p><a href="https://github.com/Mrs4s/go-cqhttp">Mrs4s/go-cqhttp</a>（推荐）<br><a href="https://github.com/yyuueexxiinngg/cqhttp-mirai">yyuueexxiinngg/cqhttp-mirai</a><br><a href="https://github.com/richardchien/coolq-http-api">richardchien/coolq-http-api</a>（配合 <a href="https://github.com/iTXTech/mirai-native">iTXTech/mirai-native</a> 使用）</p><p>这里我用的是go-cqhttp，本文后续部分仅介绍go-cqhttp的使用方法</p><h3><span id="选择onebot的通信方式">选择onebot的通信方式、</span></h3><p>根据官方文档，Onebot 协议规定了四种不同的通信方式：</p><ul><li>正向 HTTP：OneBot 作为 HTTP 服务端，提供 API 调用服务</li><li>反向 HTTP：OneBot 作为 HTTP 客户端，向用户配置的 URL 推送事件，并处理用户返回的响应</li><li>正向 WebSocket：OneBot 作为 WebSocket 服务端，接受用户连接，提供 API 调用和事件推送服务</li><li>反向 WebSocket：OneBot 作为 WebSocket 客户端，主动连接用户配置的 URL，提供 API 调用和事件推送服务</li></ul><p>同时官方文档推荐使用正向 WebSocket，这种通信方式操作简便，且拥有相对较高的性能。在本文的后续部分我们将介绍每一种通信方式的配置方法</p><p>首先从下载并解压最新版本的 <a href="https://github.com/Mrs4s/go-cqhttp/releases">go-cqhttp</a></p><p>解压完成后利用命令行cd进入go-cqhttp的目录<br>输入<code>./go-cqhttp</code>后按照提示选择通信方式</p><h3><span id="go-cqhttp配置参考">go-cqhttp配置参考</span></h3><p>主要配置官方文档都写着，这里就懒得写了</p><p>放一下文档链接 <a href="https://koishi.chat/plugins/adapter/onebot.html#go-cqhttp-%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83">点击这里</a></p><h3><span id="启用插件">启用插件</span></h3><p>填写完go-cqhttp的配置文件后可以在koishi自动生成的控制台启用adapter-onebot和gocqgttp插件</p><p>gocqhttp插件主要作用是每次启用koishi时会创建一个gocqhttp的子进程，这样就不需要每次开机器人都手动运行一遍<code>./go-cqhttp</code>了</p><p>然后根据提示进行验证就可以让onebot接管你的qq了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="笔记" scheme="https://wynio.online/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="技术" scheme="https://wynio.online/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="bot" scheme="https://wynio.online/tags/bot/"/>
+    
+    <category term="koishi" scheme="https://wynio.online/tags/koishi/"/>
+    
+    <category term="onebot" scheme="https://wynio.online/tags/onebot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2023迟来的新年礼物</title>
+    <link href="https://wynio.online/posts/f5ee/"/>
+    <id>https://wynio.online/posts/f5ee/</id>
+    <published>2023-01-10T02:40:01.000Z</published>
+    <updated>2023-01-11T09:40:26.375Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="2023年迟来的更新">2023年迟来的更新</span></h1><p>最近也是发现AD:PIANO系列出到IX了，对我来说也算是一个很棒的新年礼物了</p><p><img src="https://i.328888.xyz/2023/01/10/0MFFU.jpeg" alt="AD:PIANO IX -Alt-"></p><div id="aplayer" class="aplayer" data-id="157640212" data-server="netease" data-type="album" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="音乐播放" scheme="https://wynio.online/categories/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/"/>
+    
+    
+    <category term="音乐" scheme="https://wynio.online/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装N卡驱动</title>
+    <link href="https://wynio.online/posts/37c1/"/>
+    <id>https://wynio.online/posts/37c1/</id>
+    <published>2022-07-26T00:17:50.000Z</published>
+    <updated>2023-01-10T05:39:21.072Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="安装完Arch后我就一直在尝试装N卡驱动"><a href="#安装完Arch后我就一直在尝试装N卡驱动" class="headerlink" title="安装完Arch后我就一直在尝试装N卡驱动"></a>安装完Arch后我就一直在尝试装N卡驱动</h1><p>但是虽然Wiki上的安装过程很简单，只有短短几条命令</p><p>但安装后我还是出现了很多问题</p><p>像是安装后不显示驱动也进不去桌面</p><p>亦或者驱动装上了但是进不去桌面</p><p>后面经过我的实践，我终于总结出了一点装N卡驱动的经验</p><p>下面是官方中文Wiki</p><blockquote><p><a href="https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a></p></blockquote><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先安装linux-lts内核</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S linux-lts</span><br></pre></td></tr></table></figure><p>然后安装N卡驱动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S nvidia-lts</span><br></pre></td></tr></table></figure><p>需要注意的是，12代intelCPU可能会遇到系统无法正常启动的问题</p><p>这时候需要在引导加载程序中设置内核参数<strong>ibt=off</strong></p><p>下面以我用grub引导为例子</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;default&#x2F;grub</span><br></pre></td></tr></table></figure><p>找到LINUX_DEFAULT，并在后面添加ibt=off</p><p>保存退出后重新加载grub文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o &#x2F;etc&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure><p>正常情况下N卡驱动在你pacman后已经安装完成了，这时我们reboot</p><p>输入<code>nvidia-msi</code></p><p>会显示你显卡驱动的信息，如果没有也请自行上网搜索，实在不行就重装吧，我装N卡驱动少说重装了五遍，已经练出肌肉记忆了</p><h3 id="安装后配置"><a href="#安装后配置" class="headerlink" title="安装后配置"></a>安装后配置</h3><h5 id="DRM内核级显示模式设置"><a href="#DRM内核级显示模式设置" class="headerlink" title="DRM内核级显示模式设置"></a>DRM内核级显示模式设置</h5><p>在引导程序中添加DRM内核参数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;default&#x2F;grub</span><br></pre></td></tr></table></figure><p>在LINUX_DEFAULT后面添加<strong>nvidia-drm.modeset=1</strong></p><p>保存退出后更新引导文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o &#x2F;etc&#x2F;grub&#x2F;grub.cfg</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://wynio.online/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://wynio.online/tags/Linux/"/>
+    
+    <category term="系统" scheme="https://wynio.online/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="折腾" scheme="https://wynio.online/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yay助手</title>
+    <link href="https://wynio.online/posts/b0bb/"/>
+    <id>https://wynio.online/posts/b0bb/</id>
+    <published>2022-07-25T11:29:02.000Z</published>
+    <updated>2023-01-08T04:20:25.294Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="yay是ArchLinux下的AUR-Arch用户软件仓库-助手，能让我们更方便的下载和安装AUR上的软件包"><a href="#yay是ArchLinux下的AUR-Arch用户软件仓库-助手，能让我们更方便的下载和安装AUR上的软件包" class="headerlink" title="yay是ArchLinux下的AUR(Arch用户软件仓库)助手，能让我们更方便的下载和安装AUR上的软件包"></a>yay是ArchLinux下的AUR(Arch用户软件仓库)助手，能让我们更方便的下载和安装AUR上的软件包</h1><hr><h3 id="首先是安装前配置"><a href="#首先是安装前配置" class="headerlink" title="首先是安装前配置"></a>首先是安装前配置</h3><p>编辑ArchLinuxcn源</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim &#x2F;etc&#x2F;pacman.conf</span><br></pre></td></tr></table></figure><p>将其中[multilib]和其下面一行的注释#删掉</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[multilib]</span><br><span class="line">Include &#x3D; &#x2F;etc&#x2F;pacman.d&#x2F;mirrorlist</span><br></pre></td></tr></table></figure><p>然后添加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br></pre></td></tr></table></figure><p>在其下面添加cn源</p><p>这里以清华源为例</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;archlinuxcn&#x2F;$arch</span><br></pre></td></tr></table></figure><p>添加完后记得同步数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syyus</span><br></pre></td></tr></table></figure><p>然后为cn源下载密钥</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S archlinuxcn-keyring</span><br></pre></td></tr></table></figure><p>如果报错尝试以下指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman-key --init</span><br><span class="line">sudo pacman-key --populate archlinux</span><br><span class="line">sudo pacman-key --populate archlinuxcn</span><br></pre></td></tr></table></figure><p>配置结束即可进行下一步</p><hr><h3 id="安装yay助手"><a href="#安装yay助手" class="headerlink" title="安装yay助手"></a>安装yay助手</h3><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S yay</span><br></pre></td></tr></table></figure><p>静待安装</p><hr><h3 id="接下来测试yay助手，利用yay助手从AUR下载软件包"><a href="#接下来测试yay助手，利用yay助手从AUR下载软件包" class="headerlink" title="接下来测试yay助手，利用yay助手从AUR下载软件包"></a>接下来测试yay助手，利用yay助手从AUR下载软件包</h3><h5 id="安装网易云音乐"><a href="#安装网易云音乐" class="headerlink" title="安装网易云音乐"></a>安装网易云音乐</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S netease-cloud-music</span><br></pre></td></tr></table></figure><p>需要注意的是尽量避免在root下运行yay</p><h5 id="安装chrome"><a href="#安装chrome" class="headerlink" title="安装chrome"></a>安装chrome</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S google-chrome</span><br></pre></td></tr></table></figure><p>剩下的可以自己摸索，本篇旨在配置yay软件助手</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://wynio.online/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://wynio.online/tags/Linux/"/>
+    
+    <category term="系统" scheme="https://wynio.online/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="折腾" scheme="https://wynio.online/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>近期声明 ③</title>
+    <link href="https://wynio.online/posts/9c0f/"/>
+    <id>https://wynio.online/posts/9c0f/</id>
+    <published>2022-07-23T16:00:00.000Z</published>
+    <updated>2023-01-11T13:53:49.552Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="迟来的2022第一篇文章">迟来的2022第一篇文章</span></h1><h2><span id="从2020建站到如今2022已经过了两年了">从2020建站到如今2022已经过了两年了</span></h2><p>时光飞逝，不知不觉离建站已经两年了</p><p>从vuepress到gitbook再到如今的hexo</p><p>包括毕业后我开始自学html+css+js等前端知识，只为了将来能丰富我的网站</p><p>对于建站我已经有了一点小小的经验了，不再是当初到处问到处找教程的小白了</p><h2><span id="再谈谈我的高中吧">再谈谈我的高中吧</span></h2><p>和二次元那种只存在于幻想中的美好的高中生活不一样</p><p>从高一入学到高三毕业，再到高考，我的经历和这个社会上大多数同龄人一样</p><p>入学时告诉自己将来要考哪个大学，然后再付诸努力，最后成就梦想</p><p>类似的成功之人终究是少数，至少不是我</p><p>而我自己，摸鱼了三年，到最后还是去了填志愿时才知道的大学，才了解到的专业</p><p>但是无论生活如何，路还要走下去，人还是得向前看</p><p>这将是一个新的开始</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://wynio.online/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="闲聊" scheme="https://wynio.online/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>近期声明 ②</title>
+    <link href="https://wynio.online/posts/9d4f/"/>
+    <id>https://wynio.online/posts/9d4f/</id>
+    <published>2021-11-13T06:17:43.000Z</published>
+    <updated>2023-01-11T13:58:19.799Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="近期没什么特别的事情但在这里转发一下老二laur的两张新专辑">近期没什么特别的事情,但在这里转发一下老二(Laur)的两张新专辑</span></h1><p><img src="https://i.loli.net/2021/11/13/S79rUyDvtQEo24T.png" alt="Afflict"></p><blockquote><p><a href="https://last-labyrinth1.bandcamp.com/album/afflict">https://last-labyrinth1.bandcamp.com/album/afflict</a></p></blockquote><p><img src="https://i.loli.net/2021/11/13/KDts2lBGZn4fp86.png" alt="Collapse"></p><blockquote><p><a href="https://last-labyrinth1.bandcamp.com/album/collapse">https://last-labyrinth1.bandcamp.com/album/collapse</a></p></blockquote><p>封面很好看，歌也很好听</p><h5><span id="另外">另外</span></h5><p>Resalia最近要失联一段时间</p><h5><span id="最后给大家附赠点礼物">最后给大家附赠点礼物</span></h5><div id="aplayer" class="aplayer" data-id="7066987507" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div><h5><span id="以上">以上</span></h5>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://wynio.online/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="闲聊" scheme="https://wynio.online/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好李鑫——抽象之徒步狼人刘建龙</title>
+    <link href="https://wynio.online/posts/2c64/"/>
+    <id>https://wynio.online/posts/2c64/</id>
+    <published>2021-10-03T14:22:28.000Z</published>
+    <updated>2023-01-17T12:54:02.903Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="有关董事长的介绍可以参考下面链接">有关董事长的介绍可以参考下面链接</span></h1><blockquote><p><a href="https://www.zhihu.com/question/364890378">https://www.zhihu.com/question/364890378</a></p></blockquote><blockquote><p>在抖音上直接搜索“徒步阿龙”就能找到他，此人正是戴维董事长，也是东沟泥螺，快手已经放弃听说这人现在正在转型当网红，经常社会语录，显然，他没有这个才华，有的只是嘴臭拷打，不去干拷打他凉的很快。</p></blockquote><blockquote><p>大新闻:徒步阿龙，戴维董事长，刘建龙，此人在快手上直播打架被快手官方永久封禁，爷的青春正式结束，此人快手号没了，抖音和B站还在，可以去看看</p></blockquote><p><img src="https://i.loli.net/2021/10/23/DnO9ZamoLQxY7jd.png" alt="刘建龙"></p><p><img src="/css/36.png" alt="1"></p><h2><span id="龙丽思想抽象学必修-1-学习材料">龙丽思想抽象学必修 1 学习材料</span></h2><div class="row">    <embed src="https://doc-1252552907.cos.ap-shanghai.myqcloud.com/%E9%BE%99%E4%B8%BD%E9%9B%86%E5%9B%A2%E9%99%84%E5%B1%9E%E6%8A%BD%E8%B1%A1%E4%B8%93%E4%B8%9A%E5%A4%A7%E5%AD%A6%E9%BE%99%E4%B8%BD%E6%80%9D%E6%83%B3%20%E6%8A%BD%E8%B1%A1%E5%AD%A6%E5%BF%85%E4%BF%AE%201%20%E5%AD%A6%E4%B9%A0%E6%9D%90%E6%96%99.pdf" width="100%" height="550" type="application/pdf"></div><h5><span id="董事长经典">董事长经典</span></h5><p><strong>戴维董事长惩治二手车黑心商家</strong></p><blockquote><p><a href="https://www.youtube.com/watch?v=vVcuuGWcBjk&amp;t=352s">https://www.youtube.com/watch?v=vVcuuGWcBjk&amp;t=352s</a></p></blockquote><p><strong>龙丽董事长和李鑫</strong></p><blockquote><p><a href="https://www.youtube.com/watch?v=eQsoylZU73Y&amp;t=1s">https://www.youtube.com/watch?v=eQsoylZU73Y&amp;t=1s</a></p></blockquote><h5><span id="持续更新">持续更新</span></h5>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="抽象" scheme="https://wynio.online/categories/%E6%8A%BD%E8%B1%A1/"/>
+    
+    
+    <category term="董事长" scheme="https://wynio.online/tags/%E8%91%A3%E4%BA%8B%E9%95%BF/"/>
+    
+    <category term="保定" scheme="https://wynio.online/tags/%E4%BF%9D%E5%AE%9A/"/>
+    
+    <category term="刘建龙" scheme="https://wynio.online/tags/%E5%88%98%E5%BB%BA%E9%BE%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>与Katago对弈</title>
+    <link href="https://wynio.online/posts/6c65/"/>
+    <id>https://wynio.online/posts/6c65/</id>
+    <published>2021-07-12T10:15:03.000Z</published>
+    <updated>2023-01-11T14:02:31.432Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="最近无聊到下棋">最近无聊到下棋</span></h1><p>当然我不是什么职业棋士</p><p>对我来说下棋与其说是一种益智活动更像是一种催眠方式</p><p>因为有时下着下着就困了</p><p>但是我最近对一个叫做Katago围棋AI有了点兴趣，于是就研究了一下</p><p>Katago是由David J. Wu 所研究并开发的一套围棋软件。</p><p>并且以DeepMind的AlphaGo Zero与AlphaZero论文为基础为基础，训练速度更快，棋力更强</p><p>黑色是我<img src="/css/28.png" alt="被乱杀"></p><p><del>开局被乱杀</del></p><p>下面就简单讲一下KataGo和Sabaki的使用方法和下载方式</p><blockquote><p><a href="https://github.com/SabakiHQ/Sabaki/releases/tag/v0.52.0">https://github.com/SabakiHQ/Sabaki/releases/tag/v0.52.0</a>  –Sabaki</p></blockquote><blockquote><p><a href="https://github.com/lightvector/KataGo/releases">https://github.com/lightvector/KataGo/releases</a>  –KataGo</p></blockquote><p>我下载的KataGo是1.9.1版本的</p><p><img src="/css/29.png" alt="1"></p><p>其中文件名字带有bs29的是娱乐版本，支持29x29棋盘，但我不打算用，因为19x19就已经够我下一年了</p><p>一般来说有显卡的用OpenCL或CUDA比较好，Eigen是纯CPU</p><p>这里我下的是1.9.1的OpenCL版本</p><p>下载好后用cmd进入Katago的目录并执行katago.exe genconfig -model (权重文件名字).bin.gz -output gtp_custom.cfg</p><p><img src="/css/17.png" alt="1"></p><p>这里输入chinese即可</p><p>后面还有一系列指令一般有default的就直接回车吧，其他的大家英语好的自行判断该输什么</p><p>KataGo的权重文件可以到<a href="https://katagotraining.org/networks/">这里</a>下载</p><p>然后你需要给Sabaki配置权重</p><p>下载完后打开Sabaki</p><p><img src="/css/30.png" alt="1"></p><p>具体配置如上</p><p>详细介绍可以上网找，这里不一一阐述，其实我也是一知半解</p><p>配置完后打开这个运行</p><p><img src="/css/31.png" alt="1"></p><p>等候几十秒就加载完成了</p><p>加载完成就可以正常和Katago下棋了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="娱乐" scheme="https://wynio.online/categories/%E5%A8%B1%E4%B9%90/"/>
+    
+    
+    <category term="对弈" scheme="https://wynio.online/tags/%E5%AF%B9%E5%BC%88/"/>
+    
+    <category term="下棋" scheme="https://wynio.online/tags/%E4%B8%8B%E6%A3%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>音乐播放页</title>
+    <link href="https://wynio.online/posts/a7c/"/>
+    <id>https://wynio.online/posts/a7c/</id>
+    <published>2021-06-08T06:32:06.000Z</published>
+    <updated>2023-01-11T13:58:59.139Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="关于一些本人喜欢的音乐">关于一些本人喜欢的音乐</span></h1><p>使用Aplayer实现，主要是播一些站长喜欢的音乐</p><p>能不能播放取决于API是否失效</p><p>其实已经失效过一次了</p><p>加载时间过长，见谅</p><p>就当是一个测试页面了</p><div id="aplayer" class="aplayer" data-id="6796897788" data-server="netease" data-type="playlist" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#2ad1c9"></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="音乐播放" scheme="https://wynio.online/categories/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE/"/>
+    
+    
+    <category term="安利" scheme="https://wynio.online/tags/%E5%AE%89%E5%88%A9/"/>
+    
+    <category term="音乐" scheme="https://wynio.online/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+    <category term="娱乐" scheme="https://wynio.online/tags/%E5%A8%B1%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收藏网页分享</title>
+    <link href="https://wynio.online/posts/c0e5/"/>
+    <id>https://wynio.online/posts/c0e5/</id>
+    <published>2021-05-15T12:01:24.000Z</published>
+    <updated>2021-10-23T09:42:27.260Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="此页面收录了一些我收藏的网站"><a href="#此页面收录了一些我收藏的网站" class="headerlink" title="此页面收录了一些我收藏的网站"></a>此页面收录了一些我收藏的网站</h1><h3 id="Elfensjon"><a href="#Elfensjon" class="headerlink" title="Elfensjon"></a>Elfensjon</h3><blockquote><p><a href="https://elfensjon.site/">https://elfensjon.site/</a></p></blockquote><p><img src="/css/18.png" alt="1"></p><p>来自一个我很喜欢的音乐组合Elfensjon</p><p>是我不经意间在Google搜我喜欢的album时发现的宝贝网站<del>没想到是官网</del></p><p>不过好像有个分页没法跳转了，不清楚咋回事</p><hr><h3 id="泰拉记事社"><a href="#泰拉记事社" class="headerlink" title="泰拉记事社"></a>泰拉记事社</h3><blockquote><p><a href="https://terra-historicus.hypergryph.com/">https://terra-historicus.hypergryph.com/</a></p></blockquote><p>在我曾经是一个doc的时候，我还是很喜欢的</p><p>现在不怎么玩粥游了，很少逛了</p><p><img src="/css/19.png" alt="1"></p><hr><h3 id="少女病Girldisease"><a href="#少女病Girldisease" class="headerlink" title="少女病Girldisease"></a>少女病Girldisease</h3><blockquote><p><a href="http://www.girldisease.com/">http://www.girldisease.com/</a></p></blockquote><p>很经典的一个日本同人音乐组合</p><p>物语音乐从小就开始听了</p><p><img src="/css/35.png" alt="1"></p><p>最近也是要出最后一张DISC了</p><p>「真典セクサリス」对应「偽典セクサリス」</p><p>偽典代表少女病物语音乐的开始，真典将代表结束</p><hr><h3 id="克苏鲁公社Cthulhu-Craft"><a href="#克苏鲁公社Cthulhu-Craft" class="headerlink" title="克苏鲁公社Cthulhu Craft"></a>克苏鲁公社Cthulhu Craft</h3><p><img src="https://i.loli.net/2021/10/23/19RtFI8E7BAjYTG.png" alt="克苏鲁"></p><blockquote><p><a href="https://www.cthulhuclub.com/">https://www.cthulhuclub.com/</a></p></blockquote><p>最近了解克苏鲁文化时发现的宝藏网站</p><p>UI很有感觉，里面内容也比较全</p><p>希望了解克苏鲁的可以看看</p><h2 id="持续更新"><a href="#持续更新" class="headerlink" title="持续更新"></a>持续更新</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="网站" scheme="https://wynio.online/categories/%E7%BD%91%E7%AB%99/"/>
+    
+    
+    <category term="网站" scheme="https://wynio.online/tags/%E7%BD%91%E7%AB%99/"/>
+    
+    <category term="安利" scheme="https://wynio.online/tags/%E5%AE%89%E5%88%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于《进击的巨人》139话..</title>
+    <link href="https://wynio.online/posts/df0b/"/>
+    <id>https://wynio.online/posts/df0b/</id>
+    <published>2021-04-13T15:22:36.000Z</published>
+    <updated>2023-01-11T14:04:22.587Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="一言难尽但是不好的观点居多">一言难尽，但是不好的观点居多</span></h1><p>巨人139话出了以后，网络上就出现了各种不同的看法</p><p>但主要是巨人烂尾的观点居多</p><p>下面就简单讲一下我对《进击的巨人》第139话的看法</p><h2><span id="把我的观点放在前头巨人的结尾确实烂烂上加烂">把我的观点放在前头，巨人的结尾确实烂，烂上加烂</span></h2><p>在讨论巨人结尾之前，我想先讲一些别的东西</p><p>首先我认为，一个作品的好坏在于它创造出的价值</p><p>他于社会，于读者，传达出了什么价值观，有什么影响</p><p>巨人是不是神作，是的，至少在地鸣之前甚至139话之前他都能称得上一部优秀的作品</p><p>加上动画组优秀的作画以及泽野弘之神bgm的多重加持下巨人可以说的上是一部神作</p><p>巨人能够爆火，我认为主要得益于动画方面的宣传，虽说巨人的设定也很有意思</p><p>作者谏山创创造了一个比较完整的世界观，虽说里面有不少内容原理上和现代科学是相悖的，不科学的，也甚至于里面的有些设定放到现实中也是极其荒谬的</p><p>精良的动画制作加上巨人还算不错的设定让这个IP得到爆火</p><p>而当《进击的巨人》公布139话后，带来的冲击力是令人始料未及的</p><p>他烂到什么程度呢</p><p>借用B站UP瓶子152的话来说</p><blockquote><p>所有你能想到的烂尾作品可能都得对着巨人深深鞠上一躬</p></blockquote><p>所有在结尾出来之前的巨人爱好者都被谏山创突如其来的神回转灌了一嘴的shit</p><p>短短一话彻彻底底将这部本能在漫画史上留下美誉的作品推向了他的极端</p><p>短短一话让苦心经营的人设彻底崩塌</p><p>短短一话完全与所有巨人爱好者猜测的结局背道而驰</p><p>只能说谏山创的想象力是极其丰富的</p><p>现在巨人彻底扬名了，不过是臭名昭著</p><p>那么具体巨人的结尾烂在什么地方，大🔥可以网上直接搜，以下就不剧透了</p><p>以上就是我要说的全部内容了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="评价" scheme="https://wynio.online/categories/%E8%AF%84%E4%BB%B7/"/>
+    
+    
+    <category term="漫画" scheme="https://wynio.online/tags/%E6%BC%AB%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Make a wish</title>
+    <link href="https://wynio.online/posts/3166/"/>
+    <id>https://wynio.online/posts/3166/</id>
+    <published>2021-01-30T03:51:18.000Z</published>
+    <updated>2023-01-17T04:41:06.557Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="ark新活动本来想着摸摸鱼就算了">ark新活动，本来想着摸摸鱼就算了</span></h1><p><img src="/css/5.jpg" alt="1"></p><p>But…</p><p><img src="/css/10.png" alt="1"></p><p>OHHHHHHHHHHHHHHHHH!!!!!</p><p><img src="/css/11.png" alt="1"></p><p>狗子很可爱</p><p><img src="/css/12.png" alt="1"></p><p><img src="/css/13.png" alt="1"></p><p>顶</p><h2><span id="许愿夕和嵯峨">许愿夕和嵯峨</span></h2><p>出货必还愿</p><p>yj不要不识好歹</p><p><img src="/css/37.png" alt="1"></p><h1><span id="power">POWER！</span></h1><hr><p><img src="/css/maws1.jpg" alt="1"></p><p><img src="/css/maws3.jpg" alt="1"></p><p><img src="/css/maws2.jpg" alt="1"></p><p>出息<del>夕</del>了</p><p><img src="/css/xi.png" alt="1"></p><p>按照约定前来还愿了,但是活动才刚开始</p><p>能否再送个嵯峨给我呢<del>得寸进尺</del></p><p>谢谢你，yj</p><hr><p>二月十九号，一大早醒来，夕池没了，嵯峨也没出</p><h5><span id>？？？</span></h5><p><img src="/css/16.png" alt="1"></p><p>本次活动很圆满<del>遗憾</del>的结束了</p><p>我狗子呢？<em>YJ!!??</em></p><h5><span id="这个仇我记下了">这个仇我记下了</span></h5>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="游戏" scheme="https://wynio.online/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="arknights" scheme="https://wynio.online/categories/%E6%B8%B8%E6%88%8F/arknights/"/>
+    
+    
+    <category term="祈愿" scheme="https://wynio.online/tags/%E7%A5%88%E6%84%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ArchLinux安装指南</title>
+    <link href="https://wynio.online/posts/ae4f/"/>
+    <id>https://wynio.online/posts/ae4f/</id>
+    <published>2021-01-26T04:23:19.000Z</published>
+    <updated>2023-02-06T05:09:15.798Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="先前有尝试过用vmware装archlinux">先前有尝试过用VMware装Archlinux</span></h1><p>因为整个系统都是在Cli下一步步引导安装</p><p>打算针对只会Windows的完全没接触过GNU/Linux的新手写一个零基础安装教学</p><p>这回不再使用VMware进行安装，直接上手实机进行EFI引导安装arch</p><p>内容可能会有一些错误，如有发现请即刻私信我</p><p>我也是没有过这类手动安装linux的经历，如果遇到什么问题也可以找我讨论<img src="/css/1.jpg" alt></p><p>另外，尽管这类教程Google上一搜一大片</p><p>但还是有些不全面的地方，这个教程会针对新人，保证仅通过复制代码不清楚代码作用的情况下也能顺利安装</p><p>这个教学不只是针对新人，也为了日后我速通archlinux。冷知识：目前世界记录是一分多钟</p><p>具体安装速度取决于网速，取决于你安装基本包的速度</p><p>**Tips：**本次安装使用y7000p进行实机安装</p><p>废话说完了，开始操作</p><h3><span id="安装前准备">安装前准备</span></h3><blockquote><p>首先把官方文档的链接放在下面，有能力的先对照着看</p></blockquote><blockquote><p><a href="https://wiki.archlinux.org/index.php/Installation_guide">https://wiki.archlinux.org/index.php/Installation_guide</a></p></blockquote><p>备份结束后就可以下载ISO了</p><blockquote><p><a href="https://www.archlinux.org/download/">https://www.archlinux.org/download/</a></p></blockquote><p>进入以后可以选择下载磁力链或种子<br><img src="/css/2.png" alt></p><p>当然我是选择的磁力链，迅雷下载也是比较快的</p><p>下载结束后也最好检验一下哈希值，这里就不详细说明怎么检验了</p><p>下载完镜像后可以使用rufus创建引导U盘，这里也不一一阐述</p><p>引导盘弄好后，就可以开始安装了</p><hr><h3><span id="安装">安装</span></h3><p>首先重启电脑进入BIOS界面</p><p><img src="/css/1.png" alt="另外如果出现这样的界面已经成功了"></p><p>然后设置你的U盘启动项为首位</p><p>这里选择第一个选项或是等待过后自动进入安装页面</p><p><img src="/css/3.png" alt="1"></p><h3><span id="首先确定自己的引导方式">首先确定自己的引导方式</span></h3><p>执行以下命令</p><p><code>ls /sys/firmware/efi/efivars</code></p><p>执行命令后，如果弹出一大堆东西，说明你是EFI引导，如果弹出下面的信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls: cannot access &#x27;/sys/firmware/efi/efivars&#x27;: No such file or directory</span><br></pre></td></tr></table></figure><p>则说明你是以BIOS方式引导</p><p>两种不同的类型安装方式也会有所不同</p><p>本次安装采用EFI引导安装</p><hr><h3><span id="联网">联网</span></h3><p><strong>arch</strong>不能离线安装，需要通过联网来下载相关的包和组件，首先我们需要联网</p><p>如果你是有线网，输入以下命令获取IP地址</p><p><code>dhcpcd</code></p><p>然后再通过ping来判断是否联网，例如：</p><p><code>ping www.baidu.com</code></p><p>ping通了就说明连上网了</p><p>如果你是无线网，就执行以下命令：</p><p><code>iwctl</code></p><p>会进入一个以<strong>iwd</strong>开头的Cli环境中，然后执行</p><p><code>device list</code></p><p>会出现以下情况</p><p><img src="/css/4.png" alt="1"></p><p>有的人可能会像我这样，设备的powered是off的，这时候可以执行rfkill unblock wlan</p><p>再次<code>device list</code>即可</p><p>然后执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">station name scan # 使用wlan0进行无线网络扫描</span><br><span class="line">station name get-networks # 使用wlan0列出扫描到的网络</span><br><span class="line">station name connect WIFI # 使用wlan0连接到你家WIFI</span><br></pre></td></tr></table></figure><p>之后按要求输入密码，就能成功连上网了，执行下面命令以退出iwd</p><p><code>quit</code></p><p>之后再尝试<code>ping baidu.com</code></p><p>如果ping的通就连上了</p><p>目前我没遇到过什么问题，如遇到问题可以先上官方论坛查找，下方是官方wiki</p><blockquote><p><a href="https://wiki.archlinux.org/index.php/Wireless_network_configuration">https://wiki.archlinux.org/index.php/Wireless_network_configuration</a></p></blockquote><hr><h3><span id="分区">分区</span></h3><p>操作前一定要特别注意，一定不要操作失误，一定要清楚自己所做的每一步带来的影响，不然你数据就没了</p><p>首先查看目前的分区情况</p><p><code>fdisk -l</code></p><p><img src="/css/5.png" alt="1"></p><p>可以先清空磁盘，删除掉不需要的分区，需要注意的是不要删错，下面以我为例</p><p>执行<code>fdisk /dev/nvme0n1</code></p><p>然后输入<code>d</code>，一路回车，最后输入<code>w</code>保存</p><p>然后可以<strong>CTRL+C</strong>退出fdisk</p><p>下面对磁盘进行分区</p><p>我采用的是cfdisk进行，还是以我为例</p><p>执行<code>cfdisk /dev/nvme0n1</code></p><p>下方回车new选项，回车</p><p>大小输入300M，回车，创建一个EFI分区</p><p><img src="/css/38.png" alt="1"></p><p>此时已经创建了一个EFI分区</p><p>然后再选中剩下的free space再创建一个根分区</p><p>回车new创建完成后再回车write，输入yes，回车</p><p>然后回车quit离开</p><p>此时再<code>fdisk -l</code>就会发现已经分区完成了</p><p>格式化分区</p><p>执行以下命令对EFI分区和根分区进行格式化</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkfs.fat -F32 /dev/nvme0n1p1 #对EFI分区进行格式化</span><br><span class="line">mkfs.ext4 /dev/nvme0n1p2 #对根分区进行格式化</span><br></pre></td></tr></table></figure><p>格式化结束进行下一步</p><p>挂载</p><p>首先挂载根分区</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/你的根分区 /mnt</span><br></pre></td></tr></table></figure><p>随后创建EFI分区的挂载点</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /mnt/boot</span><br><span class="line">mkdir /mnt/boot/EFI</span><br></pre></td></tr></table></figure><p>挂载EFI分区</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/你的EFI分区 /mnt/boot/EFI</span><br></pre></td></tr></table></figure><p>挂载结束进行下一步</p><hr><h3><span id="选择镜像">选择镜像</span></h3><p>根据不同地区选择不同的镜像来加快下载速度</p><p><s>硬下也没关系，只不过可能要下到猴年马月</s></p><p>执行以下命令来编辑源文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/pacman.d/mirrorlist</span><br></pre></td></tr></table></figure><p>找到标有China的镜像源，剪切到最前面的位置</p><p>找不到就直接手搓</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch</span><br><span class="line">Server = http://mirrors.zju.edu.cn/archlinux/$repo/os/$arch</span><br></pre></td></tr></table></figure><p>之后用<code>:wq</code>保存并退出即可<img src="/css/37.png" alt="1"></p><hr><h3><span id="安装基本包">安装基本包</span></h3><p>折腾了一堆东西，总算可以开始安装基本包了，本过程需要全程联网<s>废话</s></p><p>执行以下命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacstrap /mnt base base-devel linux linux-firmware dhcpcd </span><br></pre></td></tr></table></figure><p>能不能速通就看网速了，arch安装一般就卡在网速上</p><p>不过镜像配置好是不会很久的</p><hr><h3><span id="配置fstab">配置Fstab</span></h3><p>生成一个Fstab文件通过UUID或者标签进行定义</p><p>执行以下命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /mnt/etc/fstab</span><br></pre></td></tr></table></figure><p>检查输出的文件<code>/mnt/etc/fstab</code>是否正确</p><p>比如查看是否有/boot/EFI的文件，如果没出现说明挂载没成功</p><p>需要重新挂载后再生成一次</p><p>结束进行下一步</p><h3><span id="chroot">Chroot</span></h3><p>切换到根目录</p><p>执行<code>arch-chroot /mnt</code></p><p><img src="/css/7.png" alt="1"></p><hr><h3><span id="设置时区">设置时区</span></h3><p>输入以下指令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -sf /usr/share/zoneinfo/Region/City /etc/localtime # /Region/City改为自己城市和地区，例如/Asia/Shanghai</span><br><span class="line">hwclock --systohc #设置时间漂移</span><br></pre></td></tr></table></figure><p>结束到下一步</p><hr><h3><span id="安装vim和sudo">安装vim和sudo</span></h3><p>可以通过Archlinux的包管理器<strong>pacman</strong>下载，大部分情况只需要一行命令就帮你搞定依赖和安装的问题</p><p>输入以下指令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S vim sudo</span><br></pre></td></tr></table></figure><hr><h3><span id="配置locale">配置locale</span></h3><p>执行以下命令已编辑/etc/locale.gen文件</p><p><code>vim /etc/locale.gen</code></p><p>在文件中找到zh_CN.UTF-8 UTF-8和en_US.UTF-8 UTF-8</p><p>去掉开头的#号，并:<strong>wq</strong>保存退出</p><p>再执行<code>locale-gen</code></p><p>下一步</p><hr><h3><span id="设置语言">设置语言</span></h3><p><code>vim /etc/locale.conf</code></p><p>在里面输入<strong>LANG=en_US.UTF-8</strong></p><p><strong>:wq</strong>退出</p><hr><h3><span id="设置主机名字">设置主机名字</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 主机名 &gt; /etc/hostname</span><br></pre></td></tr></table></figure><hr><h3><span id="配置hosts文件">配置hosts文件</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure><p><img src="/css/39.png" alt="1"></p><p>其中的anastasia改为上一步你设置的主机名字</p><p><strong>:wq</strong>保存退出</p><hr><h3><span id="启用dhcpcd服务">启用dhcpcd服务</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable dhcpcd.service</span><br></pre></td></tr></table></figure><hr><h3><span id="设置root密码">设置Root密码</span></h3><p>输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure><p>按提示确认即可</p><hr><h3><span id="创建普通用户并设置密码并赋予其sudo权限">创建普通用户并设置密码并赋予其sudo权限</span></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -m -G wheel -s /bin/bash 用户名</span><br></pre></td></tr></table></figure><p>然后</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd 用户名</span><br></pre></td></tr></table></figure><p>接着</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></table></figure><p>找到%wheel ALL=(ALL:ALL) ALL，并把其前面的注释#去掉，保存退出</p><hr><h3><span id="安装引导">安装引导</span></h3><p>安装grub和efibootmgr：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S grub efibootmgr</span><br></pre></td></tr></table></figure><p>部署grub：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-install --target=x86_64-efi --efi-directory=/boot/EFI</span><br></pre></td></tr></table></figure><p>生成配置文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure><p>如果是EFI/GPT引导方式</p><p>如果引导或挂载没什么问题这里应该是正常的</p><hr><h3><span id="安装后检查">安装后检查</span></h3><p>输入以下指令检查是否成功生成各系统入口：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure><p>如果没生成其他系统入口，请自行查阅</p><blockquote><p><a href="https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Combining_the_use_of_UUIDs_and_basic_scripting">https://wiki.archlinux.org/index.php/GRUB/Tips_and_tricks#Combining_the_use_of_UUIDs_and_basic_scripting</a></p></blockquote><p>vans后就进行下一步</p><hr><h3><span id="reboot">Reboot</span></h3><p>一定要先确保所有步骤无误，否则重启后一切努力就会全部木大！</p><p>确保无误后先输入<code>exit</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure><p>重启</p><p><img src="/css/8.png" alt="1"></p><p>如果你成功进入到这里了，恭喜你，你已经完成安装了</p><p>算算时间，看看你一共花了多长时间吧</p><hr><h3><span id="安装后配置">安装后配置</span></h3><p>查看显示设备</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lspci | grep VGA</span><br></pre></td></tr></table></figure><p>安装通用显示驱动</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S xf86-video-vesa</span><br></pre></td></tr></table></figure><p>安装xorg</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S xorg</span><br></pre></td></tr></table></figure><p>安装字体</p><p>安装字体，不然有可能出现方块字</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S wqy-microhei</span><br></pre></td></tr></table></figure><p>安装KDE桌面</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S plasma kde-applications</span><br></pre></td></tr></table></figure><p>启用sddm显示和network网络管理器</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable sddm</span><br><span class="line">systemctl enable NetworkManager</span><br></pre></td></tr></table></figure><p>重启<code>reboot</code></p><p>这个时候就进入到archlinux的图形化界面了</p><hr><h3><span id="结束">结束</span></h3><p>至此archlinux的图形化界面已经安装结束了</p><p>如果在安装过程中你们遇到什么问题可以上论坛找，也可以找我</p><p>整篇文章如有写错的地方还请指出</p><p>谢谢！<br><img src="/css/33.png" alt="1"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://wynio.online/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://wynio.online/tags/Linux/"/>
+    
+    <category term="系统" scheme="https://wynio.online/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="折腾" scheme="https://wynio.online/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="笔记" scheme="https://wynio.online/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>近期声明 ①</title>
+    <link href="https://wynio.online/posts/b180/"/>
+    <id>https://wynio.online/posts/b180/</id>
+    <published>2021-01-25T05:16:23.000Z</published>
+    <updated>2023-01-11T13:57:12.169Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="最近也是迫于疫情形势严峻的情况下我提前放假了">最近也是迫于疫情形势严峻的情况下，我提前放假了</span></h1><p>抽空搞了一下这个站点</p><p>原先使用的theme是hipaper</p><p>由于bug比较多，为求清净换了cactus</p><p>不说别的我还挺喜欢cactus的，但是有一些小bug，不过好在不影响观感</p><p>但是限于我目前的前端知识我还没法修复这些bug</p><p>所以暂时鸽置一下啦</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="公告" scheme="https://wynio.online/categories/%E5%85%AC%E5%91%8A/"/>
+    
+    
+    <category term="闲聊" scheme="https://wynio.online/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://wynio.online/posts/4a17b156/"/>
+    <id>https://wynio.online/posts/4a17b156/</id>
+    <published>2020-11-29T04:23:19.000Z</published>
+    <updated>2021-10-23T09:33:11.472Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h1 id="本站第一篇文章，懒得删，就这样吧"><a href="#本站第一篇文章，懒得删，就这样吧" class="headerlink" title="本站第一篇文章，懒得删，就这样吧"></a>本站第一篇文章，懒得删，就这样吧</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="start" scheme="https://wynio.online/categories/start/"/>
+    
+    
+    <category term="Hexo" scheme="https://wynio.online/tags/Hexo/"/>
+    
+    <category term="Hello world" scheme="https://wynio.online/tags/Hello-world/"/>
+    
+  </entry>
+  
+</feed>
