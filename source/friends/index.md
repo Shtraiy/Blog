@@ -47,7 +47,7 @@ type: friends
 </div>
 </a>
 
-<a href="https://seamain.studio">
+<a href="https://seamain.org">
 <div class="link">
 <img class="avater" src="https://jsd.cdn.zzko.cn/gh/Seamain/My-blog@master/src/images/icon.png"></img>
 <div class="content">
