@@ -74,9 +74,9 @@
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="icons.menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="icons.menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="icons.top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="menu-icon" href="#" aria-label="icons.menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="icons.menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="icons.top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -101,13 +101,13 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="上一篇" href="/posts/3166/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/posts/3166/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="下一篇" href="/posts/b180/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/posts/b180/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
       <span id="i-prev" class="info" style="display:none;">上一篇</span>
       <span id="i-next" class="info" style="display:none;">下一篇</span>
@@ -121,7 +121,7 @@
   <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://wynio.online/posts/ae4f/&text=ArchLinux安装指南"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wynio.online/posts/ae4f/&is_video=false&description=ArchLinux安装指南"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=ArchLinux安装指南&body=Check out this article: https://wynio.online/posts/ae4f/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ArchLinux安装指南&body=Check out this article: https://wynio.online/posts/ae4f/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
@@ -131,18 +131,22 @@
 </ul>
 
     </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">先前有尝试过用VMware装Archlinux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装前准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.3.</span> <span class="toc-text">首先确定自己的引导方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.4.</span> <span class="toc-text">联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.5.</span> <span class="toc-text">分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.6.</span> <span class="toc-text">选择镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.7.</span> <span class="toc-text">安装基本包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.8.</span> <span class="toc-text">配置Fstab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.9.</span> <span class="toc-text">Chroot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.10.</span> <span class="toc-text">设置时区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.11.</span> <span class="toc-text">安装vim和sudo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.12.</span> <span class="toc-text">配置locale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.13.</span> <span class="toc-text">设置语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.14.</span> <span class="toc-text">设置主机名字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.15.</span> <span class="toc-text">配置hosts文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.16.</span> <span class="toc-text">启用dhcpcd服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.17.</span> <span class="toc-text">设置Root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.18.</span> <span class="toc-text">创建普通用户并设置密码并赋予其sudo权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.19.</span> <span class="toc-text">安装引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.20.</span> <span class="toc-text">安装后检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.21.</span> <span class="toc-text">Reboot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.22.</span> <span class="toc-text">安装后配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.23.</span> <span class="toc-text">结束</span></a></li></ol></li></ol></li></ol>
-    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">先前有尝试过用VMware装Archlinux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装前准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.3.</span> <span class="toc-text">首先确定自己的引导方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.4.</span> <span class="toc-text">联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.5.</span> <span class="toc-text">分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.6.</span> <span class="toc-text">选择镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.7.</span> <span class="toc-text">安装基本包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.8.</span> <span class="toc-text">配置Fstab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.9.</span> <span class="toc-text">Chroot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.10.</span> <span class="toc-text">设置时区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.11.</span> <span class="toc-text">安装vim和sudo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.12.</span> <span class="toc-text">配置locale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.13.</span> <span class="toc-text">设置语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.14.</span> <span class="toc-text">设置主机名字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.15.</span> <span class="toc-text">配置hosts文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.16.</span> <span class="toc-text">启用dhcpcd服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.17.</span> <span class="toc-text">设置Root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.18.</span> <span class="toc-text">创建普通用户并设置密码并赋予其sudo权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.19.</span> <span class="toc-text">安装引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.20.</span> <span class="toc-text">安装后检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.21.</span> <span class="toc-text">Reboot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.22.</span> <span class="toc-text">安装后配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.23.</span> <span class="toc-text">结束</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
   </span>
 </div>
+
     
     <div class="content index py4">
         
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     
-    <h1 class="posttitle" itemprop="name headline">
+    <h1 class="posttitle p-name" itemprop="name headline">
         ArchLinux安装指南
     </h1>
 
@@ -155,9 +159,9 @@
       
     <div class="postdate">
       
-        <time datetime="2021-01-26T04:23:19.000Z" itemprop="datePublished">2021-01-26</time>
+        <time datetime="2021-01-26T04:23:19.000Z" class="dt-published" itemprop="datePublished">2021-01-26</time>
         
-        (Updated: <time datetime="2023-02-06T05:09:15.798Z" itemprop="dateModified">2023-02-06</time>)
+        (Updated: <time datetime="2023-02-06T05:09:15.798Z" class="dt-updated" itemprop="dateModified">2023-02-06</time>)
         
       
     </div>
@@ -165,42 +169,18 @@
 
       
     <div class="article-category">
-        <i class="fas fa-archive"></i>
+        <i class="fa-solid fa-archive"></i>
         <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
     </div>
 
 
-      <!DOCTYPE html>
-<html>
-  <head>
-    <title>jQCloud Example</title>
-    <link rel="stylesheet" type="text/css" href="jqcloud.css" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script type="text/javascript" src="jqcloud-1.0.4.js"></script>
-    <script type="text/javascript">
-      /*!
-       * Create an array of word objects, each representing a word in the cloud
-       */
-      var word_array = [
-          {text: "Lorem", weight: 15},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5}
-          // ...as many words as you want
-      ];
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Linux/" rel="tag">Linux</a>, <a class="p-category" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a>, <a class="p-category" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a>, <a class="p-category" href="/tags/%E7%B3%BB%E7%BB%9F/" rel="tag">系统</a>
+    </div>
 
-      $(function() {
-        // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
-        $("#example").jQCloud(word_array);
-      });
-    </script>
-  </head>
-  <body>
-    <!-- You should explicitly specify the dimensions of the container element -->
-    <div id="example" style="width: 550px; height: 350px;"></div>
-  </body>
-</html>
+
     </div>
   </header>
   
@@ -458,27 +438,30 @@
 
     <div id="nav-footer" style="display: none">
       <ul>
-         
+        
           <li><a href="/">首页</a></li>
-         
+        
           <li><a href="/archives/">归档</a></li>
-         
+        
           <li><a href="/categories/">分类</a></li>
-         
+        
           <li><a href="/tags/">标签</a></li>
-         
+        
           <li><a href="/about/">关于我</a></li>
-         
+        
           <li><a href="/friends/">朋友</a></li>
-         
+        
           <li><a href="/search/">搜索</a></li>
         
       </ul>
     </div>
 
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">先前有尝试过用VMware装Archlinux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装前准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.3.</span> <span class="toc-text">首先确定自己的引导方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.4.</span> <span class="toc-text">联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.5.</span> <span class="toc-text">分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.6.</span> <span class="toc-text">选择镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.7.</span> <span class="toc-text">安装基本包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.8.</span> <span class="toc-text">配置Fstab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.9.</span> <span class="toc-text">Chroot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.10.</span> <span class="toc-text">设置时区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.11.</span> <span class="toc-text">安装vim和sudo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.12.</span> <span class="toc-text">配置locale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.13.</span> <span class="toc-text">设置语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.14.</span> <span class="toc-text">设置主机名字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.15.</span> <span class="toc-text">配置hosts文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.16.</span> <span class="toc-text">启用dhcpcd服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.17.</span> <span class="toc-text">设置Root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.18.</span> <span class="toc-text">创建普通用户并设置密码并赋予其sudo权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.19.</span> <span class="toc-text">安装引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.20.</span> <span class="toc-text">安装后检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.21.</span> <span class="toc-text">Reboot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.22.</span> <span class="toc-text">安装后配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.23.</span> <span class="toc-text">结束</span></a></li></ol></li></ol></li></ol>
-    </div>
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">先前有尝试过用VMware装Archlinux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装前准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.3.</span> <span class="toc-text">首先确定自己的引导方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.4.</span> <span class="toc-text">联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.5.</span> <span class="toc-text">分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.6.</span> <span class="toc-text">选择镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.7.</span> <span class="toc-text">安装基本包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.8.</span> <span class="toc-text">配置Fstab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.9.</span> <span class="toc-text">Chroot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.10.</span> <span class="toc-text">设置时区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.11.</span> <span class="toc-text">安装vim和sudo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.12.</span> <span class="toc-text">配置locale</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.13.</span> <span class="toc-text">设置语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.14.</span> <span class="toc-text">设置主机名字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.15.</span> <span class="toc-text">配置hosts文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.16.</span> <span class="toc-text">启用dhcpcd服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.17.</span> <span class="toc-text">设置Root密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.18.</span> <span class="toc-text">创建普通用户并设置密码并赋予其sudo权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.19.</span> <span class="toc-text">安装引导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.20.</span> <span class="toc-text">安装后检查</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.21.</span> <span class="toc-text">Reboot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.22.</span> <span class="toc-text">安装后配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.0.23.</span> <span class="toc-text">结束</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
 
     <div id="share-footer" style="display: none">
       <ul>
@@ -486,7 +469,7 @@
   <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://wynio.online/posts/ae4f/&text=ArchLinux安装指南"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wynio.online/posts/ae4f/&is_video=false&description=ArchLinux安装指南"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=ArchLinux安装指南&body=Check out this article: https://wynio.online/posts/ae4f/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=ArchLinux安装指南&body=Check out this article: https://wynio.online/posts/ae4f/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://wynio.online/posts/ae4f/&title=ArchLinux安装指南"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
@@ -498,10 +481,12 @@
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
     </div>
 
   </div>

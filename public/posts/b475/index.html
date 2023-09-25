@@ -63,9 +63,9 @@
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="icons.menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="icons.menu"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="icons.top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="menu-icon" href="#" aria-label="icons.menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="icons.menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="icons.top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -91,10 +91,10 @@
       <ul>
         
         
-        <li><a class="icon" aria-label="下一篇" href="/posts/f5ee/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/posts/f5ee/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
       <span id="i-prev" class="info" style="display:none;">上一篇</span>
       <span id="i-next" class="info" style="display:none;">下一篇</span>
@@ -108,7 +108,7 @@
   <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://wynio.online/posts/b475/&text=关于koishi机器人框架的一些笔记"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wynio.online/posts/b475/&is_video=false&description=关于koishi机器人框架的一些笔记"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=关于koishi机器人框架的一些笔记&body=Check out this article: https://wynio.online/posts/b475/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于koishi机器人框架的一些笔记&body=Check out this article: https://wynio.online/posts/b475/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
@@ -118,18 +118,22 @@
 </ul>
 
     </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">koishi搭建项目模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">选择onebot的通信方式、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">go-cqhttp配置参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.3.</span> <span class="toc-text">启用插件</span></a></li></ol></li></ol></li></ol>
-    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">koishi搭建项目模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">选择onebot的通信方式、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">go-cqhttp配置参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.3.</span> <span class="toc-text">启用插件</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
   </span>
 </div>
+
     
     <div class="content index py4">
         
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     
-    <h1 class="posttitle" itemprop="name headline">
+    <h1 class="posttitle p-name" itemprop="name headline">
         关于koishi机器人框架的一些笔记
     </h1>
 
@@ -142,9 +146,9 @@
       
     <div class="postdate">
       
-        <time datetime="2023-02-04T12:52:54.000Z" itemprop="datePublished">2023-02-04</time>
+        <time datetime="2023-02-04T12:52:54.000Z" class="dt-published" itemprop="datePublished">2023-02-04</time>
         
-        (Updated: <time datetime="2023-02-06T04:59:17.702Z" itemprop="dateModified">2023-02-06</time>)
+        (Updated: <time datetime="2023-02-06T04:59:17.702Z" class="dt-updated" itemprop="dateModified">2023-02-06</time>)
         
       
     </div>
@@ -152,42 +156,18 @@
 
       
     <div class="article-category">
-        <i class="fas fa-archive"></i>
+        <i class="fa-solid fa-archive"></i>
         <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
     </div>
 
 
-      <!DOCTYPE html>
-<html>
-  <head>
-    <title>jQCloud Example</title>
-    <link rel="stylesheet" type="text/css" href="jqcloud.css" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script type="text/javascript" src="jqcloud-1.0.4.js"></script>
-    <script type="text/javascript">
-      /*!
-       * Create an array of word objects, each representing a word in the cloud
-       */
-      var word_array = [
-          {text: "Lorem", weight: 15},
-          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
-          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
-          {text: "Sit", weight: 7},
-          {text: "Amet", weight: 5}
-          // ...as many words as you want
-      ];
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/bot/" rel="tag">bot</a>, <a class="p-category" href="/tags/koishi/" rel="tag">koishi</a>, <a class="p-category" href="/tags/onebot/" rel="tag">onebot</a>, <a class="p-category" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a>
+    </div>
 
-      $(function() {
-        // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
-        $("#example").jQCloud(word_array);
-      });
-    </script>
-  </head>
-  <body>
-    <!-- You should explicitly specify the dimensions of the container element -->
-    <div id="example" style="width: 550px; height: 350px;"></div>
-  </body>
-</html>
+
     </div>
   </header>
   
@@ -263,27 +243,30 @@
 
     <div id="nav-footer" style="display: none">
       <ul>
-         
+        
           <li><a href="/">首页</a></li>
-         
+        
           <li><a href="/archives/">归档</a></li>
-         
+        
           <li><a href="/categories/">分类</a></li>
-         
+        
           <li><a href="/tags/">标签</a></li>
-         
+        
           <li><a href="/about/">关于我</a></li>
-         
+        
           <li><a href="/friends/">朋友</a></li>
-         
+        
           <li><a href="/search/">搜索</a></li>
         
       </ul>
     </div>
 
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">koishi搭建项目模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">选择onebot的通信方式、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">go-cqhttp配置参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.3.</span> <span class="toc-text">启用插件</span></a></li></ol></li></ol></li></ol>
-    </div>
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">最近闲来无事，抽空搞了一下以前废弃的项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.1.</span> <span class="toc-text">koishi搭建项目模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.1.</span> <span class="toc-text">选择onebot的通信方式、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.2.</span> <span class="toc-text">go-cqhttp配置参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.1.3.</span> <span class="toc-text">启用插件</span></a></li></ol></li></ol></li></ol>
+      </div>
+    
 
     <div id="share-footer" style="display: none">
       <ul>
@@ -291,7 +274,7 @@
   <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://wynio.online/posts/b475/&text=关于koishi机器人框架的一些笔记"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wynio.online/posts/b475/&is_video=false&description=关于koishi机器人框架的一些笔记"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=关于koishi机器人框架的一些笔记&body=Check out this article: https://wynio.online/posts/b475/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于koishi机器人框架的一些笔记&body=Check out this article: https://wynio.online/posts/b475/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://wynio.online/posts/b475/&title=关于koishi机器人框架的一些笔记"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
@@ -303,10 +286,12 @@
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
     </div>
 
   </div>
