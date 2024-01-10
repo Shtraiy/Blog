@@ -13,41 +13,28 @@ date: 2020-12-20 11:41:02
 
 目前在摸鱼路上越行越远
 
-概念图，仅供参考
+以下是概念图，仅供参考
 
 ![1](/css/a.jpg)
 
-### 喜欢听歌，目前喜欢的音乐人及组合有
+作者P站ID：429077
+
+### 喜欢听歌，目前喜欢的音乐人有
 
 + 藍月なくる
 + Sennzai
 + Feryquitous
 + Such
-+ Tuyu
 + Sayuri
-+ Ririsya
-+ WaMi
-+ 少女病
-+ ななひら
-+ 中惠光城
-+ 結束バンド
-+ lasah
-+ 佐々木恵梨
-+ 花たん
-+ 麻婆豆腐
 + 花谱
 + EGOIST
-+ Elfensjon
-+ Konoco
 + Risa Yuzuki
-+ memex
 
 ### 目前喜欢的专辑系列有
 
-+ AD:PIANO
-+ 少女病
-
-作者P站ID：429077
++ AD:PIANO V
++ 少女病系列
++ CYGNUS COLLECTION SS2016 'SWANSONG'
 
 # 象牙塔
 
@@ -69,7 +56,9 @@ date: 2020-12-20 11:41:02
 
 [Ivory Tower](https://zh.wikipedia.org/wiki/%E8%B1%A1%E7%89%99%E5%A1%94)，出自圣经，指的是“脱离现实生活的大学等学术机构”
 
-曾用域名*wynio.pw*
+曾用域名*wynio.online*
+
+本站或将长期使用*wynio.pw*这个域名
 
 ---
 # 关于PGP
