@@ -615,7 +615,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  line-height: 1rem;
+  line-height: 0.7rem;
 }
 #header #nav ul a {
   margin-right: 4px;
@@ -760,7 +760,7 @@ body {
   font-size: 0.9rem;
 }
 #header-post #nav ul {
-  line-height: 2rem;
+  line-height: 0.7rem;
   font-size: 0.9rem;
 }
 #header-post #nav ul a {
