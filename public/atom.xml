@@ -6,7 +6,7 @@
   <link href="https://wynio.pw/atom.xml" rel="self"/>
   
   <link href="https://wynio.pw/"/>
-  <updated>2024-01-13T04:38:14.976Z</updated>
+  <updated>2024-01-13T06:36:05.653Z</updated>
   <id>https://wynio.pw/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wynio.pw/posts/117e/"/>
     <id>https://wynio.pw/posts/117e/</id>
     <published>2024-01-10T05:02:02.000Z</published>
-    <updated>2024-01-13T04:38:14.976Z</updated>
+    <updated>2024-01-13T06:36:05.653Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1><span id="说起来有差不多一年没有更新过这个网站了">说起来有差不多一年没有更新过这个网站了</span></h1><p>这个站转眼间就已经运营四年了，从开始的Vuepress到Gitbook再到现在的Hexo。</p><p>这个站是2020疫情期间闲来无事创建的，现在已经运营了4年，见证了我整个高中三年和大一的一整年。</p><p>想说的话没有太多，希望一直持续下去吧。</p><p>最近也是准备放假了，打算在假期抽空优化一下这个博客项目的结构。</p><p>这一年来遇到了很多难以攻克的难题，我是一个十分安于现状的人，如果哪天生活的规律被打破了会非常的难受，不过好在这些难题最后往往不会持续太久就会得到解决，不然我会疯掉的。</p><p>上一个域名<strong>wynio.online</strong>在8号那天过期了<s>也就是前天</s>。</p><p>与此同时我还发现我现在用的这个主题好像出现了不少bug，比如标签部分以及侧边栏部分，说实在话我不是很懂要怎么对付这些问题，虽然我的一些样式和这个主题的预设看起来不太一样，但这个博客的主题毕竟不是我写的，我可以魔改一部分样式，但是如果要动到一些关于这个主题的底层的东西，我还是觉得无从下手，说白了，我自己都不太了解我自己的项目，不过假期如果有时间我会研究一下，可能会删掉一些以前写的文章，修改一些样式，总之会尽量让观感变好一点。</p><p>还有就是关于DISQUS之前别人留下来的评论消失的问题，大概率是我哪次上传博客资源的时候不小心覆盖掉了，于是我现在将整个评论功能禁用了。</p><h3><span id="话又说回来我好多友链挂掉了发生甚么事了">话又说回来，我好多友链挂掉了，发生甚么事了。</span></h3>]]></content>
     
@@ -333,7 +333,7 @@
     <link href="https://wynio.pw/posts/4a17b156/"/>
     <id>https://wynio.pw/posts/4a17b156/</id>
     <published>2020-11-29T04:23:19.000Z</published>
-    <updated>2024-01-13T04:34:40.969Z</updated>
+    <updated>2024-01-13T05:53:34.383Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2><span id="quick-start">Quick Start</span></h2><h3><span id="create-a-new-post">Create a new post</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3><span id="run-server">Run server</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3><span id="generate-static-files">Generate static files</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h1><span id="本站第一篇文章懒得删就这样吧">本站第一篇文章，懒得删，就这样吧</span></h1>]]></content>
     

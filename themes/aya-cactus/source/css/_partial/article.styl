@@ -38,6 +38,8 @@ article
         background: linear-gradient(#e35522,#dece1b)
         -webkit-background-clip: text
         color: transparent
+      margin-top: 0.3rem
+      margin-bottom: 0.3rem
     ul
       li
         color: rgba(85, 85, 85, 0.8)
@@ -137,13 +139,21 @@ article
 
 .article-tag
   .tag-link
-    &:before
-      content: "#"
     underline(10px, $color-link)
+  
+  .tag-link:hover
+    background: linear-gradient(#e35522,#dece1b)
+    -webkit-background-clip: text
+    color: transparent
+  
 
 .article-category
   .category-link
     underline(10px, $color-link)
+  .category-link:hover
+    background: linear-gradient(#e35522,#dece1b)
+    -webkit-background-clip: text
+    color: transparent
 
 @media (min-width: 480px)
   .article-tag,

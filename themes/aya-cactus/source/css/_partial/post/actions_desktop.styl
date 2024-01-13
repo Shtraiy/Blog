@@ -78,16 +78,17 @@
 
     ul
       line-height: 2rem
-      font-size: 1rem
+      font-size: 0.9rem
 
       a
-        margin-right: 15px
+        margin-right: 4px
         color: $color-accent-1
 
       a:hover
         underline(5px, $color-accent-1)
 
       li
+        margin-right: 4px
         border-right: 1px dotted $color-accent-1
 
       li:last-child
@@ -99,8 +100,8 @@
 
   #actions
     float: right
-    margin-top: 2rem
-    margin-right: 2rem
+    margin-top: 1rem
+    margin-right: 1rem
     width: 100%
     text-align: right
     font-size: 1.2rem
@@ -134,7 +135,9 @@
     list-style: none
 
     a:hover
-      color: $color-link
+      background: linear-gradient(#e35522,#dece1b)
+      -webkit-background-clip: text
+      color: transparent
 
     .toc-level-1 > .toc-link
       display: none
@@ -145,11 +148,11 @@
 
     .toc-level-3
       color: $color-meta
-      font-size: .9rem
+      font-size: .8rem
 
     .toc-level-4
-      color: darken($color-meta, 20%)
-      font-size: .8rem
+      color: $color-meta
+      font-size: .6rem
 
     .toc-level-5
       display: none
