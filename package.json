@@ -34,10 +34,9 @@
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
-    "hexo-toc": "^1.1.0",
+    "hexo-tag-cloud": "2.1.*",
     "jquery-pjax": "^2.0.1",
     "pjax": "^0.2.8",
-    "surge": "^0.23.1",
-    "hexo-tag-cloud": "2.1.*"
+    "surge": "^0.23.1"
   }
 }
