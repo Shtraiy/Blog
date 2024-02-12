@@ -4,20 +4,17 @@
       <% if (page.search || page.type === "search") { %>
         <%- partial('_partial/search') %>
       <% } else if (page.type === "tags") { %>
-          <div id="tag-cloud">
-            <div class="tag-cloud-title">
-                <% var visibleTags = 0 %>
-                <% site.tags.each(function(tag){ %>
-                  <% if (tag.length) { %>
-                    <% visibleTags += 1 %>
-                  <% } %>
-                <% }) %>
-                <%- _p('counter.tag_cloud', visibleTags) %>
-            </div>
-            <div class="tag-cloud-tags">
-              <%- tagcloud({min_font: 12, max_font: 30, amount: 300}) %>
+        <% if (site.tags.length) { %>
+          <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcloud.js') %>"></script>
+          <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcanvas.js') %>"></script>
+          <div class="widget-wrap">
+            <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="300" height="300" id="resCanvas" style="width:100%;height:100%;">
+                <%- tagcloud() %>
+              </canvas>
             </div>
           </div>
+        <% } %>
         <% } else if (page.type === 'categories') { %>
           <div id="categories">
             <div class="category-list-title">
