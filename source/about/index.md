@@ -63,7 +63,7 @@ date: 2020-12-20 11:41:02
 ---
 # 关于PGP
 
-[个人PGP公钥](/about/pgp.html)
+[个人PGP公钥](/pgp/pgp.html)
 
 ---
 #
