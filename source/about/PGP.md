@@ -1,5 +1,5 @@
 ---
-title: PGP
+title: pgp
 date: 2020-12-27 13:38:04
 categories: 
 - PGP
