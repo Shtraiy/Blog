@@ -41,7 +41,7 @@ Steam推出了一个叫ProtonDB的东西，貌似是wine的魔改版，但是支
 
 下面是官方中文Wiki
 
-> https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+[这里是链接](https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
 ### 安装
 
