@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="安装完Arch后我就一直在尝试装N卡驱动 曾经有那么一段时间，我把主力机的Win10彻底替换成了ArchLinux 然后用了一段时间后，就萌生出了用Linux打游戏的想法 但是毕竟是Linux，原生支持Linux的游戏本来就不多，在Linux下驱动的效果也不如Windows那么好 事实证明Linux下的游戏体验确实不咋地，如果原本就支持Linux的倒也还好，但是在只能用Wine模拟Windows进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为ArchLinux安装N卡驱动">
+<meta property="og:url" content="https://wynio.pw/posts/37c1/">
+<meta property="og:site_name" content="Nocturne">
+<meta property="og:description" content="安装完Arch后我就一直在尝试装N卡驱动 曾经有那么一段时间，我把主力机的Win10彻底替换成了ArchLinux 然后用了一段时间后，就萌生出了用Linux打游戏的想法 但是毕竟是Linux，原生支持Linux的游戏本来就不多，在Linux下驱动的效果也不如Windows那么好 事实证明Linux下的游戏体验确实不咋地，如果原本就支持Linux的倒也还好，但是在只能用Wine模拟Windows进">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-26T00:17:50.000Z">
+<meta property="article:modified_time" content="2024-02-22T02:57:01.985Z">
+<meta property="article:author" content="Resalia">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="系统">
+<meta property="article:tag" content="折腾">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/css/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/css/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/css/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>为ArchLinux安装N卡驱动</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/atom.xml" title="Nocturne" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="icons.menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="icons.menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="icons.top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于我</a></li><!--
+     --><!--
+       --><li><a href="/friends/">朋友</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/posts/f5ee/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/9c0f/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://wynio.pw/posts/37c1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://wynio.pw/posts/37c1/&text=为ArchLinux安装N卡驱动"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wynio.pw/posts/37c1/&is_video=false&description=为ArchLinux安装N卡驱动"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=为ArchLinux安装N卡驱动&body=Check out this article: https://wynio.pw/posts/37c1/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://wynio.pw/posts/37c1/&name=为ArchLinux安装N卡驱动&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://wynio.pw/posts/37c1/&t=为ArchLinux安装N卡驱动"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">安装完Arch后我就一直在尝试装N卡驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%90%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装后配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#DRM%E5%86%85%E6%A0%B8%E7%BA%A7%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">DRM内核级显示模式设置</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        为ArchLinux安装N卡驱动
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Resalia</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-07-26T00:17:50.000Z" class="dt-published" itemprop="datePublished">2022-07-26</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="tag-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-link" href="/tags/%E6%8A%98%E8%85%BE/" rel="tag">折腾</a>, <a class="tag-link" href="/tags/%E7%B3%BB%E7%BB%9F/" rel="tag">系统</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1>安装完Arch后我就一直在尝试装N卡驱动</h1>
+<p>曾经有那么一段时间，我把主力机的Win10彻底替换成了ArchLinux</p>
+<p>然后用了一段时间后，就萌生出了用Linux打游戏的想法</p>
+<p>但是毕竟是Linux，原生支持Linux的游戏本来就不多，在Linux下驱动的效果也不如Windows那么好</p>
+<p>事实证明Linux下的游戏体验确实不咋地，如果原本就支持Linux的倒也还好，但是在只能用Wine模拟Windows进行游戏的情况下体验就特别糟糕了</p>
+<p>Steam推出了一个叫ProtonDB的东西，貌似是wine的魔改版，但是支持很多Steam上的游戏</p>
+<p>我Steam有不少游戏，而我刚好又在用Arch，天底下怎么会有这么巧的事情</p>
+<p>于是我用Arch下载了Steam，想试试靠这个所谓的ProtonDB能运行我库里的多少个游戏</p>
+<p>但是如果要玩游戏，光靠核显肯定是不够用的，那我的主力机也有独显，如果不用上也就太浪费了</p>
+<p>这就有了后面我安装N卡驱动测试Steam游戏的事情</p>
+<p>回归正题，官方Wiki上关于N卡驱动的安装过程很简单，只有短短几条命令</p>
+<p>但按照Wiki上的步骤安装结束后还是出现了很多问题</p>
+<p>比如安装后不显示驱动也进不去图形化界面</p>
+<p>亦或者驱动装上了但是进不去桌面</p>
+<p>经过多次尝试和排错我终于找到了正确的打开方式</p>
+<p>下面是官方中文Wiki</p>
+<p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/NVIDIA_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">这里是链接</a></p>
+<h3 id="安装">安装</h3>
+<p>首先安装linux-lts内核</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S linux-lts</span><br></pre></td></tr></table></figure>
+<p>然后安装N卡驱动</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S nvidia-lts</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，12代intelCPU可能会遇到系统无法正常启动的问题</p>
+<p>这时候需要在引导加载程序中设置内核参数<code>ibt=off</code></p>
+<p>下面以我用grub引导为例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/default/grub</span><br></pre></td></tr></table></figure>
+<p>找到LINUX_DEFAULT，并在后面添加ibt=off</p>
+<p>保存退出后重新加载grub文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o /etc/grub/grub.cfg</span><br></pre></td></tr></table></figure>
+<p>正常情况下N卡驱动在执行pacman命令后就已经安装完成了，这时我们重启一下电脑</p>
+<p>重新开机后输入<code>nvidia-msi</code></p>
+<p>正常情况下会显示你显卡驱动的信息，这个时候就已经安装成功了</p>
+<h3 id="安装后配置">安装后配置</h3>
+<h5 id="DRM内核级显示模式设置">DRM内核级显示模式设置</h5>
+<p>在引导程序中添加DRM内核参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/default/grub</span><br></pre></td></tr></table></figure>
+<p>在LINUX_DEFAULT后面添加<code>nvidia-drm.modeset=1</code></p>
+<p>保存退出后记得更新引导文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grub-mkconfig -o /etc/grub/grub.cfg</span><br></pre></td></tr></table></figure>
+<p>安装流程大概就这些了，不过Linux的驱动体验肯定没Windows那么好，所以在这之后不久我又换回Win10了</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/about/">关于我</a></li>
+        
+          <li><a href="/friends/">朋友</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">安装完Arch后我就一直在尝试装N卡驱动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.0.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%90%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装后配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#DRM%E5%86%85%E6%A0%B8%E7%BA%A7%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">DRM内核级显示模式设置</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://wynio.pw/posts/37c1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://wynio.pw/posts/37c1/&text=为ArchLinux安装N卡驱动"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://wynio.pw/posts/37c1/&is_video=false&description=为ArchLinux安装N卡驱动"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=为ArchLinux安装N卡驱动&body=Check out this article: https://wynio.pw/posts/37c1/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://wynio.pw/posts/37c1/&title=为ArchLinux安装N卡驱动"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://wynio.pw/posts/37c1/&name=为ArchLinux安装N卡驱动&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://wynio.pw/posts/37c1/&t=为ArchLinux安装N卡驱动"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020-2024
+    Resalia
+  </div>
+  <div class="footer-ipv6"><a href="https://ipw.cn/ipv6webcheck/?site=wynio.pw/" title="本站支持IPv6访问" target='_blank'>本站支持IPv6访问</a></div>
+  <div class="footer-right"><a href="https://icp.gov.moe/?keyword=20230124" target="_blank" one-link-mark="yes">萌ICP备20230124号</a></div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'Resalia';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+
+<div>
+    <link rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
+  </div>
+</body>
+</html>
