@@ -7,12 +7,12 @@ type: friends
 
 # 友情链接
 
-<a href="https://moe.jimmy0w0.me">
+<a href="https://jimmy0w0.me/">
 <div class="link">
-<img class="avater" src="https://i.328888.xyz/2023/01/11/CM5kX.jpeg"></img>
+<img class="avater" src="https://jimmy0w0.me/favicon.svg"></img>
 <div class="content">
-<span class="name">喵呜Moe</span>
-<span class="description">很有感觉！！！</span>
+<span class="name">Jimmy0w0</span>
+<span class="description">Babel Tower</span>
 </div>
 </div>
 </a>
