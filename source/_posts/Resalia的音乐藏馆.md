@@ -13,9 +13,9 @@ categories:
             <font color="#d1061b">『Proud Echoes』</font>
         </h3>
         <div>
-            <link rel="stylesheet" href="/aplayer/APlayer.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
             <div id="aplayer"></div>
-            <script type="text/javascript" src="/aplayer/APlayer.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
         </div>
         <script>
             const ap = new APlayer({
