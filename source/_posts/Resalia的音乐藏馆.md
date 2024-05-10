@@ -13,7 +13,7 @@ categories:
             <font color="#d1061b">『Proud Echoes』</font>
         </h3>
         <div>
-            <link rel="stylesheet" href="https://www.wynio.pw/Aplayer/APlayer.min.css">
+            <link rel="stylesheet" src="https://www.wynio.pw/Aplayer/APlayer.min.css">
             <div id="aplayer"></div>
             <script href="https://www.wynio.pw/Aplayer/APlayer.min.js"></script>
         </div>
