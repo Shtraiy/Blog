@@ -13,9 +13,9 @@ categories:
             <font color="#d1061b">『Proud Echoes』</font>
         </h3>
         <div>
-            <link rel="stylesheet" src="https://www.wynio.pw/Aplayer/APlayer.min.css">
+            <link rel="stylesheet" href="/aplayer/APlayer.min.css">
             <div id="aplayer"></div>
-            <script href="https://www.wynio.pw/Aplayer/APlayer.min.js"></script>
+            <script type="text/javascript" src="/aplayer/APlayer.min.js"></script>
         </div>
         <script>
             const ap = new APlayer({
