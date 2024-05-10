@@ -1,0 +1,69 @@
+---
+title: Resalia的音乐藏馆
+abbrlink: eb07
+date: 2024-05-10 12:28:21
+tags:
+  - 音乐
+categories:
+  - 音乐分享
+---
+<div id="albums">
+    <div id="Sennzai">
+        <h3 style="text-align:center">
+            <font color="#d1061b">『Proud Echoes』</font>
+        </h3>
+        <div>
+            <link rel="stylesheet" href="https://www.wynio.pw/Aplayer/APlayer.min.css">
+            <div id="aplayer"></div>
+            <script href="https://www.wynio.pw/Aplayer/APlayer.min.js"></script>
+        </div>
+        <script>
+            const ap = new APlayer({
+                container: document.getElementById('aplayer'),
+                mini: false,
+                autoplay: false,
+                theme: '#d1061b',
+                loop: 'all',
+                order: 'random',
+                preload: 'auto',
+                volume: 0.5,
+                mutex: true,
+                listFolded: false,
+                listMaxHeight: 90,
+                audio: [
+                    {
+                        name: '白蓮華',
+                        artist: 'Sennzai',
+                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/01.%20%E7%99%BD%E8%93%AE%E8%8F%AF.flac',
+                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
+                    },
+                    {
+                        name: '全知全能',
+                        artist: 'Sennzai',
+                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/02.%20%E5%85%A8%E7%9F%A5%E5%85%A8%E8%83%BD.flac',
+                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
+                    },
+                    {
+                        name: '沈黙の塔',
+                        artist: 'Sennzai',
+                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/03.%20%E6%B2%88%E9%BB%99%E3%81%AE%E5%A1%94.flac',
+                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
+                    },
+                    {
+                        name: 'Dimension',
+                        artist: 'Sennzai',
+                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/04.%20Dimension.flac',
+                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
+                    },
+                    {
+                        name: '春宵胡蝶',
+                        artist: 'Sennzai',
+                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/05.%20%E6%98%A5%E5%AE%B5%E8%83%A1%E8%9D%B6.flac',
+                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
+                    }
+                ]
+            });
+        </script>
+    </div>
+</div>
+
