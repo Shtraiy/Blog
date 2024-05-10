@@ -22,7 +22,7 @@ Katago是由David J. Wu 所研究并开发的一套围棋软件。
 
 并且以DeepMind的AlphaGo Zero与AlphaZero论文为基础为基础，训练速度更快，棋力更强
 
-黑色是我![被乱杀](/css/28.png)
+黑色是我![被乱杀](/images/28.png)
 
 ~~开局被乱杀~~
 
@@ -34,7 +34,7 @@ Katago是由David J. Wu 所研究并开发的一套围棋软件。
 
 我下载的KataGo是1.9.1版本的
 
-![1](/css/29.png)
+![1](/images/29.png)
 
 其中文件名字带有bs29的是娱乐版本，支持29x29棋盘，但我不打算用，因为19x19就已经够我下一年了
 
@@ -44,7 +44,7 @@ Katago是由David J. Wu 所研究并开发的一套围棋软件。
 
 下载好后用cmd进入Katago的目录并执行katago.exe genconfig -model (权重文件名字).bin.gz -output gtp_custom.cfg
 
-![1](/css/17.png)
+![1](/images/17.png)
 
 这里输入chinese即可
 
@@ -56,7 +56,7 @@ KataGo的权重文件可以到[这里](https://katagotraining.org/networks/)下�
 
 下载完后打开Sabaki
 
-![1](/css/30.png)
+![1](/images/30.png)
 
 具体配置如上
 
@@ -64,7 +64,7 @@ KataGo的权重文件可以到[这里](https://katagotraining.org/networks/)下�
 
 配置完后打开这个运行
 
-![1](/css/31.png)
+![1](/images/31.png)
 
 等候几十秒就加载完成了
 

@@ -20,7 +20,7 @@ date: 2021-01-26 12:23:19
 
 内容可能会有一些错误，如有发现请即刻私信我
 
-我也是没有过这类手动安装linux的经历，如果遇到什么问题也可以找我讨论![](/css/1.jpg)
+我也是没有过这类手动安装linux的经历，如果遇到什么问题也可以找我讨论![](/images/1.jpg)
 
 另外，尽管这类教程Google上一搜一大片
 
@@ -45,7 +45,7 @@ date: 2021-01-26 12:23:19
 >https://www.archlinux.org/download/
 
 进入以后可以选择下载磁力链或种子
-![](/css/2.png)
+![](/images/2.png)
 
 当然我是选择的磁力链，迅雷下载也是比较快的
 
@@ -61,13 +61,13 @@ date: 2021-01-26 12:23:19
 
  首先重启电脑进入BIOS界面
 
-![另外如果出现这样的界面已经成功了](/css/1.png)
+![另外如果出现这样的界面已经成功了](/images/1.png)
 
 然后设置你的U盘启动项为首位
 
  这里选择第一个选项或是等待过后自动进入安装页面
 
-![1](/css/3.png)
+![1](/images/3.png)
 
 ### 首先确定自己的引导方式
 
@@ -112,7 +112,7 @@ ping通了就说明连上网了
 
 会出现以下情况
 
-![1](/css/4.png)
+![1](/images/4.png)
 
 有的人可能会像我这样，设备的powered是off的，这时候可以执行rfkill unblock wlan
 
@@ -146,7 +146,7 @@ station name connect WIFI # 使用wlan0连接到你家WIFI
 
 ```fdisk -l```
 
-![1](/css/5.png)
+![1](/images/5.png)
 
 可以先清空磁盘，删除掉不需要的分区，需要注意的是不要删错，下面以我为例
 
@@ -166,7 +166,7 @@ station name connect WIFI # 使用wlan0连接到你家WIFI
 
 大小输入300M，回车，创建一个EFI分区
 
-![1](/css/38.png)
+![1](/images/38.png)
 
 此时已经创建了一个EFI分区
 
@@ -235,7 +235,7 @@ Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 Server = http://mirrors.zju.edu.cn/archlinux/$repo/os/$arch
 ```
 
-之后用`:wq`保存并退出即可![1](/css/37.png)
+之后用`:wq`保存并退出即可![1](/images/37.png)
 
 ---
 
@@ -283,7 +283,7 @@ cat /mnt/etc/fstab
 
 执行```arch-chroot /mnt```
 
-![1](/css/7.png)
+![1](/images/7.png)
 
 ---
 
@@ -352,7 +352,7 @@ echo 主机名 > /etc/hostname
 vim /etc/hosts
 ```
 
-![1](/css/39.png)
+![1](/images/39.png)
 
 其中的anastasia改为上一步你设置的主机名字
 
@@ -455,7 +455,7 @@ reboot
 
 重启
 
-![1](/css/8.png)
+![1](/images/8.png)
 
 如果你成功进入到这里了，恭喜你，你已经完成安装了
 
@@ -519,4 +519,4 @@ systemctl enable NetworkManager
 整篇文章如有写错的地方还请指出
 
 谢谢！
-![1](/css/33.png)
+![1](/images/33.png)

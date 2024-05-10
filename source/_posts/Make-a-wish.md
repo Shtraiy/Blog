@@ -11,21 +11,21 @@ date: 2021-01-30 11:51:18
 
 # ark新活动，本来想着摸摸鱼就算了
 
-![1](/css/5.jpg)
+![1](/images/5.jpg)
 
 But...
 
-![1](/css/10.png)
+![1](/images/10.png)
 
 OHHHHHHHHHHHHHHHHH!!!!!
 
-![1](/css/11.png)
+![1](/images/11.png)
 
 狗子很可爱
 
-![1](/css/12.png)
+![1](/images/12.png)
 
-![1](/css/13.png)
+![1](/images/13.png)
 
 顶
 
@@ -35,21 +35,21 @@ OHHHHHHHHHHHHHHHHH!!!!!
 
 yj不要不识好歹
 
-![1](/css/37.png)
+![1](/images/37.png)
 
 # POWER！
 
 ---
 
-![1](/css/maws1.jpg)
+![1](/images/maws1.jpg)
 
-![1](/css/maws3.jpg)
+![1](/images/maws3.jpg)
 
-![1](/css/maws2.jpg)
+![1](/images/maws2.jpg)
 
 出息~~夕~~了
 
-![1](/css/xi.png)
+![1](/images/xi.png)
 
 按照约定前来还愿了,但是活动才刚开始
 
@@ -63,7 +63,7 @@ yj不要不识好歹
 
 ##### ？？？
 
-![1](/css/16.png)
+![1](/images/16.png)
 
 本次活动很圆满~~遗憾~~的结束了
 
