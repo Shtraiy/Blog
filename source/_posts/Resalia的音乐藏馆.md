@@ -1,5 +1,5 @@
 ---
-title: Resalia的音乐藏馆
+title: 音乐藏馆
 abbrlink: eb07
 date: 2024-05-10 12:28:21
 tags:
@@ -8,62 +8,82 @@ categories:
   - 音乐分享
 ---
 <div id="albums">
-    <div id="Sennzai">
-        <h3 style="text-align:center">
-            <font color="#d1061b">『Proud Echoes』</font>
-        </h3>
-        <div>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-            <div id="aplayer"></div>
-            <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div id="Sennzai">
+    <h3>
+      Sennzai
+    </h3>
+  </div>
+  <div class="cd">
+    <a href="/music/Proud-Echoes.html">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/Proud-Echoes.jpg"><img>
         </div>
-        <script>
-            const ap = new APlayer({
-                container: document.getElementById('aplayer'),
-                mini: false,
-                autoplay: false,
-                theme: '#d1061b',
-                loop: 'all',
-                order: 'random',
-                preload: 'auto',
-                volume: 0.5,
-                mutex: true,
-                listFolded: false,
-                listMaxHeight: 90,
-                audio: [
-                    {
-                        name: '白蓮華',
-                        artist: 'Sennzai',
-                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/01.%20%E7%99%BD%E8%93%AE%E8%8F%AF.flac',
-                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
-                    },
-                    {
-                        name: '全知全能',
-                        artist: 'Sennzai',
-                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/02.%20%E5%85%A8%E7%9F%A5%E5%85%A8%E8%83%BD.flac',
-                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
-                    },
-                    {
-                        name: '沈黙の塔',
-                        artist: 'Sennzai',
-                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/03.%20%E6%B2%88%E9%BB%99%E3%81%AE%E5%A1%94.flac',
-                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
-                    },
-                    {
-                        name: 'Dimension',
-                        artist: 'Sennzai',
-                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/04.%20Dimension.flac',
-                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
-                    },
-                    {
-                        name: '春宵胡蝶',
-                        artist: 'Sennzai',
-                        url: 'http://47.113.203.68/Sennzai/Proud%20Echoes/05.%20%E6%98%A5%E5%AE%B5%E8%83%A1%E8%9D%B6.flac',
-                        cover: 'http://47.113.203.68/Sennzai/Proud%20Echoes/cover.jpg'
-                    }
-                ]
-            });
-        </script>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#d1061b">『Proud Echoes』</font></span>
+      <span class="description"><font color="#d1061b">Sennzai</font></span>
     </div>
+  </div>
+
+  <div id="Endorfin.">
+    <h3>
+      Endorfin.
+    </h3>
+  </div>
+  <div class="cd">
+    <a href="/music/COLOURS-01">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.01.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#47d649">『COLOURS.01』</font></span>
+      <span class="description"><font color="#47d649">Endorfin.</font></span>
+    </div>
+  </div>
+  <div class="cd">
+    <a href="/music/COLOURS-02">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.02.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#1A469C">『COLOURS.02』</font></span>
+      <span class="description"><font color="#1A469C">Endorfin.</font></span>
+    </div>
+  </div>
+  <div class="cd">
+    <a href="/music/COLOURS-03">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.03.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#D02B27">『COLOURS.03』</font></span>
+      <span class="description"><font color="#D02B27">Endorfin.</font></span>
+    </div>
+  </div>
+  <div class="cd">
+    <a href="/music/COLOURS-04">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.04.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#EDC95E">『COLOURS.04』</font></span>
+      <span class="description"><font color="#EDC95E">Endorfin.</font></span>
+    </div>
+  </div>
 </div>
+
 
