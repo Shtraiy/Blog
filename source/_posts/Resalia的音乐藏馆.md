@@ -33,7 +33,7 @@ categories:
     </h3>
   </div>
   <div class="cd">
-    <a href="/music/COLOURS-01">
+    <a href="/music/COLOURS-01.html">
       <div class="info">
         <div class="circle">
           <img class="avater" src="/images/COLOURS.01.jpg"><img>
@@ -46,7 +46,7 @@ categories:
     </div>
   </div>
   <div class="cd">
-    <a href="/music/COLOURS-02">
+    <a href="/music/COLOURS-02.html">
       <div class="info">
         <div class="circle">
           <img class="avater" src="/images/COLOURS.02.jpg"><img>
@@ -59,7 +59,7 @@ categories:
     </div>
   </div>
   <div class="cd">
-    <a href="/music/COLOURS-03">
+    <a href="/music/COLOURS-03.html">
       <div class="info">
         <div class="circle">
           <img class="avater" src="/images/COLOURS.03.jpg"><img>
@@ -72,7 +72,7 @@ categories:
     </div>
   </div>
   <div class="cd">
-    <a href="/music/COLOURS-04">
+    <a href="/music/COLOURS-04.html">
       <div class="info">
         <div class="circle">
           <img class="avater" src="/images/COLOURS.04.jpg"><img>
