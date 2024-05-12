@@ -116,9 +116,6 @@ abbrlink:
 nav:
   search: /search/
   
-toc:
-  maxDepth: 3
-
 feed:
     type: atom
     path: atom.xml
