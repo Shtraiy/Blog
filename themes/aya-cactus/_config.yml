@@ -33,11 +33,12 @@ social_links:
   mail: mailto:weihuazhen24@gmail.com
   telegram: https://t.me/Resalia_24
   steam: https://steamcommunity.com/id/Shtraiy/
+
+tools_links:
   rss: /atom.xml
+  lock: https://www.wynio.pw/pgp/pgp.html
+  clock: https://timer.wynio.pw/
   
-
-  
-
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
 tags_overview: false
