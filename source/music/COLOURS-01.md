@@ -23,7 +23,7 @@ tags:
                 loop: 'all',
                 order: 'random',
                 preload: 'auto',
-                volume: 0.5,
+                volume: 0.3,
                 mutex: true,
                 listFolded: false,
                 listMaxHeight: 90,

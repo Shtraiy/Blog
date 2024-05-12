@@ -23,7 +23,7 @@ tags:
                 loop: 'all',
                 order: 'random',
                 preload: 'auto',
-                volume: 0.5,
+                volume: 0.3,
                 mutex: true,
                 listFolded: false,
                 listMaxHeight: 90,
@@ -55,7 +55,7 @@ tags:
                     {
                         name: 'ココロメソッド(心灵公式)',
                         artist: 'Endorfin.',
-                        url: 'https://github.com/Resalia/music1/raw/main/COLOURS.01%20%E2%80%9CGrowing%E2%80%9D/05.%20route%20signal.flac',
+                        url: 'https://github.com/Resalia/music1/raw/main/COLOURS.02%20%E2%80%9CBlurred%20Mind%E2%80%9D/05.%20%E3%82%B3%E3%82%B3%E3%83%AD%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89.flac',
                         cover: '/images/COLOURS.02.jpg'
                     },
                     {

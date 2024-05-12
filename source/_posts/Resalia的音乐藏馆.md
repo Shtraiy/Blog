@@ -22,7 +22,7 @@ categories:
       </div>
     </a>
     <div class="content">
-      <span class="name"><font color="#d1061b">『Proud Echoes』</font></span>
+      <span class="name"><font color="#d1061b" size="3">『Proud Echoes』</font></span>
       <span class="description"><font color="#d1061b">Sennzai</font></span>
     </div>
   </div>
@@ -41,7 +41,7 @@ categories:
       </div>
     </a>
     <div class="content">
-      <span class="name"><font color="#47d649">『COLOURS.01』</font></span>
+      <span class="name"><font color="#47d649"  size="3">『COLOURS.01』</font></span>
       <span class="description"><font color="#47d649">Endorfin.</font></span>
     </div>
   </div>
@@ -54,7 +54,7 @@ categories:
       </div>
     </a>
     <div class="content">
-      <span class="name"><font color="#1A469C">『COLOURS.02』</font></span>
+      <span class="name"><font color="#1A469C" size="3">『COLOURS.02』</font></span>
       <span class="description"><font color="#1A469C">Endorfin.</font></span>
     </div>
   </div>
@@ -67,7 +67,7 @@ categories:
       </div>
     </a>
     <div class="content">
-      <span class="name"><font color="#D02B27">『COLOURS.03』</font></span>
+      <span class="name"><font color="#D02B27" size="3">『COLOURS.03』</font></span>
       <span class="description"><font color="#D02B27">Endorfin.</font></span>
     </div>
   </div>
@@ -80,8 +80,27 @@ categories:
       </div>
     </a>
     <div class="content">
-      <span class="name"><font color="#EDC95E">『COLOURS.04』</font></span>
+      <span class="name"><font color="#EDC95E" size="3">『COLOURS.04』</font></span>
       <span class="description"><font color="#EDC95E">Endorfin.</font></span>
+    </div>
+  </div>
+
+  <div id="ツユ">
+    <h3>
+      ツユ
+    </h3>
+  </div>
+  <div class="cd">
+    <a href="/music/やっぱり雨は降るんだね.html">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/やっぱり雨は降るんだね.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#242D62" size="3">『やっぱり雨は降<br>るんだね』</font></span>
+      <span class="description"><font color="#242D62">ツユ</font></span>
     </div>
   </div>
 </div>
