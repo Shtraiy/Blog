@@ -1,2 +1,4 @@
 
 .deploy_git/
+/public/js/tagcanvas.js
+/public/js/tagcloud.js
