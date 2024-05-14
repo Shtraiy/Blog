@@ -16,8 +16,9 @@ categories:
   <div class="cd">
     <a href="/music/Proud-Echoes.html">
       <div class="info">
-        <img class="avater" src="/images/Proud-Echoes.jpg"><img>
-        <div class="circle"></div>
+        <div class="circle">
+          <img class="avater" src="/images/Proud-Echoes.jpg"><img>
+        </div>
       </div>
     </a>
     <div class="content">
@@ -34,8 +35,9 @@ categories:
   <div class="cd">
     <a href="/music/COLOURS-01.html">
       <div class="info">
-        <img class="avater" src="/images/COLOURS.01.jpg"><img>
-        <div class="circle"></div>
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.01.jpg"><img>
+        </div>
       </div>
     </a>
     <div class="content">
@@ -46,8 +48,9 @@ categories:
   <div class="cd">
     <a href="/music/COLOURS-02.html">
       <div class="info">
-        <img class="avater" src="/images/COLOURS.02.jpg"><img>
-        <div class="circle"></div>
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.02.jpg"><img>
+        </div>
       </div>
     </a>
     <div class="content">
@@ -58,8 +61,9 @@ categories:
   <div class="cd">
     <a href="/music/COLOURS-03.html">
       <div class="info">
-        <img class="avater" src="/images/COLOURS.03.jpg"><img>
-        <div class="circle"></div>
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.03.jpg"><img>
+        </div>
       </div>
     </a>
     <div class="content">
@@ -70,8 +74,9 @@ categories:
   <div class="cd">
     <a href="/music/COLOURS-04.html">
       <div class="info">
-        <img class="avater" src="/images/COLOURS.04.jpg"><img>
-        <div class="circle"></div>
+        <div class="circle">
+          <img class="avater" src="/images/COLOURS.04.jpg"><img>
+        </div>
       </div>
     </a>
     <div class="content">
@@ -88,8 +93,9 @@ categories:
   <div class="cd">
     <a href="/music/やっぱり雨は降るんだね.html">
       <div class="info">
-        <img class="avater" src="/images/やっぱり雨は降るんだね.jpg"><img>
-        <div class="circle"></div>
+        <div class="circle">
+          <img class="avater" src="/images/やっぱり雨は降るんだね.jpg"><img>
+        </div>
       </div>
     </a>
     <div class="content">
