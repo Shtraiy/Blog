@@ -8,6 +8,51 @@ categories:
   - 音乐分享
 ---
 <div id="albums">
+  <div id="ELECTROCUTICA">
+    <h3>
+      ELECTROCUTICA
+    </h3>
+  </div>
+  <div class="cd">
+    <a href="/music/Piece-of-Cipher.html">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/Piece of Cipher+.png"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#A7A7A7" size="3">『Piece of Cip<br>her+』</font></span>
+      <span class="description"><font color="#A7A7A7">ELECTROCUTICA</font></span>
+    </div>
+  </div>
+  <div class="cd">
+    <a href="/music/REVERSUS.html">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/REVERSUS.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#1C211D" size="3">『REVERSUS』</font></span>
+      <span class="description"><font color="#1C211D">ELECTROCUTICA</font></span>
+    </div>
+  </div>
+  <div class="cd">
+    <a href="/music/SWANSONG.html">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/SWANSONG.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#948D91" size="3">『REVERSUS』</font></span>
+      <span class="description"><font color="#948D91">ELECTROCUTICA</font></span>
+    </div>
+  </div>
+
   <div id="Sennzai">
     <h3>
       Sennzai
