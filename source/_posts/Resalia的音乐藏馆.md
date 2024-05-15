@@ -103,6 +103,26 @@ categories:
       <span class="description"><font color="#242D62">ツユ</font></span>
     </div>
   </div>
+
+  <div id="三月のパンタシア">
+    <h3>
+      三月のパンタシア
+    </h3>
+  </div>
+  <div class="cd">
+    <a href="/music/ガールズブルー・ハッピーサッド.html">
+      <div class="info">
+        <div class="circle">
+          <img class="avater" src="/images/ガールズブルー・ハッピーサッド.jpg"><img>
+        </div>
+      </div>
+    </a>
+    <div class="content">
+      <span class="name"><font color="#29B5C4" size="3">『ガールズブルー・<br>ハッピーサッド』</font></span>
+      <span class="description"><font color="#29B5C4">三月のパンタシア</font></span>
+    </div>
+  </div>
+
 </div>
 
 
