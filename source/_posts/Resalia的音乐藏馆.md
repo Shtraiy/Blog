@@ -17,7 +17,7 @@ categories:
     <a href="/music/Piece-of-Cipher.html">
       <div class="info">
         <div class="circle">
-          <img class="avater" src="/images/Piece of Cipher+.png"><img>
+          <img class="avater" src="/images/Piece-of-Cipher+.png"><img>
         </div>
       </div>
     </a>
@@ -48,7 +48,7 @@ categories:
       </div>
     </a>
     <div class="content">
-      <span class="name"><font color="#948D91" size="3">『REVERSUS』</font></span>
+      <span class="name"><font color="#948D91" size="3">『SWANSONG』</font></span>
       <span class="description"><font color="#948D91">ELECTROCUTICA</font></span>
     </div>
   </div>
