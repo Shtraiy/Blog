@@ -30,16 +30,6 @@ type: friends
 </div>
 </a>
 
-<a href="https://jinyu.host">
-<div class="link" style="background-color: #4debeb">
-<img class="avater" src="https://cdn.jinyu.host/config/avatar.320.-1.webp"></img>
-<div class="content">
-<span class="name" style="color: rgb(85, 85, 85)">轨道兔</span>
-<span class="description" style="color: rgb(85, 85, 85)">为我自己，为友与仇，人与兽，爱者与不爱者</span>
-</div>
-</div>
-</a>
-
 <a href="https://subilan.win">
 <div class="link" style="background-color: #009688">
 <img class="avater" src="https://fnmdp.oss-cn-beijing.aliyuncs.com/assets/avatar-big.jpg"></img>
@@ -66,7 +56,8 @@ type: friends
 
 > 1.申请人的网站需要有一篇以上的原创文章。
 > 2.申请人的网站文章不能有大量的无脑复制他人的经验得来的技术分享。
-> 3.友链的申请是相互的，如果有一方发现另一方并没有及时添加友链，该方有权利将已添加的友链除去。
+> 3.友链的申请是相互的，不能存在单方面添加友链的情况。
+> 4.域名失效的网站在联系其站长无果后另一方有权删去友链。
 
 如果您觉得您已经满足以上需求，可以通过如下的方式联系到我交换友链
 
