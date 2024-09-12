@@ -2,6 +2,7 @@
 title: 音乐藏馆
 abbrlink: eb07
 date: 2024-05-10 12:28:21
+sticky: 100
 tags:
   - 音乐
 categories:
