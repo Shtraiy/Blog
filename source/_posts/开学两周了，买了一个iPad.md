@@ -1,13 +1,8 @@
 ---
 title: 开学两周了，买了一个iPad
-tags:
-  - iPad
-  - 苹果
-  - 日常
-categories:
-  - 日常
-abbrlink: 91b4
-date: 2024-03-21 19:43:40
+tags: ["iPad", "苹果", "日常"]
+publishDate: "2024-03-21 19:43:40"
+description: "This post is purely for testing if the css is correct for the title on the page"
 ---
 
 # 这是我从出生到现在第一次真正意义上拥有的第一个苹果系列的产品

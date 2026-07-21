@@ -1,13 +1,8 @@
 ---
 title: 为ArchLinux安装N卡驱动
-tags:
-  - Linux
-  - 系统
-  - 折腾
-categories:
-  - 技术
-abbrlink: 37c1
-date: 2022-07-26 08:17:50
+tags: ["Linux", "系统", "折腾"]
+publishDate: "2022-07-26 08:17:50"
+description: "This post is purely for testing if the css is correct for the title on the page"
 ---
 # 安装完Arch后我就一直在尝试装N卡驱动
 
